@@ -82,14 +82,12 @@
 		<br>
 		<description><b>description: </b>concat 3 expressions</description>
 		<h2 id="core_defines_AME_PRINT">AME_PRINT</h2>
-		<pre><code class="prepro">#define AME_PRINT(message) printf_s("%s
-", message)</code></pre>
+		<pre><code class="prepro">#define AME_PRINT(message) printf_s("%s\n", message)</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>print message on windows</description>
 		<h2 id="core_defines_AME_PRINTF">AME_PRINTF</h2>
-		<pre><code class="prepro">#define AME_PRINTF(format, ...)  printf_s(format, __VA_ARGS__); printf_s("
-")</code></pre>
+		<pre><code class="prepro">#define AME_PRINTF(format, ...)  printf_s(format, __VA_ARGS__); printf_s("\n")</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>print formatted message on windows</description>

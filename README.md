@@ -8,9 +8,11 @@ See release folder for binary versions of tools.
 
 Visit [ame source documentation](https://amedev1.github.io/ame/), code documentation for ame generated with custom-made "code_doc_generator" tool.
 
+Feel free to download it to quickly generate HTML documentation for your C code.
+
 # Blog
 
-I also write articles in a [blog](https://ame-dev.com). Articles consist of programming updates on ame project, as well as short reviews of movies, TV series, video games, etc.
+I also write articles in a [blog](https://ame-dev.com), programming updates on ame project, as well as short reviews of movies, TV series, video games, etc.
 
 # Mentions
 

@@ -19,8 +19,8 @@ But I'm happy to list them here (and will include the appropriate licenses if I 
 
 - ftest library: basic concept inspired by [µnit](https://nemequ.github.io/munit/)
 - core library:
-  - dynamic strings (cstr): concept by [sds](https://github.com/antirez/sds)
-  - dynamic buffers: the famous [Stretchy buffer by Sean Barret](https://github.com/nothings/stb/blob/master/stretchy_buffer.h)
+  - dynamic strings: `cstr` concept inspired by [sds](https://github.com/antirez/sds), I liked how it worked so did my own implementation
+  - dynamic buffers: the famous [Stretchy buffer by Sean Barret](https://github.com/nothings/stb/blob/master/stretchy_buffer.h), couldn't find a better way to write it
   - memory debugging: memory overshoot functions taken from [Eskil Steenberg's source code](http://www.quelsolaar.com/mergesource.zip)
 - code documentation (look and concept): Eskil Steenberg's [website](http://www.gamepipeline.org/) 
 

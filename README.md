@@ -4,4 +4,4 @@ Passion project exclusively in C
 
 # Documentation
 
-The GitHub page of this repository displays the current source code documentation made with a custom-made tool.
+Visit [ame source documentation](https://amedev1.github.io/), code documentation made with a custom-made tool.

@@ -2,6 +2,7 @@
 
 Welcome to ame, a passion project exclusively in C.
 For now it consists of libraries and small tools, currently being converted from C++ to C.
+See release folder for binary versions of tools.
 
 # Code Documentation
 

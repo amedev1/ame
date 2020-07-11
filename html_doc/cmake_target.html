@@ -12,59 +12,6 @@
 	<p>macros for creating library / executable targets</p>
 	<br>
 	<section class="main">
-		<h2 id="cmake_target_ame_add_custom_commands">ame_add_custom_commands</h2>
-		<pre><code class="cmake">macro(ame_add_custom_commands p_targetName)</code></pre>
-		<description><b>type:</b> <i>Cmake macro</i></description>
-		<br>
-		<description><b>description: </b>add custom commands to target (from target_PRE_BUILD_COMMANDS)</description>
-		<h2 id="cmake_target_ame_add_executable">ame_add_executable</h2>
-		<pre><code class="cmake">macro(ame_add_executable p_executableName)</code></pre>
-		<description><b>type:</b> <i>Cmake macro</i></description>
-		<br>
-		<description><b>description: </b>add an executable target</description>
-		<h2 id="cmake_target_ame_add_library">ame_add_library</h2>
-		<pre><code class="cmake">macro(ame_add_library p_libraryName)</code></pre>
-		<description><b>type:</b> <i>Cmake macro</i></description>
-		<br>
-		<description>
-			<b>description: </b>add a library target<br>
-			- source group files<br>
-			- get addiontional sources<br>
-			- check target dependencies<br>
-			- write include dirs & link dirs<br>
-			- handle target link libraries
-		</description>
-		<h2 id="cmake_target_ame_add_utest">ame_add_utest</h2>
-		<pre><code class="cmake">macro(ame_add_utest p_testName)</code></pre>
-		<description><b>type:</b> <i>Cmake macro</i></description>
-		<br>
-		<description><b>description: </b>add a unit test library</description>
-		<h2 id="cmake_target_ame_build_static_module_cxx_flags">ame_build_static_module_cxx_flags</h2>
-		<pre><code class="cmake">macro(ame_build_static_module_cxx_flags p_target p_staticModules)</code></pre>
-		<description><b>type:</b> <i>Cmake macro</i></description>
-		<br>
-		<description><b>description: </b>build static modules CXX flags for target</description>
-		<h2 id="cmake_target_ame_check_all_dependencies">ame_check_all_dependencies</h2>
-		<pre><code class="cmake">macro(ame_check_all_dependencies p_target p_searchTarget)</code></pre>
-		<description><b>type:</b> <i>Cmake macro</i></description>
-		<br>
-		<description><b>description: </b>retrieve all dependencies of target</description>
-		<h2 id="cmake_target_ame_create_exe_target_variables">ame_create_exe_target_variables</h2>
-		<pre><code class="cmake">macro(ame_create_exe_target_variables p_targetName)</code></pre>
-		<description><b>type:</b> <i>Cmake macro</i></description>
-		<br>
-		<description>
-			<b>description: </b>create all target related variables for an executable<br>
-			p_targetName: name of target<br>
-			name_INCLUDE_DIRS<br>
-			name__IS_HEADER_LIBRARY<br>
-			name_IS_LIBRARY<br>
-			name_IS_MODULE<br>
-			name_DEPENDENCIES<br>
-			name_EXTERN_DEPENDENCIES<br>
-			name_COMPANION_ELEMENTS<br>
-			name_CUSTOM_COMMANDS
-		</description>
 		<h2 id="cmake_target_ame_create_library_target_variables">ame_create_library_target_variables</h2>
 		<pre><code class="cmake">macro(ame_create_library_target_variables p_targetName)</code></pre>
 		<description><b>type:</b> <i>Cmake macro</i></description>
@@ -81,31 +28,84 @@
 			name_COMPANION_ELEMENTS<br>
 			name_CUSTOM_COMMANDS
 		</description>
-		<h2 id="cmake_target_ame_enable_LTCG">ame_enable_LTCG</h2>
-		<pre><code class="cmake">macro(ame_enable_LTCG p_targetName)</code></pre>
+		<h2 id="cmake_target_ame_create_exe_target_variables">ame_create_exe_target_variables</h2>
+		<pre><code class="cmake">macro(ame_create_exe_target_variables p_targetName)</code></pre>
 		<description><b>type:</b> <i>Cmake macro</i></description>
 		<br>
-		<description><b>description: </b>enable LTCG for target (msvc only)</description>
-		<h2 id="cmake_target_ame_find_static_module_dependencies">ame_find_static_module_dependencies</h2>
-		<pre><code class="cmake">macro(ame_find_static_module_dependencies p_target p_module)</code></pre>
-		<description><b>type:</b> <i>Cmake macro</i></description>
-		<br>
-		<description><b>description: </b>finds static modules dependencies of a target</description>
-		<h2 id="cmake_target_ame_include_target_dependencies_dirs">ame_include_target_dependencies_dirs</h2>
-		<pre><code class="cmake">macro(ame_include_target_dependencies_dirs p_target)</code></pre>
-		<description><b>type:</b> <i>Cmake macro</i></description>
-		<br>
-		<description><b>description: </b>adds target dependencies include paths to target INCLUDE_DIRS / LINK_DIRS</description>
-		<h2 id="cmake_target_ame_list_contains">ame_list_contains</h2>
-		<pre><code class="cmake">macro(ame_list_contains var value)</code></pre>
-		<description><b>type:</b> <i>Cmake macro</i></description>
-		<br>
-		<description><b>description: </b>set var to TRUE if list contains value</description>
+		<description>
+			<b>description: </b>create all target related variables for an executable<br>
+			p_targetName: name of target<br>
+			name_INCLUDE_DIRS<br>
+			name__IS_HEADER_LIBRARY<br>
+			name_IS_LIBRARY<br>
+			name_IS_MODULE<br>
+			name_DEPENDENCIES<br>
+			name_EXTERN_DEPENDENCIES<br>
+			name_COMPANION_ELEMENTS<br>
+			name_CUSTOM_COMMANDS
+		</description>
 		<h2 id="cmake_target_ame_set_target_module">ame_set_target_module</h2>
 		<pre><code class="cmake">macro(ame_set_target_module p_targetName p_value)</code></pre>
 		<description><b>type:</b> <i>Cmake macro</i></description>
 		<br>
 		<description><b>description: </b>assign module to target</description>
+		<h2 id="cmake_target_ame_enable_LTCG">ame_enable_LTCG</h2>
+		<pre><code class="cmake">macro(ame_enable_LTCG p_targetName)</code></pre>
+		<description><b>type:</b> <i>Cmake macro</i></description>
+		<br>
+		<description><b>description: </b>enable LTCG for target (msvc only)</description>
+		<h2 id="cmake_target_ame_build_static_module_cxx_flags">ame_build_static_module_cxx_flags</h2>
+		<pre><code class="cmake">macro(ame_build_static_module_cxx_flags p_target p_staticModules)</code></pre>
+		<description><b>type:</b> <i>Cmake macro</i></description>
+		<br>
+		<description><b>description: </b>build static modules CXX flags for target</description>
+		<h2 id="cmake_target_ame_find_static_module_dependencies">ame_find_static_module_dependencies</h2>
+		<pre><code class="cmake">macro(ame_find_static_module_dependencies p_target p_module)</code></pre>
+		<description><b>type:</b> <i>Cmake macro</i></description>
+		<br>
+		<description><b>description: </b>finds static modules dependencies of a target</description>
+		<h2 id="cmake_target_ame_list_contains">ame_list_contains</h2>
+		<pre><code class="cmake">macro(ame_list_contains var value)</code></pre>
+		<description><b>type:</b> <i>Cmake macro</i></description>
+		<br>
+		<description><b>description: </b>set var to TRUE if list contains value</description>
+		<h2 id="cmake_target_ame_include_target_dependencies_dirs">ame_include_target_dependencies_dirs</h2>
+		<pre><code class="cmake">macro(ame_include_target_dependencies_dirs p_target)</code></pre>
+		<description><b>type:</b> <i>Cmake macro</i></description>
+		<br>
+		<description><b>description: </b>adds target dependencies include paths to target INCLUDE_DIRS / LINK_DIRS</description>
+		<h2 id="cmake_target_ame_check_all_dependencies">ame_check_all_dependencies</h2>
+		<pre><code class="cmake">macro(ame_check_all_dependencies p_target p_searchTarget)</code></pre>
+		<description><b>type:</b> <i>Cmake macro</i></description>
+		<br>
+		<description><b>description: </b>retrieve all dependencies of target</description>
+		<h2 id="cmake_target_ame_add_library">ame_add_library</h2>
+		<pre><code class="cmake">macro(ame_add_library p_libraryName)</code></pre>
+		<description><b>type:</b> <i>Cmake macro</i></description>
+		<br>
+		<description>
+			<b>description: </b>add a library target<br>
+			- source group files<br>
+			- get addiontional sources<br>
+			- check target dependencies<br>
+			- write include dirs & link dirs<br>
+			- handle target link libraries
+		</description>
+		<h2 id="cmake_target_ame_add_executable">ame_add_executable</h2>
+		<pre><code class="cmake">macro(ame_add_executable p_executableName)</code></pre>
+		<description><b>type:</b> <i>Cmake macro</i></description>
+		<br>
+		<description><b>description: </b>add an executable target</description>
+		<h2 id="cmake_target_ame_add_utest">ame_add_utest</h2>
+		<pre><code class="cmake">macro(ame_add_utest p_testName)</code></pre>
+		<description><b>type:</b> <i>Cmake macro</i></description>
+		<br>
+		<description><b>description: </b>add a unit test library</description>
+		<h2 id="cmake_target_ame_add_custom_commands">ame_add_custom_commands</h2>
+		<pre><code class="cmake">macro(ame_add_custom_commands p_targetName)</code></pre>
+		<description><b>type:</b> <i>Cmake macro</i></description>
+		<br>
+		<description><b>description: </b>add custom commands to target (from target_PRE_BUILD_COMMANDS)</description>
 	</section>
 	<nav class="menu">
 		<a href="../index.html">Home</a>

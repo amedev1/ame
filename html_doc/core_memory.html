@@ -105,32 +105,32 @@
 		<br>
 		<description><b>description: </b>check that all current allocation are valid (no overshoot)</description>
 		<h2 id="core_memory_c_alloc">c_alloc</h2>
-		<pre><code class="prepro">#define c_alloc(s, a) c_memory_debug_alloc(s, a, __FILENAME__, __LINE__)</code></pre>
+		<pre><code class="prepro">#define c_alloc(size, alignment) c_memory_debug_alloc(size, alignment, __FILENAME__, __LINE__)</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>debug allocate with core allocator</description>
 		<h2 id="core_memory_c_free">c_free</h2>
-		<pre><code class="prepro">#define c_free(p) c_memory_debug_free(p, __FILENAME__, __LINE__)</code></pre>
+		<pre><code class="prepro">#define c_free(pointer) c_memory_debug_free(pointer, __FILENAME__, __LINE__)</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>debug free with core allocator</description>
 		<h2 id="core_memory_c_realloc">c_realloc</h2>
-		<pre><code class="prepro">#define c_realloc(p, s, a) c_memory_debug_realloc(p, s, a, __FILENAME__, __LINE__)</code></pre>
+		<pre><code class="prepro">#define c_realloc(pointer, size, alignment) c_memory_debug_realloc(pointer, size, alignment, __FILENAME__, __LINE__)</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>debug realloc with core allocator</description>
 		<h2 id="core_memory_c_alloc">c_alloc</h2>
-		<pre><code class="prepro">#define c_alloc(s, a) c_memory_alloc(s, a)</code></pre>
+		<pre><code class="prepro">#define c_alloc(size, alignment) c_memory_alloc(size, alignment)</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>allocate with core allocator</description>
 		<h2 id="core_memory_c_free">c_free</h2>
-		<pre><code class="prepro">#define c_free(p) c_memory_free(p)</code></pre>
+		<pre><code class="prepro">#define c_free(pointer) c_memory_free(pointer)</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>free with core allocator</description>
 		<h2 id="core_memory_c_realloc">c_realloc</h2>
-		<pre><code class="prepro">#define c_realloc(p, s, a) c_memory_realloc(p, s, a)</code></pre>
+		<pre><code class="prepro">#define c_realloc(pointer, size, alignment) c_memory_realloc(pointer, size, alignment)</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>realloc with core allocator</description>
@@ -269,6 +269,7 @@
 		<a class="section" href="core_compression.html">compression</a>
 		<a class="section" href="core_commands.html">commands</a>
 		<a class="section" href="core_multi-threading.html">multi-threading</a>
+		<a class="section" href="core_streams.html">streams</a>
 		<a href="image.html">image</a>
 		<a href="util.html">util</a>
 		<a href="documentation.html">documentation</a>

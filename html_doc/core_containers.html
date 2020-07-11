@@ -18,42 +18,42 @@
 	<br>
 	<section class="main">
 		<h2 id="core_containers_c_list_clear">c_list_clear</h2>
-		<pre><code class="prepro">#define c_list_clear(l)          c_list_internal_clear(&(l))</code></pre>
+		<pre><code class="prepro">#define c_list_clear(list)             c_list_internal_clear(&(list))</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>clear linked list</description>
 		<h2 id="core_containers_c_list_push">c_list_push</h2>
-		<pre><code class="prepro">#define c_list_push(l, v)       (memcpy(c_list_internal_push(&(l), sizeof(v)), &(v), sizeof(v)))</code></pre>
+		<pre><code class="prepro">#define c_list_push(list, value)       (memcpy(c_list_internal_push(&(list), sizeof(value)), &(v), sizeof(value)))</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>push element at the end of linked list</description>
 		<h2 id="core_containers_c_list_push_front">c_list_push_front</h2>
-		<pre><code class="prepro">#define c_list_push_front(l, v) (memcpy(c_list_internal_push_front(&(l), sizeof(v)), &v, sizeof(v)))</code></pre>
+		<pre><code class="prepro">#define c_list_push_front(list, value) (memcpy(c_list_internal_push_front(&(list), sizeof(value)), &value, sizeof(value)))</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>push element at the start of linked list</description>
 		<h2 id="core_containers_c_list_pop">c_list_pop</h2>
-		<pre><code class="prepro">#define c_list_pop(l)           c_list_internal_pop(&(l))</code></pre>
+		<pre><code class="prepro">#define c_list_pop(list)               c_list_internal_pop(&(list))</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>remove linked list last element</description>
 		<h2 id="core_containers_c_list_pop_front">c_list_pop_front</h2>
-		<pre><code class="prepro">#define c_list_pop_front(l)     c_list_internal_pop_front(&(l))</code></pre>
+		<pre><code class="prepro">#define c_list_pop_front(list)         c_list_internal_pop_front(&(list))</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>remove linked list first element</description>
 		<h2 id="core_containers_c_list_empty">c_list_empty</h2>
-		<pre><code class="prepro">#define c_list_empty(l)         ((l) ? true : false)</code></pre>
+		<pre><code class="prepro">#define c_list_empty(list)             ((list) ? true : false)</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>check if linked list is empty</description>
 		<h2 id="core_containers_c_list_get_ptr">c_list_get_ptr</h2>
-		<pre><code class="prepro">#define c_list_get_ptr(l, v)    memcpy(&(v), &(l->data), sizeof(v))</code></pre>
+		<pre><code class="prepro">#define c_list_get_ptr(list, value)    memcpy(&(value), &(list->data), sizeof(value))</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>get pointer to current linked list element</description>
 		<h2 id="core_containers_c_list_get">c_list_get</h2>
-		<pre><code class="prepro">#define c_list_get(l, v)        memcpy(&(v), l->data, sizeof(v))</code></pre>
+		<pre><code class="prepro">#define c_list_get(list, value)        memcpy(&(value), list->data, sizeof(value))</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>get current linked list element</description>
@@ -126,6 +126,11 @@
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>get pointer to element of dynamic buffer</description>
+		<h2 id="core_containers_dbuffer_reset">dbuffer_reset</h2>
+		<pre><code class="prepro">#define dbuffer_reset(p)   ((p) ? (dbuffer_length(p) = 0) : 0)</code></pre>
+		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<br>
+		<description><b>description: </b>reset dynamic buffer</description>
 		<h2 id="core_containers_dbuffer_insert">dbuffer_insert</h2>
 		<pre><code class="prepro">#define dbuffer_insert(p, n, v) (*((void **)&(p)) = dbuffer_insert_call((p), (n), sizeof(*(p))), (p)[n] = (v))</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
@@ -255,6 +260,11 @@
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>get pointer of vector element at index</description>
+		<h2 id="core_containers_c_vector_reset">c_vector_reset</h2>
+		<pre><code class="prepro">#define c_vector_reset  dbuffer_reset</code></pre>
+		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<br>
+		<description><b>description: </b>reset vector</description>
 		<h2 id="core_containers_c_stack_add">c_stack_add</h2>
 		<pre><code class="prepro">#define c_stack_add(s)   dbuffer_add(s, 1)</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
@@ -280,6 +290,11 @@
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>clear all elements in stack</description>
+		<h2 id="core_containers_c_stack_reset">c_stack_reset</h2>
+		<pre><code class="prepro">#define c_stack_reset    dbuffer_reset</code></pre>
+		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<br>
+		<description><b>description: </b>reset vector</description>
 		<h2 id="core_containers_c_queue_enqueue">c_queue_enqueue</h2>
 		<pre><code class="prepro">#define c_queue_enqueue    dbuffer_push</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
@@ -305,6 +320,11 @@
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>clear all elements in queue</description>
+		<h2 id="core_containers_c_queue_reset">c_queue_reset</h2>
+		<pre><code class="prepro">#define c_queue_reset      dbuffer_reset</code></pre>
+		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<br>
+		<description><b>description: </b>reset vector</description>
 		<h2 id="core_containers_fbuffer_struct">fbuffer_struct</h2>
 		<pre><code class="prepro">#define fbuffer_struct(a, t, n) struct { uint size; uint length; t data[n]; } a</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
@@ -355,18 +375,23 @@
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>get pointer to element of fixed buffer</description>
+		<h2 id="core_containers_fbuffer_reset">fbuffer_reset</h2>
+		<pre><code class="prepro">#define fbuffer_reset(a)   (fbuffer_name(a).length = 0)</code></pre>
+		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<br>
+		<description><b>description: </b>reset fixed buffer</description>
 		<h2 id="core_containers_fbuffer_insert">fbuffer_insert</h2>
 		<pre><code class="prepro">#define fbuffer_insert(a, n, v) (c_fbuffer_internal_insert((a), (n), sizeof(*(a)), (a)[n] = (v))</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>insert element in fixed buffer</description>
 		<h2 id="core_containers_fbuffer_add_at">fbuffer_add_at</h2>
-		<pre><code class="prepro">#define fbuffer_add_at(a, n)    (c_fbuffer_internal_insert((a), (n), sizeof(*(p)))</code></pre>
+		<pre><code class="prepro">#define fbuffer_add_at(a, n)    (c_fbuffer_internal_insert((a), (n), sizeof(*(a))))</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>add element in fixed buffer at index</description>
 		<h2 id="core_containers_fbuffer_remove">fbuffer_remove</h2>
-		<pre><code class="prepro">#define fbuffer_remove(a, n)    (c_fbuffer_internal_remove((a), (n), sizeof(*(p)))</code></pre>
+		<pre><code class="prepro">#define fbuffer_remove(a, n)    (c_fbuffer_internal_remove((a), (n), sizeof(*(a))))</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>remove element in fixed buffer</description>
@@ -460,6 +485,11 @@
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>get element pointer in fixed vector at index</description>
+		<h2 id="core_containers_c_fvector_reset">c_fvector_reset</h2>
+		<pre><code class="prepro">#define c_fvector_reset  fbuffer_reset</code></pre>
+		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<br>
+		<description><b>description: </b>reset fixed vector</description>
 		<h2 id="core_containers_fstack_struct">fstack_struct</h2>
 		<pre><code class="prepro">#define fstack_struct     fbuffer_struct</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
@@ -500,6 +530,11 @@
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>clear all elements in fixed stack</description>
+		<h2 id="core_containers_c_fstack_reset">c_fstack_reset</h2>
+		<pre><code class="prepro">#define c_fstack_reset    fbuffer_reset</code></pre>
+		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<br>
+		<description><b>description: </b>reset fixed stack</description>
 		<h2 id="core_containers_fqueue_struct">fqueue_struct</h2>
 		<pre><code class="prepro">#define fqueue_struct       fbuffer_struct</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
@@ -540,6 +575,11 @@
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>clear all elements in fixed queue</description>
+		<h2 id="core_containers_c_fqueue_reset">c_fqueue_reset</h2>
+		<pre><code class="prepro">#define c_fqueue_reset      fbuffer_reset</code></pre>
+		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<br>
+		<description><b>description: </b>reset fixed queue</description>
 		<h2 id="core_containers_map_keys">map_keys</h2>
 		<pre><code class="prepro">#define map_keys(m) (m).keys</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
@@ -682,6 +722,7 @@
 		<a class="section" href="core_compression.html">compression</a>
 		<a class="section" href="core_commands.html">commands</a>
 		<a class="section" href="core_multi-threading.html">multi-threading</a>
+		<a class="section" href="core_streams.html">streams</a>
 		<a href="image.html">image</a>
 		<a href="util.html">util</a>
 		<a href="documentation.html">documentation</a>

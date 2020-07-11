@@ -136,7 +136,7 @@
 		<br>
 		<description><b>description: </b>write text to file</description>
 		<h2 id="core_filesystem_c_file_write_bytes">c_file_write_bytes</h2>
-		<pre><code class="ccode">bool   c_file_write_bytes(const char *file, const byte *bytes);</code></pre>
+		<pre><code class="ccode">bool   c_file_write_bytes(const char *file, const byte_array bytes);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>write byte array to file</description>
@@ -146,7 +146,7 @@
 		<br>
 		<description><b>description: </b>append text to file</description>
 		<h2 id="core_filesystem_c_file_append_bytes">c_file_append_bytes</h2>
-		<pre><code class="ccode">bool   c_file_append_bytes(const char *file, const byte *bytes);</code></pre>
+		<pre><code class="ccode">bool   c_file_append_bytes(const char *file, const byte_array bytes);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>append byte array to file</description>
@@ -156,12 +156,12 @@
 		<br>
 		<description><b>description: </b>compare file a & b using system file attributes</description>
 		<h2 id="core_filesystem_c_file_binary_read">c_file_binary_read</h2>
-		<pre><code class="ccode">byte *c_file_binary_read(const char *file);</code></pre>
+		<pre><code class="ccode">byte_array c_file_binary_read(const char *file);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>read file content to byte array</description>
 		<h2 id="core_filesystem_c_file_text_read">c_file_text_read</h2>
-		<pre><code class="ccode">cstr  c_file_text_read(const char* file);</code></pre>
+		<pre><code class="ccode">cstr       c_file_text_read(const char* file);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>read file content to dynamic string</description>
@@ -200,6 +200,7 @@
 		<a class="section" href="core_compression.html">compression</a>
 		<a class="section" href="core_commands.html">commands</a>
 		<a class="section" href="core_multi-threading.html">multi-threading</a>
+		<a class="section" href="core_streams.html">streams</a>
 		<a href="image.html">image</a>
 		<a href="util.html">util</a>
 		<a href="documentation.html">documentation</a>

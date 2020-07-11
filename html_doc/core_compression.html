@@ -18,17 +18,17 @@
 		<br>
 		<description><b>description: </b>get compression bound of size</description>
 		<h2 id="core_compression_c_compress">c_compress</h2>
-		<pre><code class="ccode">bool   c_compress(const byte *src, byte *dst, size_t *compressed_size);</code></pre>
+		<pre><code class="ccode">bool   c_compress(const byte_array src, byte_array dst, size_t *compressed_size);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>compress src to dst WARNING dst array must be big enough</description>
 		<h2 id="core_compression_c_uncompressed_size">c_uncompressed_size</h2>
-		<pre><code class="ccode">size_t c_uncompressed_size(const byte *compressed);</code></pre>
+		<pre><code class="ccode">size_t c_uncompressed_size(const byte_array compressed);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>get size of compressed byte array</description>
 		<h2 id="core_compression_c_uncompress">c_uncompress</h2>
-		<pre><code class="ccode">bool   c_uncompress(const byte *src, byte *dst);</code></pre>
+		<pre><code class="ccode">bool   c_uncompress(const byte_array src, byte_array dst);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>uncompress src to dst WARNING dst array must be big enough</description>
@@ -67,6 +67,7 @@
 		<a class="current_section" href="core_compression.html">compression</a>
 		<a class="section" href="core_commands.html">commands</a>
 		<a class="section" href="core_multi-threading.html">multi-threading</a>
+		<a class="section" href="core_streams.html">streams</a>
 		<a href="image.html">image</a>
 		<a href="util.html">util</a>
 		<a href="documentation.html">documentation</a>

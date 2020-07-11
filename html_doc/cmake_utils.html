@@ -12,11 +12,31 @@
 	<p>misc macros</p>
 	<br>
 	<section class="main">
-		<h2 id="cmake_utils_ame_add_companion_files">ame_add_companion_files</h2>
-		<pre><code class="cmake">macro(ame_add_companion_files p_target)</code></pre>
+		<h2 id="cmake_utils_ame_check_filename_duplicates">ame_check_filename_duplicates</h2>
+		<pre><code class="cmake">macro(ame_check_filename_duplicates p_folder)</code></pre>
 		<description><b>type:</b> <i>Cmake macro</i></description>
 		<br>
-		<description><b>description: </b>create commands to copy companion files in targat binary dir</description>
+		<description><b>description: </b>check if folder contains two files with the same name</description>
+		<h2 id="cmake_utils_ame_add_utest">ame_add_utest</h2>
+		<pre><code class="cmake">macro(ame_add_utest p_targetName)</code></pre>
+		<description><b>type:</b> <i>Cmake macro</i></description>
+		<br>
+		<description><b>description: </b>add a unit test as POST-BUILD command</description>
+		<h2 id="cmake_utils_ame_embed_file">ame_embed_file</h2>
+		<pre><code class="cmake">macro(ame_embed_file p_targetName p_inputfile p_outputDir p_symbol p_mode)</code></pre>
+		<description><b>type:</b> <i>Cmake macro</i></description>
+		<br>
+		<description><b>description: </b>embed a file and add it to target</description>
+		<h2 id="cmake_utils_ame_embed_bitmap_fonts">ame_embed_bitmap_fonts</h2>
+		<pre><code class="cmake">macro(ame_embed_bitmap_fonts p_targetName p_folder)</code></pre>
+		<description><b>type:</b> <i>Cmake macro</i></description>
+		<br>
+		<description><b>description: </b>embed a folder of .bitmapfont files</description>
+		<h2 id="cmake_utils_ame_embed_images">ame_embed_images</h2>
+		<pre><code class="cmake">macro(ame_embed_images p_targetName p_folder)</code></pre>
+		<description><b>type:</b> <i>Cmake macro</i></description>
+		<br>
+		<description><b>description: </b>embed a folder of images</description>
 		<h2 id="cmake_utils_ame_add_copy_file">ame_add_copy_file</h2>
 		<pre><code class="cmake">macro(ame_add_copy_file p_targetName p_file p_destination)</code></pre>
 		<description><b>type:</b> <i>Cmake macro</i></description>
@@ -32,41 +52,16 @@
 		<description><b>type:</b> <i>Cmake macro</i></description>
 		<br>
 		<description><b>description: </b>add a PRE-BUILD command to copy a directory</description>
-		<h2 id="cmake_utils_ame_add_utest">ame_add_utest</h2>
-		<pre><code class="cmake">macro(ame_add_utest p_targetName)</code></pre>
+		<h2 id="cmake_utils_ame_add_companion_files">ame_add_companion_files</h2>
+		<pre><code class="cmake">macro(ame_add_companion_files p_target)</code></pre>
 		<description><b>type:</b> <i>Cmake macro</i></description>
 		<br>
-		<description><b>description: </b>add a unit test as POST-BUILD command</description>
+		<description><b>description: </b>create commands to copy companion files in targat binary dir</description>
 		<h2 id="cmake_utils_ame_check_companion_elements">ame_check_companion_elements</h2>
 		<pre><code class="cmake">macro(ame_check_companion_elements p_target p_searchTarget)</code></pre>
 		<description><b>type:</b> <i>Cmake macro</i></description>
 		<br>
 		<description><b>description: </b>add companion elements from target dependencies</description>
-		<h2 id="cmake_utils_ame_check_filename_duplicates">ame_check_filename_duplicates</h2>
-		<pre><code class="cmake">macro(ame_check_filename_duplicates p_folder)</code></pre>
-		<description><b>type:</b> <i>Cmake macro</i></description>
-		<br>
-		<description><b>description: </b>check if folder contains two files with the same name</description>
-		<h2 id="cmake_utils_ame_embed_bitmap_fonts">ame_embed_bitmap_fonts</h2>
-		<pre><code class="cmake">macro(ame_embed_bitmap_fonts p_targetName p_folder)</code></pre>
-		<description><b>type:</b> <i>Cmake macro</i></description>
-		<br>
-		<description><b>description: </b>embed a folder of .bitmapfont files</description>
-		<h2 id="cmake_utils_ame_embed_file">ame_embed_file</h2>
-		<pre><code class="cmake">macro(ame_embed_file p_targetName p_inputfile p_outputDir p_symbol p_mode)</code></pre>
-		<description><b>type:</b> <i>Cmake macro</i></description>
-		<br>
-		<description><b>description: </b>embed a file and add it to target</description>
-		<h2 id="cmake_utils_ame_embed_images">ame_embed_images</h2>
-		<pre><code class="cmake">macro(ame_embed_images p_targetName p_folder)</code></pre>
-		<description><b>type:</b> <i>Cmake macro</i></description>
-		<br>
-		<description><b>description: </b>embed a folder of images</description>
-		<h2 id="cmake_utils_ame_output_copy_dir">ame_output_copy_dir</h2>
-		<pre><code class="cmake">macro(ame_output_copy_dir p_targetName p_dir)</code></pre>
-		<description><b>type:</b> <i>Cmake macro</i></description>
-		<br>
-		<description><b>description: </b>add commands to copy a directory in target output directory</description>
 		<h2 id="cmake_utils_ame_output_copy_file">ame_output_copy_file</h2>
 		<pre><code class="cmake">macro(ame_output_copy_file p_targetName p_file)</code></pre>
 		<description><b>type:</b> <i>Cmake macro</i></description>
@@ -77,6 +72,11 @@
 		<description><b>type:</b> <i>Cmake macro</i></description>
 		<br>
 		<description><b>description: </b>add commands to copy a list of files to target output directory</description>
+		<h2 id="cmake_utils_ame_output_copy_dir">ame_output_copy_dir</h2>
+		<pre><code class="cmake">macro(ame_output_copy_dir p_targetName p_dir)</code></pre>
+		<description><b>type:</b> <i>Cmake macro</i></description>
+		<br>
+		<description><b>description: </b>add commands to copy a directory in target output directory</description>
 	</section>
 	<nav class="menu">
 		<a href="../index.html">Home</a>

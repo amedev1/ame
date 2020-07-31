@@ -19,6 +19,8 @@
 } Segment2f;
 </code></pre>
 		<description><b>type:</b> <i>C struct</i></description>
+		<br>
+		<description><b>description: </b>2d segment float</description>
 		<h2 id="math_segment_Segment2d">Segment2d</h2>
 		<pre><code class="ccode">typedef struct {
   vec2d a;
@@ -26,6 +28,8 @@
 } Segment2d;
 </code></pre>
 		<description><b>type:</b> <i>C struct</i></description>
+		<br>
+		<description><b>description: </b>2d segment double</description>
 		<h2 id="math_segment_Segmentf">Segmentf</h2>
 		<pre><code class="ccode">typedef struct {
   vec3f a;
@@ -33,6 +37,8 @@
 } Segmentf;
 </code></pre>
 		<description><b>type:</b> <i>C struct</i></description>
+		<br>
+		<description><b>description: </b>3d segment float</description>
 		<h2 id="math_segment_Segmentd">Segmentd</h2>
 		<pre><code class="ccode">typedef struct {
   vec3d a;
@@ -40,33 +46,35 @@
 } Segmentd;
 </code></pre>
 		<description><b>type:</b> <i>C struct</i></description>
+		<br>
+		<description><b>description: </b>3d segment double</description>
 		<h2 id="math_segment_m_segment2_lengthd">m_segment2_lengthd</h2>
 		<pre><code class="ccode">double m_segment2_lengthd(double *segment);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>return length of segment 2d</description>
 		<h2 id="math_segment_m_segment2_points_on_same_sided">m_segment2_points_on_same_sided</h2>
-		<pre><code class="ccode">bool m_segment2_points_on_same_sided(double *segment, double *a, double *b);</code></pre>
+		<pre><code class="ccode">bool   m_segment2_points_on_same_sided(double *segment, double *a, double *b);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>check if two points (vec2) are on the same side of segment 2d</description>
 		<h2 id="math_segment_m_segment2_midpointd">m_segment2_midpointd</h2>
-		<pre><code class="ccode">void m_segment2_midpointd(double *segment, double *res);</code></pre>
+		<pre><code class="ccode">void   m_segment2_midpointd(double *segment, double *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>return midpoint (vec2) of segment 2d</description>
 		<h2 id="math_segment_m_segment2_line_equationd">m_segment2_line_equationd</h2>
-		<pre><code class="ccode">void m_segment2_line_equationd(double *segment, double *res);</code></pre>
+		<pre><code class="ccode">void   m_segment2_line_equationd(double *segment, double *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>return line equation (vec3) of segment 2d</description>
 		<h2 id="math_segment_m_segment2_projectiond">m_segment2_projectiond</h2>
-		<pre><code class="ccode">void m_segment2_projectiond(double *segment, double *c, double *res);</code></pre>
+		<pre><code class="ccode">void   m_segment2_projectiond(double *segment, double *c, double *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>return projection (vec2) of point c (vec2) on segment 2d</description>
 		<h2 id="math_segment_m_segment2_pointd">m_segment2_pointd</h2>
-		<pre><code class="ccode">void m_segment2_pointd(double *segment, double t, double *res);</code></pre>
+		<pre><code class="ccode">void   m_segment2_pointd(double *segment, double t, double *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>return point (vec2) of t following the segment 2d</description>
@@ -76,77 +84,77 @@
 		<br>
 		<description><b>description: </b>return length of segment</description>
 		<h2 id="math_segment_m_segment_midpointd">m_segment_midpointd</h2>
-		<pre><code class="ccode">void m_segment_midpointd(double *segment, double *res);</code></pre>
+		<pre><code class="ccode">void   m_segment_midpointd(double *segment, double *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>return midpoint (vec3) of segment</description>
 		<h2 id="math_segment_m_segment_projectiond">m_segment_projectiond</h2>
-		<pre><code class="ccode">void m_segment_projectiond(double *segment, double *c, double *res);</code></pre>
+		<pre><code class="ccode">void   m_segment_projectiond(double *segment, double *c, double *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>return projection (vec3) of point c (vec3) on segment</description>
 		<h2 id="math_segment_m_segment_intersectiond">m_segment_intersectiond</h2>
-		<pre><code class="ccode">void m_segment_intersectiond(double *segment, double *res);</code></pre>
+		<pre><code class="ccode">void   m_segment_intersectiond(double *segment, double *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>return intersection (vec2) of segment</description>
 		<h2 id="math_segment_m_segment_pointd">m_segment_pointd</h2>
-		<pre><code class="ccode">void m_segment_pointd(double *segment, double t, double *res);</code></pre>
+		<pre><code class="ccode">void   m_segment_pointd(double *segment, double t, double *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>return point (vec3) of t following the segment</description>
 		<h2 id="math_segment_m_segment2_lengthf">m_segment2_lengthf</h2>
-		<pre><code class="ccode">float m_segment2_lengthf(float *segment);</code></pre>
+		<pre><code class="ccode">float  m_segment2_lengthf(float *segment);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>return length of segment 2d</description>
 		<h2 id="math_segment_m_segment2_points_on_same_sidef">m_segment2_points_on_same_sidef</h2>
-		<pre><code class="ccode">bool m_segment2_points_on_same_sidef(float *segment, float *a, float *b);</code></pre>
+		<pre><code class="ccode">bool   m_segment2_points_on_same_sidef(float *segment, float *a, float *b);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>check if two points (vec2) are on the same side of segment 2d</description>
 		<h2 id="math_segment_m_segment2_midpointf">m_segment2_midpointf</h2>
-		<pre><code class="ccode">void m_segment2_midpointf(float *segment, float *res);</code></pre>
+		<pre><code class="ccode">void   m_segment2_midpointf(float *segment, float *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>return midpoint (vec2) of segment 2d</description>
 		<h2 id="math_segment_m_segment2_line_equationf">m_segment2_line_equationf</h2>
-		<pre><code class="ccode">void m_segment2_line_equationf(float *segment, float *res);</code></pre>
+		<pre><code class="ccode">void   m_segment2_line_equationf(float *segment, float *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>return line equation (vec3) of segment 2d</description>
 		<h2 id="math_segment_m_segment2_projectionf">m_segment2_projectionf</h2>
-		<pre><code class="ccode">void m_segment2_projectionf(float *segment, float *c, float *res);</code></pre>
+		<pre><code class="ccode">void   m_segment2_projectionf(float *segment, float *c, float *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>return projection (vec2) of point c (vec2) on segment 2d</description>
 		<h2 id="math_segment_m_segment2_pointf">m_segment2_pointf</h2>
-		<pre><code class="ccode">void m_segment2_pointf(float *segment, float t, float *res);</code></pre>
+		<pre><code class="ccode">void   m_segment2_pointf(float *segment, float t, float *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>return point (vec2) of t following the segment 2d</description>
 		<h2 id="math_segment_m_segment_lengthf">m_segment_lengthf</h2>
-		<pre><code class="ccode">float m_segment_lengthf(float *segment);</code></pre>
+		<pre><code class="ccode">float  m_segment_lengthf(float *segment);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>return length of segment</description>
 		<h2 id="math_segment_m_segment_midpointf">m_segment_midpointf</h2>
-		<pre><code class="ccode">void m_segment_midpointf(float *segment, float *res);</code></pre>
+		<pre><code class="ccode">void   m_segment_midpointf(float *segment, float *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>return midpoint (vec3) of segment</description>
 		<h2 id="math_segment_m_segment_projectionf">m_segment_projectionf</h2>
-		<pre><code class="ccode">void m_segment_projectionf(float *segment, float *c, float *res);</code></pre>
+		<pre><code class="ccode">void   m_segment_projectionf(float *segment, float *c, float *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>return projection (vec3) of point c (vec3) on segment</description>
 		<h2 id="math_segment_m_segment_intersectionf">m_segment_intersectionf</h2>
-		<pre><code class="ccode">void m_segment_intersectionf(float *segment, float *res);</code></pre>
+		<pre><code class="ccode">void   m_segment_intersectionf(float *segment, float *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>return intersection (vec2) of segment</description>
 		<h2 id="math_segment_m_segment_pointf">m_segment_pointf</h2>
-		<pre><code class="ccode">void m_segment_pointf(float *segment, float t, float *res);</code></pre>
+		<pre><code class="ccode">void   m_segment_pointf(float *segment, float t, float *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>return point (vec3) of t following the segment</description>
@@ -174,6 +182,8 @@
 		<a class="section" href="math_float_types.html">float_types</a>
 		<a href="core.html">core</a>
 		<a href="image.html">image</a>
+		<a href="graphics.html">graphics</a>
+		<a href="input.html">input</a>
 		<a href="util.html">util</a>
 		<a href="documentation.html">documentation</a>
 	</nav>

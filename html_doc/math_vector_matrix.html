@@ -120,48 +120,168 @@
 		<description><b>type:</b> <i>C struct</i></description>
 		<br>
 		<description><b>description: </b>mat4 double</description>
+		<h2 id="math_vector_matrix_ivec2s">ivec2s</h2>
+		<pre><code class="ccode">typedef struct {
+  int x;
+  int y;
+} ivec2s;
+</code></pre>
+		<description><b>type:</b> <i>C struct</i></description>
+		<br>
+		<description><b>description: </b>vec2 int</description>
+		<h2 id="math_vector_matrix_ivec2l">ivec2l</h2>
+		<pre><code class="ccode">typedef struct {
+  int64 x;
+  int64 y;
+} ivec2l;
+</code></pre>
+		<description><b>type:</b> <i>C struct</i></description>
+		<br>
+		<description><b>description: </b>vec2 int64</description>
+		<h2 id="math_vector_matrix_ivec3s">ivec3s</h2>
+		<pre><code class="ccode">typedef struct {
+  int x;
+  int y;
+  int z;
+} ivec3s;
+</code></pre>
+		<description><b>type:</b> <i>C struct</i></description>
+		<br>
+		<description><b>description: </b>vec3 int</description>
+		<h2 id="math_vector_matrix_ivec3l">ivec3l</h2>
+		<pre><code class="ccode">typedef struct {
+  int64 x;
+  int64 y;
+  int64 z;
+} ivec3l;
+</code></pre>
+		<description><b>type:</b> <i>C struct</i></description>
+		<br>
+		<description><b>description: </b>vec3 int64</description>
+		<h2 id="math_vector_matrix_ivec4s">ivec4s</h2>
+		<pre><code class="ccode">typedef struct {
+  int x;
+  int y;
+  int z;
+  int w;
+} ivec4s;
+</code></pre>
+		<description><b>type:</b> <i>C struct</i></description>
+		<br>
+		<description><b>description: </b>vec4 int</description>
+		<h2 id="math_vector_matrix_ivec4l">ivec4l</h2>
+		<pre><code class="ccode">typedef struct {
+  int64 x;
+  int64 y;
+  int64 z;
+  int64 w;
+} ivec4l;
+</code></pre>
+		<description><b>type:</b> <i>C struct</i></description>
+		<br>
+		<description><b>description: </b>vec4 int64</description>
+		<h2 id="math_vector_matrix_uvec2s">uvec2s</h2>
+		<pre><code class="ccode">typedef struct {
+  uint x;
+  uint y;
+} uvec2s;
+</code></pre>
+		<description><b>type:</b> <i>C struct</i></description>
+		<br>
+		<description><b>description: </b>vec2 uint</description>
+		<h2 id="math_vector_matrix_uvec2l">uvec2l</h2>
+		<pre><code class="ccode">typedef struct {
+  uint64 x;
+  uint64 y;
+} uvec2l;
+</code></pre>
+		<description><b>type:</b> <i>C struct</i></description>
+		<br>
+		<description><b>description: </b>vec2 uint64</description>
+		<h2 id="math_vector_matrix_uvec3s">uvec3s</h2>
+		<pre><code class="ccode">typedef struct {
+  uint x;
+  uint y;
+  uint z;
+} uvec3s;
+</code></pre>
+		<description><b>type:</b> <i>C struct</i></description>
+		<br>
+		<description><b>description: </b>vec3 uint</description>
+		<h2 id="math_vector_matrix_uvec3l">uvec3l</h2>
+		<pre><code class="ccode">typedef struct {
+  uint64 x;
+  uint64 y;
+  uint64 z;
+} uvec3l;
+</code></pre>
+		<description><b>type:</b> <i>C struct</i></description>
+		<br>
+		<description><b>description: </b>vec3 int64</description>
+		<h2 id="math_vector_matrix_uvec4s">uvec4s</h2>
+		<pre><code class="ccode">typedef struct {
+  uint x;
+  uint y;
+  uint z;
+  uint w;
+} uvec4s;
+</code></pre>
+		<description><b>type:</b> <i>C struct</i></description>
+		<br>
+		<description><b>description: </b>vec4 uint</description>
+		<h2 id="math_vector_matrix_uvec4l">uvec4l</h2>
+		<pre><code class="ccode">typedef struct {
+  uint64 x;
+  uint64 y;
+  uint64 z;
+  uint64 w;
+} uvec4l;
+</code></pre>
+		<description><b>type:</b> <i>C struct</i></description>
+		<br>
+		<description><b>description: </b>vec4 uint64</description>
 		<h2 id="math_vector_matrix_m_vec2_addd">m_vec2_addd</h2>
-		<pre><code class="ccode">void m_vec2_addd(double *a, double *b, double *res);</code></pre>
+		<pre><code class="ccode">void   m_vec2_addd(double *a, double *b, double *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>res = a + b</description>
 		<h2 id="math_vector_matrix_m_vec2_subd">m_vec2_subd</h2>
-		<pre><code class="ccode">void m_vec2_subd(double *a, double *b, double *res);</code></pre>
+		<pre><code class="ccode">void   m_vec2_subd(double *a, double *b, double *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>res = a - b</description>
 		<h2 id="math_vector_matrix_m_vec2_muld">m_vec2_muld</h2>
-		<pre><code class="ccode">void m_vec2_muld(double *a, double *b, double *res);</code></pre>
+		<pre><code class="ccode">void   m_vec2_muld(double *a, double *b, double *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>res = a x b</description>
 		<h2 id="math_vector_matrix_m_vec2_mul_nd">m_vec2_mul_nd</h2>
-		<pre><code class="ccode">void m_vec2_mul_nd(double *vec, double n, double *res);</code></pre>
+		<pre><code class="ccode">void   m_vec2_mul_nd(double *vec, double n, double *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>res = a x n</description>
 		<h2 id="math_vector_matrix_m_vec2_div_nd">m_vec2_div_nd</h2>
-		<pre><code class="ccode">void m_vec2_div_nd(double *vec, double n, double *res);</code></pre>
+		<pre><code class="ccode">void   m_vec2_div_nd(double *vec, double n, double *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>res = a / n</description>
 		<h2 id="math_vector_matrix_m_vec2_equald">m_vec2_equald</h2>
-		<pre><code class="ccode">bool m_vec2_equald(double *a, double *b);</code></pre>
+		<pre><code class="ccode">bool   m_vec2_equald(double *a, double *b);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>a == b</description>
 		<h2 id="math_vector_matrix_m_vec2_fractiond">m_vec2_fractiond</h2>
-		<pre><code class="ccode">void m_vec2_fractiond(int64 *t, double *vec);</code></pre>
+		<pre><code class="ccode">void   m_vec2_fractiond(int64 *t, double *vec);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>get fraction t.x/t.y</description>
-		<h2 id="math_vector_matrix_m_vec2i_reducel">m_vec2i_reducel</h2>
-		<pre><code class="ccode">void m_vec2i_reducel(int64 *v, int64* t);</code></pre>
+		<h2 id="math_vector_matrix_m_ivec2_reducel">m_ivec2_reducel</h2>
+		<pre><code class="ccode">void   m_ivec2_reducel(int64 *v, int64* t);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>reduce v.x/v.y to t.x/t.y</description>
 		<h2 id="math_vector_matrix_m_vec2_normalized">m_vec2_normalized</h2>
-		<pre><code class="ccode">void m_vec2_normalized(double *vec);</code></pre>
+		<pre><code class="ccode">void   m_vec2_normalized(double *vec);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>normalize vec2</description>
@@ -176,17 +296,17 @@
 		<br>
 		<description><b>description: </b>distance from a to b</description>
 		<h2 id="math_vector_matrix_m_vec2_midpointd">m_vec2_midpointd</h2>
-		<pre><code class="ccode">void m_vec2_midpointd(double *a, double *b, double *res);</code></pre>
+		<pre><code class="ccode">void   m_vec2_midpointd(double *a, double *b, double *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>return midpoint (vec2) between a & b</description>
 		<h2 id="math_vector_matrix_m_vec2_clipd">m_vec2_clipd</h2>
-		<pre><code class="ccode">void m_vec2_clipd(double *vec, double *viewport, double *res);</code></pre>
+		<pre><code class="ccode">void   m_vec2_clipd(double *vec, double *viewport, double *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>return clipped vector (vec2) based on viewport (vec2)</description>
 		<h2 id="math_vector_matrix_m_vec2_unclipd">m_vec2_unclipd</h2>
-		<pre><code class="ccode">void m_vec2_unclipd(double *vec, double *viewport, double *res);</code></pre>
+		<pre><code class="ccode">void   m_vec2_unclipd(double *vec, double *viewport, double *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>return un-clipped vector (vec2) based on viewport (vec2)</description>
@@ -196,47 +316,47 @@
 		<br>
 		<description><b>description: </b>vec2 dot product</description>
 		<h2 id="math_vector_matrix_m_vec2_transform2d">m_vec2_transform2d</h2>
-		<pre><code class="ccode">void m_vec2_transform2d(double *vec, double *mat, double *res);</code></pre>
+		<pre><code class="ccode">void   m_vec2_transform2d(double *vec, double *mat, double *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>transform vec2 using mat2</description>
 		<h2 id="math_vector_matrix_m_vec2_transformd">m_vec2_transformd</h2>
-		<pre><code class="ccode">void m_vec2_transformd(double *vec, double *mat, double *res);</code></pre>
+		<pre><code class="ccode">void   m_vec2_transformd(double *vec, double *mat, double *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>transform vec2 using mat3</description>
 		<h2 id="math_vector_matrix_m_vec3_addd">m_vec3_addd</h2>
-		<pre><code class="ccode">void m_vec3_addd(double *a, double *b, double *res);</code></pre>
+		<pre><code class="ccode">void   m_vec3_addd(double *a, double *b, double *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>res = a + b</description>
 		<h2 id="math_vector_matrix_m_vec3_subd">m_vec3_subd</h2>
-		<pre><code class="ccode">void m_vec3_subd(double *a, double *b, double *res);</code></pre>
+		<pre><code class="ccode">void   m_vec3_subd(double *a, double *b, double *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>res = a - b</description>
 		<h2 id="math_vector_matrix_m_vec3_muld">m_vec3_muld</h2>
-		<pre><code class="ccode">void m_vec3_muld(double *a, double *b, double *res);</code></pre>
+		<pre><code class="ccode">void   m_vec3_muld(double *a, double *b, double *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>res = a x b</description>
 		<h2 id="math_vector_matrix_m_vec3_mul_nd">m_vec3_mul_nd</h2>
-		<pre><code class="ccode">void m_vec3_mul_nd(double *vec, double n, double *res);</code></pre>
+		<pre><code class="ccode">void   m_vec3_mul_nd(double *vec, double n, double *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>res = a x n</description>
 		<h2 id="math_vector_matrix_m_vec3_div_nd">m_vec3_div_nd</h2>
-		<pre><code class="ccode">void m_vec3_div_nd(double *vec, double n, double *res);</code></pre>
+		<pre><code class="ccode">void   m_vec3_div_nd(double *vec, double n, double *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>res = a / n</description>
 		<h2 id="math_vector_matrix_m_vec3_equald">m_vec3_equald</h2>
-		<pre><code class="ccode">bool m_vec3_equald(double *a, double *b);</code></pre>
+		<pre><code class="ccode">bool   m_vec3_equald(double *a, double *b);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>a == b</description>
 		<h2 id="math_vector_matrix_m_vec3_normalized">m_vec3_normalized</h2>
-		<pre><code class="ccode">void m_vec3_normalized(double *vec);</code></pre>
+		<pre><code class="ccode">void   m_vec3_normalized(double *vec);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>normalize vec3</description>
@@ -246,7 +366,7 @@
 		<br>
 		<description><b>description: </b>vec3 magnitude</description>
 		<h2 id="math_vector_matrix_m_vec3_crossd">m_vec3_crossd</h2>
-		<pre><code class="ccode">void m_vec3_crossd(double *a, double *b, double *res);</code></pre>
+		<pre><code class="ccode">void   m_vec3_crossd(double *a, double *b, double *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>vec3 cross product (vec3)</description>
@@ -256,7 +376,7 @@
 		<br>
 		<description><b>description: </b>distance from a to b</description>
 		<h2 id="math_vector_matrix_m_vec3_midpointd">m_vec3_midpointd</h2>
-		<pre><code class="ccode">void m_vec3_midpointd(double *a, double *b, double *res);</code></pre>
+		<pre><code class="ccode">void   m_vec3_midpointd(double *a, double *b, double *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>return midpoint (vec3) between a & b</description>
@@ -266,47 +386,47 @@
 		<br>
 		<description><b>description: </b>vec3 dot product</description>
 		<h2 id="math_vector_matrix_m_vec3_transform3d">m_vec3_transform3d</h2>
-		<pre><code class="ccode">void m_vec3_transform3d(double *vec, double *mat, double *res);</code></pre>
+		<pre><code class="ccode">void   m_vec3_transform3d(double *vec, double *mat, double *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>transform vec3 using mat3</description>
 		<h2 id="math_vector_matrix_m_vec3_transformd">m_vec3_transformd</h2>
-		<pre><code class="ccode">void m_vec3_transformd(double *vec, double *mat, double *res);</code></pre>
+		<pre><code class="ccode">void   m_vec3_transformd(double *vec, double *mat, double *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>transform vec3 using mat4</description>
 		<h2 id="math_vector_matrix_m_vec4_addd">m_vec4_addd</h2>
-		<pre><code class="ccode">void m_vec4_addd(double *a, double *b, double *res);</code></pre>
+		<pre><code class="ccode">void   m_vec4_addd(double *a, double *b, double *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>res = a + b</description>
 		<h2 id="math_vector_matrix_m_vec4_subd">m_vec4_subd</h2>
-		<pre><code class="ccode">void m_vec4_subd(double *a, double *b, double *res);</code></pre>
+		<pre><code class="ccode">void   m_vec4_subd(double *a, double *b, double *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>res = a - b</description>
 		<h2 id="math_vector_matrix_m_vec4_muld">m_vec4_muld</h2>
-		<pre><code class="ccode">void m_vec4_muld(double *a, double *b, double *res);</code></pre>
+		<pre><code class="ccode">void   m_vec4_muld(double *a, double *b, double *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>res = a x b</description>
 		<h2 id="math_vector_matrix_m_vec4_mul_nd">m_vec4_mul_nd</h2>
-		<pre><code class="ccode">void m_vec4_mul_nd(double *vec, double n, double *res);</code></pre>
+		<pre><code class="ccode">void   m_vec4_mul_nd(double *vec, double n, double *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>res = a x n</description>
 		<h2 id="math_vector_matrix_m_vec4_div_nd">m_vec4_div_nd</h2>
-		<pre><code class="ccode">void m_vec4_div_nd(double *vec, double n, double *res);</code></pre>
+		<pre><code class="ccode">void   m_vec4_div_nd(double *vec, double n, double *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>res = a / n</description>
 		<h2 id="math_vector_matrix_m_vec4_equald">m_vec4_equald</h2>
-		<pre><code class="ccode">bool m_vec4_equald(double *a, double *b);</code></pre>
+		<pre><code class="ccode">bool   m_vec4_equald(double *a, double *b);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>a == b</description>
 		<h2 id="math_vector_matrix_m_vec4_normalized">m_vec4_normalized</h2>
-		<pre><code class="ccode">void m_vec4_normalized(double *vec);</code></pre>
+		<pre><code class="ccode">void   m_vec4_normalized(double *vec);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>normalize vec4</description>
@@ -316,7 +436,7 @@
 		<br>
 		<description><b>description: </b>vec3 magnitude</description>
 		<h2 id="math_vector_matrix_m_vec4_transformd">m_vec4_transformd</h2>
-		<pre><code class="ccode">void m_vec4_transformd(double *vec, double *mat, double *res);</code></pre>
+		<pre><code class="ccode">void   m_vec4_transformd(double *vec, double *mat, double *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>transform vec4 using mat4</description>
@@ -531,47 +651,47 @@
 		<br>
 		<description><b>description: </b>get right-handed orthographic matrix</description>
 		<h2 id="math_vector_matrix_m_vec2_addf">m_vec2_addf</h2>
-		<pre><code class="ccode">void m_vec2_addf(float *a, float *b, float *res);</code></pre>
+		<pre><code class="ccode">void  m_vec2_addf(float *a, float *b, float *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>res = a + b</description>
 		<h2 id="math_vector_matrix_m_vec2_subf">m_vec2_subf</h2>
-		<pre><code class="ccode">void m_vec2_subf(float *a, float *b, float *res);</code></pre>
+		<pre><code class="ccode">void  m_vec2_subf(float *a, float *b, float *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>res = a - b</description>
 		<h2 id="math_vector_matrix_m_vec2_mulf">m_vec2_mulf</h2>
-		<pre><code class="ccode">void m_vec2_mulf(float *a, float *b, float *res);</code></pre>
+		<pre><code class="ccode">void  m_vec2_mulf(float *a, float *b, float *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>res = a x b</description>
 		<h2 id="math_vector_matrix_m_vec2_mul_nf">m_vec2_mul_nf</h2>
-		<pre><code class="ccode">void m_vec2_mul_nf(float *vec, float n, float *res);</code></pre>
+		<pre><code class="ccode">void  m_vec2_mul_nf(float *vec, float n, float *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>res = a x n</description>
 		<h2 id="math_vector_matrix_m_vec2_div_nf">m_vec2_div_nf</h2>
-		<pre><code class="ccode">void m_vec2_div_nf(float *vec, float n, float *res);</code></pre>
+		<pre><code class="ccode">void  m_vec2_div_nf(float *vec, float n, float *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>res = a / n</description>
 		<h2 id="math_vector_matrix_m_vec2_equalf">m_vec2_equalf</h2>
-		<pre><code class="ccode">bool m_vec2_equalf(float *a, float *b);</code></pre>
+		<pre><code class="ccode">bool  m_vec2_equalf(float *a, float *b);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>a == b</description>
 		<h2 id="math_vector_matrix_m_vec2_fractionf">m_vec2_fractionf</h2>
-		<pre><code class="ccode">void m_vec2_fractionf(int32 *t, float *vec);</code></pre>
+		<pre><code class="ccode">void  m_vec2_fractionf(int32 *t, float *vec);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>get fraction t.x/t.y</description>
-		<h2 id="math_vector_matrix_m_vec2i_reduces">m_vec2i_reduces</h2>
-		<pre><code class="ccode">void m_vec2i_reduces(int32 *v, int32* t);</code></pre>
+		<h2 id="math_vector_matrix_m_ivec2_reduces">m_ivec2_reduces</h2>
+		<pre><code class="ccode">void  m_ivec2_reduces(int32 *v, int32* t);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>reduce v.x/v.y to t.x/t.y</description>
 		<h2 id="math_vector_matrix_m_vec2_normalizef">m_vec2_normalizef</h2>
-		<pre><code class="ccode">void m_vec2_normalizef(float *vec);</code></pre>
+		<pre><code class="ccode">void  m_vec2_normalizef(float *vec);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>normalize vec2</description>
@@ -586,17 +706,17 @@
 		<br>
 		<description><b>description: </b>distance from a to b</description>
 		<h2 id="math_vector_matrix_m_vec2_midpointf">m_vec2_midpointf</h2>
-		<pre><code class="ccode">void m_vec2_midpointf(float *a, float *b, float *res);</code></pre>
+		<pre><code class="ccode">void  m_vec2_midpointf(float *a, float *b, float *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>return midpoint (vec2) between a & b</description>
 		<h2 id="math_vector_matrix_m_vec2_clipf">m_vec2_clipf</h2>
-		<pre><code class="ccode">void m_vec2_clipf(float *vec, float *viewport, float *res);</code></pre>
+		<pre><code class="ccode">void  m_vec2_clipf(float *vec, float *viewport, float *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>return clipped vector (vec2) based on viewport (vec2)</description>
 		<h2 id="math_vector_matrix_m_vec2_unclipf">m_vec2_unclipf</h2>
-		<pre><code class="ccode">void m_vec2_unclipf(float *vec, float *viewport, float *res);</code></pre>
+		<pre><code class="ccode">void  m_vec2_unclipf(float *vec, float *viewport, float *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>return un-clipped vector (vec2) based on viewport (vec2)</description>
@@ -606,47 +726,47 @@
 		<br>
 		<description><b>description: </b>vec2 dot product</description>
 		<h2 id="math_vector_matrix_m_vec2_transform2f">m_vec2_transform2f</h2>
-		<pre><code class="ccode">void m_vec2_transform2f(float *vec, float *mat, float *res);</code></pre>
+		<pre><code class="ccode">void  m_vec2_transform2f(float *vec, float *mat, float *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>transform vec2 using mat2</description>
 		<h2 id="math_vector_matrix_m_vec2_transformf">m_vec2_transformf</h2>
-		<pre><code class="ccode">void m_vec2_transformf(float *vec, float *mat, float *res);</code></pre>
+		<pre><code class="ccode">void  m_vec2_transformf(float *vec, float *mat, float *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>transform vec2 using mat3</description>
 		<h2 id="math_vector_matrix_m_vec3_addf">m_vec3_addf</h2>
-		<pre><code class="ccode">void m_vec3_addf(float *a, float *b, float *res);</code></pre>
+		<pre><code class="ccode">void  m_vec3_addf(float *a, float *b, float *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>res = a + b</description>
 		<h2 id="math_vector_matrix_m_vec3_subf">m_vec3_subf</h2>
-		<pre><code class="ccode">void m_vec3_subf(float *a, float *b, float *res);</code></pre>
+		<pre><code class="ccode">void  m_vec3_subf(float *a, float *b, float *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>res = a - b</description>
 		<h2 id="math_vector_matrix_m_vec3_mulf">m_vec3_mulf</h2>
-		<pre><code class="ccode">void m_vec3_mulf(float *a, float *b, float *res);</code></pre>
+		<pre><code class="ccode">void  m_vec3_mulf(float *a, float *b, float *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>res = a x b</description>
 		<h2 id="math_vector_matrix_m_vec3_mul_nf">m_vec3_mul_nf</h2>
-		<pre><code class="ccode">void m_vec3_mul_nf(float *vec, float n, float *res);</code></pre>
+		<pre><code class="ccode">void  m_vec3_mul_nf(float *vec, float n, float *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>res = a x n</description>
 		<h2 id="math_vector_matrix_m_vec3_div_nf">m_vec3_div_nf</h2>
-		<pre><code class="ccode">void m_vec3_div_nf(float *vec, float n, float *res);</code></pre>
+		<pre><code class="ccode">void  m_vec3_div_nf(float *vec, float n, float *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>res = a / n</description>
 		<h2 id="math_vector_matrix_m_vec3_equalf">m_vec3_equalf</h2>
-		<pre><code class="ccode">bool m_vec3_equalf(float *a, float *b);</code></pre>
+		<pre><code class="ccode">bool  m_vec3_equalf(float *a, float *b);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>a == b</description>
 		<h2 id="math_vector_matrix_m_vec3_normalizef">m_vec3_normalizef</h2>
-		<pre><code class="ccode">void m_vec3_normalizef(float *vec);</code></pre>
+		<pre><code class="ccode">void  m_vec3_normalizef(float *vec);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>normalize vec2</description>
@@ -656,7 +776,7 @@
 		<br>
 		<description><b>description: </b>vec3 magnitude</description>
 		<h2 id="math_vector_matrix_m_vec3_crossf">m_vec3_crossf</h2>
-		<pre><code class="ccode">void m_vec3_crossf(float *a, float *b, float *res);</code></pre>
+		<pre><code class="ccode">void  m_vec3_crossf(float *a, float *b, float *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>vec3 cross product (vec3)</description>
@@ -666,7 +786,7 @@
 		<br>
 		<description><b>description: </b>distance from a to b</description>
 		<h2 id="math_vector_matrix_m_vec3_midpointf">m_vec3_midpointf</h2>
-		<pre><code class="ccode">void m_vec3_midpointf(float *a, float *b, float *res);</code></pre>
+		<pre><code class="ccode">void  m_vec3_midpointf(float *a, float *b, float *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>return midpoint (vec3) between a & b</description>
@@ -676,47 +796,47 @@
 		<br>
 		<description><b>description: </b>vec3 dot product</description>
 		<h2 id="math_vector_matrix_m_vec3_transform3f">m_vec3_transform3f</h2>
-		<pre><code class="ccode">void m_vec3_transform3f(float *vec, float *mat, float *res);</code></pre>
+		<pre><code class="ccode">void  m_vec3_transform3f(float *vec, float *mat, float *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>transform vec3 using mat3</description>
 		<h2 id="math_vector_matrix_m_vec3_transformf">m_vec3_transformf</h2>
-		<pre><code class="ccode">void m_vec3_transformf(float *vec, float *mat, float *res);</code></pre>
+		<pre><code class="ccode">void  m_vec3_transformf(float *vec, float *mat, float *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>transform vec3 using mat4</description>
 		<h2 id="math_vector_matrix_m_vec4_addf">m_vec4_addf</h2>
-		<pre><code class="ccode">void m_vec4_addf(float *a, float *b, float *res);</code></pre>
+		<pre><code class="ccode">void  m_vec4_addf(float *a, float *b, float *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>res = a + b</description>
 		<h2 id="math_vector_matrix_m_vec4_subf">m_vec4_subf</h2>
-		<pre><code class="ccode">void m_vec4_subf(float *a, float *b, float *res);</code></pre>
+		<pre><code class="ccode">void  m_vec4_subf(float *a, float *b, float *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>res = a - b</description>
 		<h2 id="math_vector_matrix_m_vec4_mulf">m_vec4_mulf</h2>
-		<pre><code class="ccode">void m_vec4_mulf(float *a, float *b, float *res);</code></pre>
+		<pre><code class="ccode">void  m_vec4_mulf(float *a, float *b, float *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>res = a x b</description>
 		<h2 id="math_vector_matrix_m_vec4_mul_nf">m_vec4_mul_nf</h2>
-		<pre><code class="ccode">void m_vec4_mul_nf(float *vec, float n, float *res);</code></pre>
+		<pre><code class="ccode">void  m_vec4_mul_nf(float *vec, float n, float *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>res = a x n</description>
 		<h2 id="math_vector_matrix_m_vec4_div_nf">m_vec4_div_nf</h2>
-		<pre><code class="ccode">void m_vec4_div_nf(float *vec, float n, float *res);</code></pre>
+		<pre><code class="ccode">void  m_vec4_div_nf(float *vec, float n, float *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>res = a / n</description>
 		<h2 id="math_vector_matrix_m_vec4_equalf">m_vec4_equalf</h2>
-		<pre><code class="ccode">bool m_vec4_equalf(float *a, float *b);</code></pre>
+		<pre><code class="ccode">bool  m_vec4_equalf(float *a, float *b);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>a == b</description>
 		<h2 id="math_vector_matrix_m_vec4_normalizef">m_vec4_normalizef</h2>
-		<pre><code class="ccode">void m_vec4_normalizef(float *vec);</code></pre>
+		<pre><code class="ccode">void  m_vec4_normalizef(float *vec);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>normalize vec4</description>
@@ -726,7 +846,7 @@
 		<br>
 		<description><b>description: </b>vec3 magnitude</description>
 		<h2 id="math_vector_matrix_m_vec4_transformf">m_vec4_transformf</h2>
-		<pre><code class="ccode">void m_vec4_transformf(float *vec, float *mat, float *res);</code></pre>
+		<pre><code class="ccode">void  m_vec4_transformf(float *vec, float *mat, float *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>transform vec4 using mat4</description>
@@ -964,6 +1084,8 @@
 		<a class="section" href="math_float_types.html">float_types</a>
 		<a href="core.html">core</a>
 		<a href="image.html">image</a>
+		<a href="graphics.html">graphics</a>
+		<a href="input.html">input</a>
 		<a href="util.html">util</a>
 		<a href="documentation.html">documentation</a>
 	</nav>

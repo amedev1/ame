@@ -9,11 +9,13 @@
 <body>
 	<h1>streams</h1>
 	<br>
-	<p></p>
+	<p>functions to read from and write to different sources of input/output (file & byte array)</p>
 	<br>
 	<section class="main">
 		<h2 id="core_streams_StreamType">StreamType</h2>
 		<description><b>type:</b> <i>C enum</i></description>
+		<br>
+		<description><b>description: </b>type of stream</description>
 		<table>
 			<tbody>
 				<tr>
@@ -40,6 +42,8 @@
 } FileStream;
 </code></pre>
 		<description><b>type:</b> <i>C struct</i></description>
+		<br>
+		<description><b>description: </b>file stream data</description>
 		<h2 id="core_streams_MemoryStream">MemoryStream</h2>
 		<pre><code class="ccode">typedef struct {
   byte_array *bytes;
@@ -47,6 +51,8 @@
 } MemoryStream;
 </code></pre>
 		<description><b>type:</b> <i>C struct</i></description>
+		<br>
+		<description><b>description: </b>memory stream data</description>
 		<h2 id="core_streams_Stream">Stream</h2>
 		<pre><code class="ccode">typedef struct {
   StreamType type;
@@ -58,36 +64,58 @@
 } Stream;
 </code></pre>
 		<description><b>type:</b> <i>C struct</i></description>
+		<br>
+		<description><b>description: </b>generic stream type</description>
 		<h2 id="core_streams_c_istream_open_file">c_istream_open_file</h2>
 		<pre><code class="ccode">bool  c_istream_open_file(Stream *stream, const char *path);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
+		<br>
+		<description><b>description: </b>use file input stream</description>
 		<h2 id="core_streams_c_istream_open_memory">c_istream_open_memory</h2>
 		<pre><code class="ccode">bool  c_istream_open_memory(Stream *stream, byte_array *bytes);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
+		<br>
+		<description><b>description: </b>use byte array as input stream</description>
 		<h2 id="core_streams_c_istream_seek">c_istream_seek</h2>
 		<pre><code class="ccode">bool  c_istream_seek(Stream *stream, size_t offset);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
+		<br>
+		<description><b>description: </b>seek offset in input stream</description>
 		<h2 id="core_streams_c_istream_read">c_istream_read</h2>
 		<pre><code class="ccode">bool  c_istream_read(Stream *stream, size_t size, uint8 *buffer);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
+		<br>
+		<description><b>description: </b>ready bytes from input stream</description>
 		<h2 id="core_streams_c_istream_read_byte">c_istream_read_byte</h2>
 		<pre><code class="ccode">uint8 c_istream_read_byte(Stream *stream);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
+		<br>
+		<description><b>description: </b>read a single byte from input stream</description>
 		<h2 id="core_streams_c_ostream_open_file">c_ostream_open_file</h2>
 		<pre><code class="ccode">bool  c_ostream_open_file(Stream *stream, const char *path);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
+		<br>
+		<description><b>description: </b>use file as output stream</description>
 		<h2 id="core_streams_c_ostream_open_memory">c_ostream_open_memory</h2>
 		<pre><code class="ccode">bool  c_ostream_open_memory(Stream *stream, byte_array *bytes);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
+		<br>
+		<description><b>description: </b>use byte array as output stream</description>
 		<h2 id="core_streams_c_ostream_write">c_ostream_write</h2>
 		<pre><code class="ccode">bool  c_ostream_write(Stream *stream, size_t size, const uint8 *bytes);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
+		<br>
+		<description><b>description: </b>write byest to output stream</description>
 		<h2 id="core_streams_c_ostream_write_byte">c_ostream_write_byte</h2>
 		<pre><code class="ccode">bool  c_ostream_write_byte(Stream *stream, uint8 byte);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
+		<br>
+		<description><b>description: </b>write a single byte to output stream</description>
 		<h2 id="core_streams_c_stream_close">c_stream_close</h2>
 		<pre><code class="ccode">bool  c_stream_close(Stream *stream);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
+		<br>
+		<description><b>description: </b>close a stream</description>
 	</section>
 	<nav class="menu">
 		<a href="../index.html">Home</a>
@@ -114,7 +142,10 @@
 		<a class="section" href="core_commands.html">commands</a>
 		<a class="section" href="core_multi-threading.html">multi-threading</a>
 		<a class="current_section" href="core_streams.html">streams</a>
+		<a class="section" href="core_Window.html">Window</a>
 		<a href="image.html">image</a>
+		<a href="graphics.html">graphics</a>
+		<a href="input.html">input</a>
 		<a href="util.html">util</a>
 		<a href="documentation.html">documentation</a>
 	</nav>

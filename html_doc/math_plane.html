@@ -19,20 +19,24 @@
 } Planef;
 </code></pre>
 		<description><b>type:</b> <i>C struct</i></description>
+		<br>
+		<description><b>description: </b>plane - float</description>
 		<h2 id="math_plane_Planed">Planed</h2>
 		<pre><code class="ccode">typedef struct {
-  vec3d normal;
+  vec3d  normal;
   double distance;
 } Planed;
 </code></pre>
 		<description><b>type:</b> <i>C struct</i></description>
+		<br>
+		<description><b>description: </b>plane - double</description>
 		<h2 id="math_plane_m_plane_initd">m_plane_initd</h2>
-		<pre><code class="ccode">void m_plane_initd(double *normal, double *point, double *res);</code></pre>
+		<pre><code class="ccode">void   m_plane_initd(double *normal, double *point, double *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>initialize plane from normal (vec3) & point (vec3)</description>
 		<h2 id="math_plane_m_plane_from_pointsd">m_plane_from_pointsd</h2>
-		<pre><code class="ccode">void m_plane_from_pointsd(double *a, double *b, double *c, double *res);</code></pre>
+		<pre><code class="ccode">void   m_plane_from_pointsd(double *a, double *b, double *c, double *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>initialize plane from 3 points (vec3)</description>
@@ -47,42 +51,42 @@
 		<br>
 		<description><b>description: </b>plane distance to point (vec4)</description>
 		<h2 id="math_plane_m_plane_points_on_same_sided">m_plane_points_on_same_sided</h2>
-		<pre><code class="ccode">bool m_plane_points_on_same_sided(double *plane, double *a, double *b);</code></pre>
+		<pre><code class="ccode">bool   m_plane_points_on_same_sided(double *plane, double *a, double *b);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>check if two points (vec3) are on the same side of a plane</description>
 		<h2 id="math_plane_m_plane_normalized">m_plane_normalized</h2>
-		<pre><code class="ccode">void m_plane_normalized(double *plane);</code></pre>
+		<pre><code class="ccode">void   m_plane_normalized(double *plane);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>normalize plane</description>
 		<h2 id="math_plane_m_plane_initf">m_plane_initf</h2>
-		<pre><code class="ccode">void m_plane_initf(float *normal, float *point, float *res);</code></pre>
+		<pre><code class="ccode">void   m_plane_initf(float *normal, float *point, float *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>initialize plane from normal (vec3) & point (vec3)</description>
 		<h2 id="math_plane_m_plane_from_pointsf">m_plane_from_pointsf</h2>
-		<pre><code class="ccode">void m_plane_from_pointsf(float *a, float *b, float *c, float *res);</code></pre>
+		<pre><code class="ccode">void   m_plane_from_pointsf(float *a, float *b, float *c, float *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>initialize plane from 3 points (vec3)</description>
 		<h2 id="math_plane_m_plane_distance_to_pointf">m_plane_distance_to_pointf</h2>
-		<pre><code class="ccode">float m_plane_distance_to_pointf(float *plane, float *point);</code></pre>
+		<pre><code class="ccode">float  m_plane_distance_to_pointf(float *plane, float *point);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>plane distance to point (vec3)</description>
 		<h2 id="math_plane_m_plane_distance_to_point4f">m_plane_distance_to_point4f</h2>
-		<pre><code class="ccode">float m_plane_distance_to_point4f(float *plane, float *point);</code></pre>
+		<pre><code class="ccode">float  m_plane_distance_to_point4f(float *plane, float *point);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>plane distance to point (vec4)</description>
 		<h2 id="math_plane_m_plane_points_on_same_sidef">m_plane_points_on_same_sidef</h2>
-		<pre><code class="ccode">bool m_plane_points_on_same_sidef(float *plane, float *a, float *b);</code></pre>
+		<pre><code class="ccode">bool   m_plane_points_on_same_sidef(float *plane, float *a, float *b);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>check if two points (vec3) are on the same side of a plane</description>
 		<h2 id="math_plane_m_plane_normalizef">m_plane_normalizef</h2>
-		<pre><code class="ccode">void m_plane_normalizef(float *plane);</code></pre>
+		<pre><code class="ccode">void   m_plane_normalizef(float *plane);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>normalize plane</description>
@@ -110,6 +114,8 @@
 		<a class="section" href="math_float_types.html">float_types</a>
 		<a href="core.html">core</a>
 		<a href="image.html">image</a>
+		<a href="graphics.html">graphics</a>
+		<a href="input.html">input</a>
 		<a href="util.html">util</a>
 		<a href="documentation.html">documentation</a>
 	</nav>

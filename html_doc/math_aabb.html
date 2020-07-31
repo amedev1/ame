@@ -27,7 +27,7 @@
 		<description><b>description: </b>aabb float</description>
 		<h2 id="math_aabb_Aabbd">Aabbd</h2>
 		<pre><code class="ccode">typedef struct {
-  vec3d center;
+  vec3d  center;
   double dimension;
 } Aabbd;
 </code></pre>
@@ -45,7 +45,7 @@
 		<description><b>description: </b>aabb2 float</description>
 		<h2 id="math_aabb_Aabb2d">Aabb2d</h2>
 		<pre><code class="ccode">typedef struct {
-  vec2d center;
+  vec2d  center;
   double dimension;
 } Aabb2d;
 </code></pre>
@@ -81,22 +81,22 @@
 		<br>
 		<description><b>description: </b>length of aabb</description>
 		<h2 id="math_aabb_m_aabb_pointd">m_aabb_pointd</h2>
-		<pre><code class="ccode">void m_aabb_pointd(double *aabb, AaabbId point, double *res);</code></pre>
+		<pre><code class="ccode">void   m_aabb_pointd(double *aabb, AaabbId point, double *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>get point (vec3) from aabb</description>
 		<h2 id="math_aabb_m_aabb_childd">m_aabb_childd</h2>
-		<pre><code class="ccode">void m_aabb_childd(double *aabb, AaabbId child, double *res);</code></pre>
+		<pre><code class="ccode">void   m_aabb_childd(double *aabb, AaabbId child, double *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>get child aabb from aabb</description>
 		<h2 id="math_aabb_m_aabb_subdivided">m_aabb_subdivided</h2>
-		<pre><code class="ccode">void m_aabb_subdivided(double *aabb, uint32 division, AaabbId index, double *res);</code></pre>
+		<pre><code class="ccode">void   m_aabb_subdivided(double *aabb, uint32 division, AaabbId index, double *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>subdivide aabb</description>
 		<h2 id="math_aabb_m_aabb_containsd">m_aabb_containsd</h2>
-		<pre><code class="ccode">bool m_aabb_containsd(double *aabb, double *point);</code></pre>
+		<pre><code class="ccode">bool   m_aabb_containsd(double *aabb, double *point);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>aabb contains point (vec3)</description>
@@ -106,72 +106,72 @@
 		<br>
 		<description><b>description: </b>length of aabb ad</description>
 		<h2 id="math_aabb_m_aabb2_pointd">m_aabb2_pointd</h2>
-		<pre><code class="ccode">void m_aabb2_pointd(double *aabb, AaabbId point, double *res);</code></pre>
+		<pre><code class="ccode">void   m_aabb2_pointd(double *aabb, AaabbId point, double *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>get point (vec2) from aabb 2d</description>
 		<h2 id="math_aabb_m_aabb2_childd">m_aabb2_childd</h2>
-		<pre><code class="ccode">void m_aabb2_childd(double *aabb, AaabbId child, double *res);</code></pre>
+		<pre><code class="ccode">void   m_aabb2_childd(double *aabb, AaabbId child, double *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>get child aabb 2d from aabb 2d</description>
 		<h2 id="math_aabb_m_aabb2_subdivided">m_aabb2_subdivided</h2>
-		<pre><code class="ccode">void m_aabb2_subdivided(double *aabb, uint32 division, AaabbId index, double *res);</code></pre>
+		<pre><code class="ccode">void   m_aabb2_subdivided(double *aabb, uint32 division, AaabbId index, double *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>subdivide aabb 2d</description>
 		<h2 id="math_aabb_m_aabb2_containsd">m_aabb2_containsd</h2>
-		<pre><code class="ccode">bool m_aabb2_containsd(double *aabb, double *point);</code></pre>
+		<pre><code class="ccode">bool   m_aabb2_containsd(double *aabb, double *point);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>aabb 2d contains point (vec2)</description>
 		<h2 id="math_aabb_m_aabb_lengthf">m_aabb_lengthf</h2>
-		<pre><code class="ccode">float m_aabb_lengthf(float *aabb);</code></pre>
+		<pre><code class="ccode">float  m_aabb_lengthf(float *aabb);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>length of aabb</description>
 		<h2 id="math_aabb_m_aabb_pointf">m_aabb_pointf</h2>
-		<pre><code class="ccode">void m_aabb_pointf(float *aabb, AaabbId point, float *res);</code></pre>
+		<pre><code class="ccode">void   m_aabb_pointf(float *aabb, AaabbId point, float *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>get point (vec3) from aabb</description>
 		<h2 id="math_aabb_m_aabb_childf">m_aabb_childf</h2>
-		<pre><code class="ccode">void m_aabb_childf(float *aabb, AaabbId child, float *res);</code></pre>
+		<pre><code class="ccode">void   m_aabb_childf(float *aabb, AaabbId child, float *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>get child aabb from aabb</description>
 		<h2 id="math_aabb_m_aabb_subdividef">m_aabb_subdividef</h2>
-		<pre><code class="ccode">void m_aabb_subdividef(float *aabb, uint32 division, AaabbId index, float *res);</code></pre>
+		<pre><code class="ccode">void   m_aabb_subdividef(float *aabb, uint32 division, AaabbId index, float *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>subdivide aabb</description>
 		<h2 id="math_aabb_m_aabb_containsf">m_aabb_containsf</h2>
-		<pre><code class="ccode">bool m_aabb_containsf(float *aabb, float *point);</code></pre>
+		<pre><code class="ccode">bool   m_aabb_containsf(float *aabb, float *point);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>aabb contains point (vec3)</description>
 		<h2 id="math_aabb_m_aabb2_lengthf">m_aabb2_lengthf</h2>
-		<pre><code class="ccode">float m_aabb2_lengthf(float *aabb);</code></pre>
+		<pre><code class="ccode">float  m_aabb2_lengthf(float *aabb);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>length of aabb 2d</description>
 		<h2 id="math_aabb_m_aabb2_pointf">m_aabb2_pointf</h2>
-		<pre><code class="ccode">void m_aabb2_pointf(float *aabb, AaabbId point, float *res);</code></pre>
+		<pre><code class="ccode">void   m_aabb2_pointf(float *aabb, AaabbId point, float *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>get point (vec2) from aabb 2d</description>
 		<h2 id="math_aabb_m_aabb2_childf">m_aabb2_childf</h2>
-		<pre><code class="ccode">void m_aabb2_childf(float *aabb, AaabbId child, float *res);</code></pre>
+		<pre><code class="ccode">void   m_aabb2_childf(float *aabb, AaabbId child, float *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>get child aabb 2d from aabb 2d</description>
 		<h2 id="math_aabb_m_aabb2_subdividef">m_aabb2_subdividef</h2>
-		<pre><code class="ccode">void m_aabb2_subdividef(float *aabb, uint32 division, AaabbId index, float *res);</code></pre>
+		<pre><code class="ccode">void   m_aabb2_subdividef(float *aabb, uint32 division, AaabbId index, float *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>subdivide aabb 2d</description>
 		<h2 id="math_aabb_m_aabb2_containsf">m_aabb2_containsf</h2>
-		<pre><code class="ccode">bool m_aabb2_containsf(float *aabb, float *point);</code></pre>
+		<pre><code class="ccode">bool   m_aabb2_containsf(float *aabb, float *point);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>aabb 2d contains point (vec2)</description>
@@ -199,6 +199,8 @@
 		<a class="section" href="math_float_types.html">float_types</a>
 		<a href="core.html">core</a>
 		<a href="image.html">image</a>
+		<a href="graphics.html">graphics</a>
+		<a href="input.html">input</a>
 		<a href="util.html">util</a>
 		<a href="documentation.html">documentation</a>
 	</nav>

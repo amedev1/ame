@@ -222,7 +222,7 @@
 		<pre><code class="ccode">bool i_gif_add_image_descriptor(Gif_ptr gif, uint32 left, uint32 top, uint32 width, uint32 height, const GifPalette *palette, const uint8 *indices, bool sort, bool interlace);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_gif_i_gif_add_frame">i_gif_add_frame</h2>
-		<pre><code class="ccode">bool i_gif_add_frame(Gif_ptr gif, const Image_ptr image, uint16 delay);</code></pre>
+		<pre><code class="ccode">bool i_gif_add_frame(Gif_ptr gif, const Image_ptr image, uint16 delay, bool dithering);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_gif_i_gif_extract_frames">i_gif_extract_frames</h2>
 		<pre><code class="ccode">bool i_gif_extract_frames(const Gif_ptr gif, Image_ptr **frames);</code></pre>
@@ -244,6 +244,8 @@
 		<a class="section" href="image_color_palette.html">color palette</a>
 		<a class="section" href="image_bitmap.html">bitmap</a>
 		<a class="current_section" href="image_gif.html">gif</a>
+		<a href="graphics.html">graphics</a>
+		<a href="input.html">input</a>
 		<a href="util.html">util</a>
 		<a href="documentation.html">documentation</a>
 	</nav>

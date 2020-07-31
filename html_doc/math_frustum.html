@@ -18,12 +18,16 @@
 } Frustumf;
 </code></pre>
 		<description><b>type:</b> <i>C struct</i></description>
+		<br>
+		<description><b>description: </b>frustum float</description>
 		<h2 id="math_frustum_Frustumd">Frustumd</h2>
 		<pre><code class="ccode">typedef struct {
   Planed planes[6];
 } Frustumd;
 </code></pre>
 		<description><b>type:</b> <i>C struct</i></description>
+		<br>
+		<description><b>description: </b>frustum double</description>
 		<h2 id="math_frustum_Spheref">Spheref</h2>
 		<pre><code class="ccode">typedef struct {
   vec3f center;
@@ -31,13 +35,17 @@
 } Spheref;
 </code></pre>
 		<description><b>type:</b> <i>C struct</i></description>
+		<br>
+		<description><b>description: </b>sphere float</description>
 		<h2 id="math_frustum_Sphered">Sphered</h2>
 		<pre><code class="ccode">typedef struct {
-  vec3d center;
+  vec3d  center;
   double radius;
 } Sphered;
 </code></pre>
 		<description><b>type:</b> <i>C struct</i></description>
+		<br>
+		<description><b>description: </b>sphere double</description>
 		<h2 id="math_frustum_FrustumResult">FrustumResult</h2>
 		<description><b>type:</b> <i>C enum</i></description>
 		<br>
@@ -59,7 +67,7 @@
 			</tbody>
 		</table>
 		<h2 id="math_frustum_m_frustum_initd">m_frustum_initd</h2>
-		<pre><code class="ccode">void m_frustum_initd(double *view, double *projection, double screen_depth, double *res);</code></pre>
+		<pre><code class="ccode">void          m_frustum_initd(double *view, double *projection, double screen_depth, double *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description>
@@ -85,7 +93,7 @@
 		<br>
 		<description><b>description: </b>test a cube with frustum</description>
 		<h2 id="math_frustum_m_frustum_initf">m_frustum_initf</h2>
-		<pre><code class="ccode">void m_frustum_initf(float *view, float *projection, float screen_depth, float *res);</code></pre>
+		<pre><code class="ccode">void          m_frustum_initf(float *view, float *projection, float screen_depth, float *res);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description>
@@ -134,6 +142,8 @@
 		<a class="section" href="math_float_types.html">float_types</a>
 		<a href="core.html">core</a>
 		<a href="image.html">image</a>
+		<a href="graphics.html">graphics</a>
+		<a href="input.html">input</a>
 		<a href="util.html">util</a>
 		<a href="documentation.html">documentation</a>
 	</nav>

@@ -295,6 +295,11 @@
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>reset vector</description>
+		<h2 id="core_containers_c_stack_last">c_stack_last</h2>
+		<pre><code class="prepro">#define c_stack_last(s)  dbuffer_get(s, dbuffer_count(s) - 1)</code></pre>
+		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<br>
+		<description><b>description: </b>get last element of fixed stack</description>
 		<h2 id="core_containers_c_queue_enqueue">c_queue_enqueue</h2>
 		<pre><code class="prepro">#define c_queue_enqueue    dbuffer_push</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
@@ -304,7 +309,7 @@
 		<pre><code class="prepro">#define c_queue_add(q)     dbuffer_add(q, 1)</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
-		<description><b>description: </b>enqueue element in queur and return pointer</description>
+		<description><b>description: </b>enqueue element in queue and return pointer</description>
 		<h2 id="core_containers_c_queue_dequeue">c_queue_dequeue</h2>
 		<pre><code class="prepro">#define c_queue_dequeue(q) dbuffer_remove(q, 0)</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
@@ -326,7 +331,7 @@
 		<br>
 		<description><b>description: </b>reset vector</description>
 		<h2 id="core_containers_fbuffer_struct">fbuffer_struct</h2>
-		<pre><code class="prepro">#define fbuffer_struct(a, t, n) struct { uint size; uint length; t data[n]; } a</code></pre>
+		<pre><code class="prepro">#define fbuffer_struct(a, t, n) struct { uint size; uint length; t array[n]; } a</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>declare a fixed buffer as a struct</description>
@@ -341,17 +346,17 @@
 		<br>
 		<description><b>description: </b>declare & initialize a fixed buffer on the stack</description>
 		<h2 id="core_containers_fbuffer_push">fbuffer_push</h2>
-		<pre><code class="prepro">#define fbuffer_push(a, v) (fbuffer_name(a).length < fbuffer_name(a).size ? a[fbuffer_name(a).length++] = v : 0)</code></pre>
+		<pre><code class="prepro">#define fbuffer_push(a, v) (fbuffer_length(a) < fbuffer_size(a) ? a[fbuffer_length(a)++] = v : 0)</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>push value in fixed buffer</description>
 		<h2 id="core_containers_fbuffer_count">fbuffer_count</h2>
-		<pre><code class="prepro">#define fbuffer_count(a)   fbuffer_name(a).length</code></pre>
+		<pre><code class="prepro">#define fbuffer_count(a)   fbuffer_length(a)</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>return number of elements in fixed buffer</description>
 		<h2 id="core_containers_fbuffer_add">fbuffer_add</h2>
-		<pre><code class="prepro">#define fbuffer_add(a, n)  (fbuffer_name(a).length < fbuffer_name(a).size ? fbuffer_length(a)+=(n), &(a)[fbuffer_length(a)-(n)] : NULL)</code></pre>
+		<pre><code class="prepro">#define fbuffer_add(a, n)  (fbuffer_length(a) < fbuffer_size(a) ? fbuffer_length(a)+=(n), &(a)[fbuffer_length(a)-(n)] : NULL)</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>add element to fixed buffer & return pointer</description>
@@ -361,12 +366,12 @@
 		<br>
 		<description><b>description: </b>get last element of fixed buffer</description>
 		<h2 id="core_containers_fbuffer_pop">fbuffer_pop</h2>
-		<pre><code class="prepro">#define fbuffer_pop(a)     (fbuffer_name(a).length ? fbuffer_name(a).length-- : 0)</code></pre>
+		<pre><code class="prepro">#define fbuffer_pop(a)     (fbuffer_length(a) ? fbuffer_length(a)-- : 0)</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>remove last element of fixed buffer</description>
 		<h2 id="core_containers_fbuffer_free">fbuffer_free</h2>
-		<pre><code class="prepro">#define fbuffer_free(a)    fbuffer_name(a).length = 0</code></pre>
+		<pre><code class="prepro">#define fbuffer_free(a)    fbuffer_length(a) = 0</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>clear fixed buffer</description>
@@ -376,7 +381,7 @@
 		<br>
 		<description><b>description: </b>get pointer to element of fixed buffer</description>
 		<h2 id="core_containers_fbuffer_reset">fbuffer_reset</h2>
-		<pre><code class="prepro">#define fbuffer_reset(a)   (fbuffer_name(a).length = 0)</code></pre>
+		<pre><code class="prepro">#define fbuffer_reset(a)   (fbuffer_length(a) = 0)</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>reset fixed buffer</description>
@@ -535,6 +540,11 @@
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>reset fixed stack</description>
+		<h2 id="core_containers_c_fstack_last">c_fstack_last</h2>
+		<pre><code class="prepro">#define c_fstack_last(s)  fbuffer_get(s, fbuffer_count(s) - 1)</code></pre>
+		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<br>
+		<description><b>description: </b>get last element of fixed stack</description>
 		<h2 id="core_containers_fqueue_struct">fqueue_struct</h2>
 		<pre><code class="prepro">#define fqueue_struct       fbuffer_struct</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
@@ -723,7 +733,10 @@
 		<a class="section" href="core_commands.html">commands</a>
 		<a class="section" href="core_multi-threading.html">multi-threading</a>
 		<a class="section" href="core_streams.html">streams</a>
+		<a class="section" href="core_Window.html">Window</a>
 		<a href="image.html">image</a>
+		<a href="graphics.html">graphics</a>
+		<a href="input.html">input</a>
 		<a href="util.html">util</a>
 		<a href="documentation.html">documentation</a>
 	</nav>

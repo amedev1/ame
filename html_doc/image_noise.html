@@ -136,6 +136,9 @@
 				<td><code>  NOISE_MIXER_TURBULENCE</code></td>
 				</tr>
 				<tr>
+				<td><code>  NOISE_MIXER_RIDGE</code></td>
+				</tr>
+				<tr>
 				<td><code>  NOISE_MIXER_MARBLE</code></td>
 				</tr>
 				<tr>
@@ -155,8 +158,12 @@
   uint           octaves;
   float          lacunarity;
   float          gain;
-  uint           marble_period;
-  float          wood_coef;
+  union NoiseData
+  {
+    uint         marble_period;
+    float        wood_coef;
+    float        ridge_offset;
+  } data;
 } NoiseMixer;
 </code></pre>
 		<description><b>type:</b> <i>C struct</i></description>
@@ -182,6 +189,12 @@
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_noise_i_noise_turbulence_3d">i_noise_turbulence_3d</h2>
 		<pre><code class="ccode">float i_noise_turbulence_3d(NoiseSource *source, uint octaves, float lacunarity, float gain, float x, float y, float z);</code></pre>
+		<description><b>type:</b> <i>C function</i></description>
+		<h2 id="image_noise_i_noise_ridge_2d">i_noise_ridge_2d</h2>
+		<pre><code class="ccode">float i_noise_ridge_2d(NoiseSource *source, uint octaves, float lacunarity, float gain, float offset, float x, float y);</code></pre>
+		<description><b>type:</b> <i>C function</i></description>
+		<h2 id="image_noise_i_noise_ridge_3d">i_noise_ridge_3d</h2>
+		<pre><code class="ccode">float i_noise_ridge_3d(NoiseSource *source, uint octaves, float lacunarity, float gain, float offset, float x, float y, float z);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_noise_i_noise_planet_2d">i_noise_planet_2d</h2>
 		<pre><code class="ccode">float i_noise_planet_2d(NoiseSource *source, uint octaves, float lacunarity, float gain, float x, float y);</code></pre>
@@ -231,6 +244,8 @@
 		<a class="section" href="image_color_palette.html">color palette</a>
 		<a class="section" href="image_bitmap.html">bitmap</a>
 		<a class="section" href="image_gif.html">gif</a>
+		<a href="graphics.html">graphics</a>
+		<a href="input.html">input</a>
 		<a href="util.html">util</a>
 		<a href="documentation.html">documentation</a>
 	</nav>

@@ -15,48 +15,74 @@
 		<h2 id="core_defines_AME_DEBUG">AME_DEBUG</h2>
 		<pre><code class="prepro">#define AME_DEBUG</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<br>
+		<description><b>description: </b>enabled in debug config</description>
 		<h2 id="core_defines_AME_WINDOWS">AME_WINDOWS</h2>
 		<pre><code class="prepro">#define AME_WINDOWS</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<br>
+		<description><b>description: </b>build for windows</description>
 		<h2 id="core_defines_AME_64">AME_64</h2>
 		<pre><code class="prepro">#define AME_64</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<br>
+		<description><b>description: </b>64 bits build</description>
 		<h2 id="core_defines_AME_32">AME_32</h2>
 		<pre><code class="prepro">#define AME_32</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<br>
+		<description><b>description: </b>32 bits build</description>
 		<h2 id="core_defines_AME_ANDROID">AME_ANDROID</h2>
 		<pre><code class="prepro">#define AME_ANDROID</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<br>
+		<description><b>description: </b>build for android</description>
 		<h2 id="core_defines_AME_32">AME_32</h2>
 		<pre><code class="prepro">#define AME_32</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<h2 id="core_defines_AME_COMPILER_GCC">AME_COMPILER_GCC</h2>
 		<pre><code class="prepro">#define AME_COMPILER_GCC</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<br>
+		<description><b>description: </b>compiler is gcc</description>
 		<h2 id="core_defines_AME_COMPILER_MSVC">AME_COMPILER_MSVC</h2>
 		<pre><code class="prepro">#define AME_COMPILER_MSVC</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<br>
+		<description><b>description: </b>compiler is msvc</description>
 		<h2 id="core_defines_C_PATH_SEPARATOR">C_PATH_SEPARATOR</h2>
 		<pre><code class="prepro">#define C_PATH_SEPARATOR "/"</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<br>
+		<description><b>description: </b>path separator on android</description>
 		<h2 id="core_defines_C_PATH_SEPARATOR_CHAR">C_PATH_SEPARATOR_CHAR</h2>
 		<pre><code class="prepro">#define C_PATH_SEPARATOR_CHAR '/'</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<br>
+		<description><b>description: </b>path separator char on android</description>
 		<h2 id="core_defines_C_DYNAMIC_LIBRARY_EXTENSION">C_DYNAMIC_LIBRARY_EXTENSION</h2>
 		<pre><code class="prepro">#define C_DYNAMIC_LIBRARY_EXTENSION "so"</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<br>
+		<description><b>description: </b>dynamic library extension for android</description>
 		<h2 id="core_defines_NOMINMAX">NOMINMAX</h2>
 		<pre><code class="prepro">#define NOMINMAX</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<h2 id="core_defines_C_PATH_SEPARATOR">C_PATH_SEPARATOR</h2>
 		<pre><code class="prepro">#define C_PATH_SEPARATOR "\\"</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<br>
+		<description><b>description: </b>path separator on windows</description>
 		<h2 id="core_defines_C_PATH_SEPARATOR_CHAR">C_PATH_SEPARATOR_CHAR</h2>
 		<pre><code class="prepro">#define C_PATH_SEPARATOR_CHAR '\\'</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<br>
+		<description><b>description: </b>path separator char on windows</description>
 		<h2 id="core_defines_C_DYNAMIC_LIBRARY_EXTENSION">C_DYNAMIC_LIBRARY_EXTENSION</h2>
 		<pre><code class="prepro">#define C_DYNAMIC_LIBRARY_EXTENSION "dll"</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<br>
+		<description><b>description: </b>dynamic library extension for windows</description>
 		<h2 id="core_defines_INTERNAL_STRINGIFY">INTERNAL_STRINGIFY</h2>
 		<pre><code class="prepro">#define INTERNAL_STRINGIFY(x) #x</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
@@ -94,9 +120,13 @@
 		<h2 id="core_defines_AME_PRINT">AME_PRINT</h2>
 		<pre><code class="prepro">#define AME_PRINT(message) __android_log_write(ANDROID_LOG_INFO, "ame", message)</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<br>
+		<description><b>description: </b>print message on android</description>
 		<h2 id="core_defines_AME_PRINTF">AME_PRINTF</h2>
 		<pre><code class="prepro">#define AME_PRINTF(format, ...) __android_log_print(ANDROID_LOG_INFO, "ame", format, __VA_ARGS__)</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<br>
+		<description><b>description: </b>print formatted message on android</description>
 		<h2 id="core_defines_INTERNAL_AME_CRITICAL">INTERNAL_AME_CRITICAL</h2>
 		<pre><code class="prepro">#define INTERNAL_AME_CRITICAL(condition) if (IsDebuggerPresent()) { __debugbreak(); } else { AME_PRINTF("critical error in %s ( line %d ) : %s", __FILE__, __LINE__, #condition); exit(EXIT_FAILURE); }</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
@@ -135,7 +165,7 @@
 		<pre><code class="prepro">#define __FILENAME__ (__FILE__ + SOURCE_PATH_SIZE)</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
-		<description><b>description: </b>short version of __FILE__</description>
+		<description><b>description: </b>short version of __FILE__ macro</description>
 		<h2 id="core_defines_AME_BASE_TYPES">AME_BASE_TYPES</h2>
 		<pre><code class="prepro">#define AME_BASE_TYPES</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
@@ -228,7 +258,10 @@
 		<a class="section" href="core_commands.html">commands</a>
 		<a class="section" href="core_multi-threading.html">multi-threading</a>
 		<a class="section" href="core_streams.html">streams</a>
+		<a class="section" href="core_Window.html">Window</a>
 		<a href="image.html">image</a>
+		<a href="graphics.html">graphics</a>
+		<a href="input.html">input</a>
 		<a href="util.html">util</a>
 		<a href="documentation.html">documentation</a>
 	</nav>

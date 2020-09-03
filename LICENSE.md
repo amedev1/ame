@@ -16,6 +16,6 @@ Code reference:
 # References
 
 Below are projects that gave me ideas to write some of the code (but no code was taken directly):
- - [µnit](https://nemequ.github.io/munit/) - [license](https://github.com/nothings/stb/blob/master/LICENSE) - concept for `ftest` library
- - [sds](https://github.com/antirez/sds) -  [license](https://github.com/nothings/stb/blob/master/LICENSE) - concept for `cstr` dynamic strings
+ - [µnit](https://nemequ.github.io/munit/) - [license](https://github.com/nemequ/munit/blob/master/COPYING) - concept for `ftest` library
+ - [sds](https://github.com/antirez/sds) -  [license](https://github.com/antirez/sds/blob/master/LICENSE) - concept for `cstr` dynamic strings
  - [GLFW](https://github.com/glfw/glfw) - [license](https://github.com/glfw/glfw/blob/master/LICENSE.md) - concept for `window` functions

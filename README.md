@@ -14,9 +14,9 @@ Feel free to download it to quickly generate HTML documentation for your C code.
 
 I also write articles in a [blog](https://ame-dev.com), programming updates on ame project, as well as short reviews of movies, TV series, video games, etc.
 
-# Mentions
+# References
 
-I found some awesome code available online, with some I was just inspired by, to try and implement the ideas myself, and others I just integrated  the code into my own because it was just great.
+I found some awesome code available online, with some I was just inspired by, to try and implement the ideas myself, and others I just integrated the code into my own because it was just great.
 I never take the code as is, I rewrite everything until I understand it correctly, and then I add my own improvements or tweaks.
 But I'm happy to list them here (and will include the appropriate licenses if I ever release ame code):
 
@@ -25,7 +25,9 @@ But I'm happy to list them here (and will include the appropriate licenses if I 
   - dynamic strings: `cstr` concept inspired by [sds](https://github.com/antirez/sds), I liked how it worked so did my own implementation
   - dynamic buffers: the famous [Stretchy buffer by Sean Barrett](https://github.com/nothings/stb/blob/master/stretchy_buffer.h), couldn't find a better way to write it
   - memory debugging: memory overshoot functions taken from [Eskil Steenberg's source code](http://www.quelsolaar.com/mergesource.zip)
-- code documentation (look and concept): Eskil Steenberg's [website](http://www.gamepipeline.org/) 
-- learn_opengl: I'm following this extremely well made tutorial and trying to implement it with my own tools (https://learnopengl.com/)
+- code documentation:
+  - look and concept: Eskil Steenberg's [website](http://www.gamepipeline.org/)
+  - syntax highlighting: powered by the amazing [prism.js](https://prismjs.com/)
+- learn_opengl: I'm following this extremely well made [site](https://learnopengl.com/) and trying to implement all the tutorials with my own tools 
 
-Many thanks to all the authors mentioned above!
+Many thanks to all mentioned above!

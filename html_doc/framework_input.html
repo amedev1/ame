@@ -18,7 +18,7 @@
 	</p>
 	<br>
 	<section class="main">
-		<h2 id="util_input_KeyboardLayout">KeyboardLayout</h2>
+		<h2 id="framework_input_KeyboardLayout">KeyboardLayout</h2>
 		<description><b>type:</b> <i>C enum</i></description>
 		<table>
 			<tbody>
@@ -36,7 +36,7 @@
 				</tr>
 			</tbody>
 		</table>
-		<h2 id="util_input_KeyState">KeyState</h2>
+		<h2 id="framework_input_KeyState">KeyState</h2>
 		<description><b>type:</b> <i>C enum</i></description>
 		<table>
 			<tbody>
@@ -51,7 +51,7 @@
 				</tr>
 			</tbody>
 		</table>
-		<h2 id="util_input_MouseButton">MouseButton</h2>
+		<h2 id="framework_input_MouseButton">MouseButton</h2>
 		<description><b>type:</b> <i>C enum</i></description>
 		<table>
 			<tbody>
@@ -69,7 +69,7 @@
 				</tr>
 			</tbody>
 		</table>
-		<h2 id="util_input_VirtualKey">VirtualKey</h2>
+		<h2 id="framework_input_VirtualKey">VirtualKey</h2>
 		<description><b>type:</b> <i>C enum</i></description>
 		<table>
 			<tbody>
@@ -411,7 +411,7 @@
 				</tr>
 			</tbody>
 		</table>
-		<h2 id="util_input_KeyboardLock">KeyboardLock</h2>
+		<h2 id="framework_input_KeyboardLock">KeyboardLock</h2>
 		<description><b>type:</b> <i>C enum</i></description>
 		<table>
 			<tbody>
@@ -429,7 +429,7 @@
 				</tr>
 			</tbody>
 		</table>
-		<h2 id="util_input_InputKey">InputKey</h2>
+		<h2 id="framework_input_InputKey">InputKey</h2>
 		<pre><code class="language-c">typedef struct {
   KeyState state;
   uint     down_count;
@@ -437,7 +437,7 @@
 } InputKey;
 </code></pre>
 		<description><b>type:</b> <i>C struct</i></description>
-		<h2 id="util_input_Mouse">Mouse</h2>
+		<h2 id="framework_input_Mouse">Mouse</h2>
 		<pre><code class="language-c">typedef struct {
   InputKey button_left;
   InputKey button_right;
@@ -446,13 +446,13 @@
 } Mouse;
 </code></pre>
 		<description><b>type:</b> <i>C struct</i></description>
-		<h2 id="util_input_Keyboard">Keyboard</h2>
+		<h2 id="framework_input_Keyboard">Keyboard</h2>
 		<pre><code class="language-c">typedef struct {
   InputKey keys[VIRTUAL_KEY_COUNT];
 } Keyboard;
 </code></pre>
 		<description><b>type:</b> <i>C struct</i></description>
-		<h2 id="util_input_InputDeviceType">InputDeviceType</h2>
+		<h2 id="framework_input_InputDeviceType">InputDeviceType</h2>
 		<description><b>type:</b> <i>C enum</i></description>
 		<table>
 			<tbody>
@@ -470,7 +470,7 @@
 				</tr>
 			</tbody>
 		</table>
-		<h2 id="util_input_InputEventType">InputEventType</h2>
+		<h2 id="framework_input_InputEventType">InputEventType</h2>
 		<description><b>type:</b> <i>C enum</i></description>
 		<table>
 			<tbody>
@@ -497,7 +497,7 @@
 				</tr>
 			</tbody>
 		</table>
-		<h2 id="util_input_InputEvent">InputEvent</h2>
+		<h2 id="framework_input_InputEvent">InputEvent</h2>
 		<pre><code class="language-c">typedef struct {
   InputDeviceType device_type;
   uint            device;
@@ -506,105 +506,105 @@
 } InputEvent;
 </code></pre>
 		<description><b>type:</b> <i>C struct</i></description>
-		<h2 id="util_input_window_input_callback">window_input_callback</h2>
+		<h2 id="framework_input_window_input_callback">window_input_callback</h2>
 		<pre><code class="language-c">typedef void(*window_input_callback)(ameWindow*, const InputEvent*);</code></pre>
 		<description><b>type:</b> <i>C typedef</i></description>
-		<h2 id="util_input_f_input_initialize">f_input_initialize</h2>
+		<h2 id="framework_input_f_input_initialize">f_input_initialize</h2>
 		<pre><code class="language-c">void f_input_initialize();</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
-		<h2 id="util_input_f_input_terminate">f_input_terminate</h2>
+		<h2 id="framework_input_f_input_terminate">f_input_terminate</h2>
 		<pre><code class="language-c">void f_input_terminate();</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
-		<h2 id="util_input_f_input_devices_refresh">f_input_devices_refresh</h2>
+		<h2 id="framework_input_f_input_devices_refresh">f_input_devices_refresh</h2>
 		<pre><code class="language-c">void f_input_devices_refresh();</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
-		<h2 id="util_input_f_input_keyboard_layout_update">f_input_keyboard_layout_update</h2>
+		<h2 id="framework_input_f_input_keyboard_layout_update">f_input_keyboard_layout_update</h2>
 		<pre><code class="language-c">void f_input_keyboard_layout_update();</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
-		<h2 id="util_input_f_input_process_message">f_input_process_message</h2>
+		<h2 id="framework_input_f_input_process_message">f_input_process_message</h2>
 		<pre><code class="language-c">void f_input_process_message(ameWindow *window, uint message, LPARAM lParam, WPARAM wParam);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
-		<h2 id="util_input_f_input_send_keyboard_down">f_input_send_keyboard_down</h2>
+		<h2 id="framework_input_f_input_send_keyboard_down">f_input_send_keyboard_down</h2>
 		<pre><code class="language-c">void f_input_send_keyboard_down(ameWindow *window, uint device, VirtualKey key);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
-		<h2 id="util_input_f_input_send_keyboard_up">f_input_send_keyboard_up</h2>
+		<h2 id="framework_input_f_input_send_keyboard_up">f_input_send_keyboard_up</h2>
 		<pre><code class="language-c">void f_input_send_keyboard_up(ameWindow *window, uint device, VirtualKey key);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
-		<h2 id="util_input_f_input_send_mouse_move">f_input_send_mouse_move</h2>
+		<h2 id="framework_input_f_input_send_mouse_move">f_input_send_mouse_move</h2>
 		<pre><code class="language-c">void f_input_send_mouse_move(ameWindow *window, uint device, int dx, int dy);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
-		<h2 id="util_input_f_input_send_mouse_wheel">f_input_send_mouse_wheel</h2>
+		<h2 id="framework_input_f_input_send_mouse_wheel">f_input_send_mouse_wheel</h2>
 		<pre><code class="language-c">void f_input_send_mouse_wheel(ameWindow *window, uint device, int delta);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
-		<h2 id="util_input_f_input_send_mouse_button_down">f_input_send_mouse_button_down</h2>
+		<h2 id="framework_input_f_input_send_mouse_button_down">f_input_send_mouse_button_down</h2>
 		<pre><code class="language-c">void f_input_send_mouse_button_down(ameWindow *window, uint device, MouseButton button);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
-		<h2 id="util_input_f_input_send_mouse_button_up">f_input_send_mouse_button_up</h2>
+		<h2 id="framework_input_f_input_send_mouse_button_up">f_input_send_mouse_button_up</h2>
 		<pre><code class="language-c">void f_input_send_mouse_button_up(ameWindow *window, uint device, MouseButton button);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
-		<h2 id="util_input_f_input_state_shift">f_input_state_shift</h2>
+		<h2 id="framework_input_f_input_state_shift">f_input_state_shift</h2>
 		<pre><code class="language-c">void f_input_state_shift();</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>--> key up becomes idle</description>
-		<h2 id="util_input_f_input_keyboard_get">f_input_keyboard_get</h2>
+		<h2 id="framework_input_f_input_keyboard_get">f_input_keyboard_get</h2>
 		<pre><code class="language-c">void f_input_keyboard_get(uint index, Keyboard *keyboard);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
-		<h2 id="util_input_f_input_mouse_get">f_input_mouse_get</h2>
+		<h2 id="framework_input_f_input_mouse_get">f_input_mouse_get</h2>
 		<pre><code class="language-c">void f_input_mouse_get(uint index, Mouse *mouse);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
-		<h2 id="util_input_f_input_key_to_char">f_input_key_to_char</h2>
+		<h2 id="framework_input_f_input_key_to_char">f_input_key_to_char</h2>
 		<pre><code class="language-c">char f_input_key_to_char(VirtualKey key, KeyboardLayout layout, bool shift, bool caps, bool alt_gr);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
-		<h2 id="util_input_f_input_key_to_char_from_device">f_input_key_to_char_from_device</h2>
+		<h2 id="framework_input_f_input_key_to_char_from_device">f_input_key_to_char_from_device</h2>
 		<pre><code class="language-c">char f_input_key_to_char_from_device(uint device, VirtualKey key);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
-		<h2 id="util_input_f_input_active_layout">f_input_active_layout</h2>
+		<h2 id="framework_input_f_input_active_layout">f_input_active_layout</h2>
 		<pre><code class="language-c">KeyboardLayout f_input_active_layout();</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
-		<h2 id="util_input_f_input_keyboard_is_key_up">f_input_keyboard_is_key_up</h2>
+		<h2 id="framework_input_f_input_keyboard_is_key_up">f_input_keyboard_is_key_up</h2>
 		<pre><code class="language-c">bool f_input_keyboard_is_key_up(uint device, VirtualKey key);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
-		<h2 id="util_input_f_input_keyboard_is_key_down">f_input_keyboard_is_key_down</h2>
+		<h2 id="framework_input_f_input_keyboard_is_key_down">f_input_keyboard_is_key_down</h2>
 		<pre><code class="language-c">bool f_input_keyboard_is_key_down(uint device, VirtualKey key);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
-		<h2 id="util_input_f_input_keyboard_is_shift_down">f_input_keyboard_is_shift_down</h2>
+		<h2 id="framework_input_f_input_keyboard_is_shift_down">f_input_keyboard_is_shift_down</h2>
 		<pre><code class="language-c">bool f_input_keyboard_is_shift_down(uint device);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
-		<h2 id="util_input_f_input_keyboard_is_alt_gr_down">f_input_keyboard_is_alt_gr_down</h2>
+		<h2 id="framework_input_f_input_keyboard_is_alt_gr_down">f_input_keyboard_is_alt_gr_down</h2>
 		<pre><code class="language-c">bool f_input_keyboard_is_alt_gr_down(uint device);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
-		<h2 id="util_input_f_input_update_keyboard_locks">f_input_update_keyboard_locks</h2>
+		<h2 id="framework_input_f_input_update_keyboard_locks">f_input_update_keyboard_locks</h2>
 		<pre><code class="language-c">void f_input_update_keyboard_locks();</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
-		<h2 id="util_input_f_input_keyboard_lock_caps_on">f_input_keyboard_lock_caps_on</h2>
+		<h2 id="framework_input_f_input_keyboard_lock_caps_on">f_input_keyboard_lock_caps_on</h2>
 		<pre><code class="language-c">bool f_input_keyboard_lock_caps_on();</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
-		<h2 id="util_input_f_input_keyboard_lock_num_on">f_input_keyboard_lock_num_on</h2>
+		<h2 id="framework_input_f_input_keyboard_lock_num_on">f_input_keyboard_lock_num_on</h2>
 		<pre><code class="language-c">bool f_input_keyboard_lock_num_on();</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
-		<h2 id="util_input_f_input_keyboard_lock_scroll_on">f_input_keyboard_lock_scroll_on</h2>
+		<h2 id="framework_input_f_input_keyboard_lock_scroll_on">f_input_keyboard_lock_scroll_on</h2>
 		<pre><code class="language-c">bool f_input_keyboard_lock_scroll_on();</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
-		<h2 id="util_input_f_input_event_key">f_input_event_key</h2>
+		<h2 id="framework_input_f_input_event_key">f_input_event_key</h2>
 		<pre><code class="language-c">VirtualKey  f_input_event_key(const InputEvent *event);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
-		<h2 id="util_input_f_input_event_mouse_button">f_input_event_mouse_button</h2>
+		<h2 id="framework_input_f_input_event_mouse_button">f_input_event_mouse_button</h2>
 		<pre><code class="language-c">MouseButton f_input_event_mouse_button(const InputEvent *event);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
-		<h2 id="util_input_f_input_event_move_offset">f_input_event_move_offset</h2>
+		<h2 id="framework_input_f_input_event_move_offset">f_input_event_move_offset</h2>
 		<pre><code class="language-c">void        f_input_event_move_offset(const InputEvent *event, int* x_offset, int* y_offset);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
-		<h2 id="util_input_f_input_event_delta">f_input_event_delta</h2>
+		<h2 id="framework_input_f_input_event_delta">f_input_event_delta</h2>
 		<pre><code class="language-c">int         f_input_event_delta(const InputEvent *event);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
-		<h2 id="util_input_f_input_cursor_get">f_input_cursor_get</h2>
+		<h2 id="framework_input_f_input_cursor_get">f_input_cursor_get</h2>
 		<pre><code class="language-c">void        f_input_cursor_get(int *x, int *y);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
-		<h2 id="util_input_f_input_cursor_set">f_input_cursor_set</h2>
+		<h2 id="framework_input_f_input_cursor_set">f_input_cursor_set</h2>
 		<pre><code class="language-c">void        f_input_cursor_set(int x, int y);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
-		<h2 id="util_input_f_input_cursor_center_screen">f_input_cursor_center_screen</h2>
+		<h2 id="framework_input_f_input_cursor_center_screen">f_input_cursor_center_screen</h2>
 		<pre><code class="language-c">void        f_input_cursor_center_screen();</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 	</section>
@@ -617,14 +617,12 @@
 		<a href="image.html">image</a>
 		<a href="graphics.html">graphics</a>
 		<a href="util.html">util</a>
-		<a class="section" href="util_C_parsing.html">C parsing</a>
-		<a class="section" href="util_code_doc_generation.html">code doc generation</a>
-		<a class="section" href="util_HTML_generation.html">HTML generation</a>
-		<a class="section" href="util_framework.html">framework</a>
-		<a class="section" href="util_framework_common.html">framework_common</a>
-		<a class="section" href="util_framework_camera.html">framework_camera</a>
-		<a class="current_section" href="util_input.html">input</a>
-		<a class="section" href="util_Window.html">Window</a>
+		<a href="framework.html">framework</a>
+		<a class="section" href="framework_framework.html">framework</a>
+		<a class="section" href="framework_framework_common.html">framework_common</a>
+		<a class="section" href="framework_framework_camera.html">framework_camera</a>
+		<a class="current_section" href="framework_input.html">input</a>
+		<a class="section" href="framework_Window.html">Window</a>
 		<a href="documentation.html">documentation</a>
 		<a href="learn_opengl_-_getting_started.html">learn_opengl - getting started</a>
 	</nav>

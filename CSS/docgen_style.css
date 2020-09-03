@@ -103,6 +103,7 @@ section{
 	line-height:110%;
 }
 
+/*
 code{
 	display:block;
 	padding:0.8%;
@@ -124,6 +125,7 @@ code{
 	color:#2e7fdb;
 	background-color:#4c4a4a;
 }
+*/
 
 table{
 	border:solid 1px #ffffff;
@@ -138,4 +140,11 @@ td{
 	border:solid 1px #ffffff;
 	padding-left:14px;
 	padding-right:14px;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }

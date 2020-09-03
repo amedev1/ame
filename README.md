@@ -1,7 +1,7 @@
 # Another Memory Ends
 
 Welcome to ame, a passion project exclusively in C.
-For now it consists of libraries and small tools, currently being converted from C++ to C.
+For now it consists of libraries, small tools, and examples, currently being converted from C++ to C.
 See release folder for binary versions of tools.
 
 # Code Documentation
@@ -26,5 +26,6 @@ But I'm happy to list them here (and will include the appropriate licenses if I 
   - dynamic buffers: the famous [Stretchy buffer by Sean Barrett](https://github.com/nothings/stb/blob/master/stretchy_buffer.h), couldn't find a better way to write it
   - memory debugging: memory overshoot functions taken from [Eskil Steenberg's source code](http://www.quelsolaar.com/mergesource.zip)
 - code documentation (look and concept): Eskil Steenberg's [website](http://www.gamepipeline.org/) 
+- learn_opengl: I'm following this extremely well made tutorial and trying to implement it with my own tools (https://learnopengl.com/)
 
 Many thanks to all the authors mentioned above!

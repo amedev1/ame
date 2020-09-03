@@ -11,7 +11,7 @@ Code reference:
  - [Stretchy buffer](https://github.com/nothings/stb/blob/master/stretchy_buffer.h) by Sean Barrett - [license](https://github.com/nothings/stb/blob/master/LICENSE) - `dbuffer` macros, amended with insert/remove
  - [Memory debugging functions](http://gamepipeline.org/forge_Debugging_.html) by [Eskil Steenberg](https://www.twitter.com/quelsolaar/) - [link](http://www.quelsolaar.com/)
  - [Gamepipeline.org](http://gamepipeline.org/) by [Eskil Steenberg](https://www.twitter.com/quelsolaar/) - look and concept for `code_doc_generator`
- - [learn_opengl](https://learnopengl.com/) by [Joey de Vries](https://twitter.com/JoeyDeVriez) - [license](https://creativecommons.org/licenses/by/4.0/legalcode) - tutorial exmaples and images
+ - [learn_opengl](https://learnopengl.com/) by [Joey de Vries](https://twitter.com/JoeyDeVriez) - [license](https://creativecommons.org/licenses/by/4.0/legalcode) - tutorial examples
 
 # References
 

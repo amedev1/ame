@@ -15,7 +15,7 @@
 	<p></p>
 	<br>
 	<section class="main">
-		<h2 id="core_filesystem_FileSystemObjectType">FileSystemObjectType</h2>
+		<h2 id="core_filesystem_FSOType">FSOType</h2>
 		<description><b>type:</b> <i>C enum</i></description>
 		<br>
 		<description><b>description: </b>file system object type</description>
@@ -39,11 +39,11 @@
 				</tr>
 			</tbody>
 		</table>
-		<h2 id="core_filesystem_FileSystemObject">FileSystemObject</h2>
+		<h2 id="core_filesystem_FSO">FSO</h2>
 		<pre><code class="language-c">typedef struct {
-  FileSystemObjectType type;
-  PathArray            path;
-} FileSystemObject;
+  FSOType type;
+  Path    path;
+} FSO;
 </code></pre>
 		<description><b>type:</b> <i>C struct</i></description>
 		<br>
@@ -84,20 +84,20 @@
 		<br>
 		<description><b>description: </b>returns true if dir_b contains contents of dir_a</description>
 		<h2 id="core_filesystem_c_dir_list">c_dir_list</h2>
-		<pre><code class="language-c">FileSystemObject *c_dir_list(const char *dir, bool search_subdirectories);</code></pre>
+		<pre><code class="language-c">FSO *c_dir_list(const char *dir, bool search_subdirectories);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
-		<description><b>description: </b>list directory items, returns vector of FileSystemObject</description>
+		<description><b>description: </b>list directory items, returns dbuffer of FileSystemObject</description>
 		<h2 id="core_filesystem_c_dir_list_filter">c_dir_list_filter</h2>
-		<pre><code class="language-c">FileSystemObject *c_dir_list_filter(const char *dir, const char *filter, bool search_subdirectories);</code></pre>
+		<pre><code class="language-c">FSO *c_dir_list_filter(const char *dir, const char *filter, bool search_subdirectories);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
-		<description><b>description: </b>list directory items based on filter, returns vector of FileSystemObject</description>
+		<description><b>description: </b>list directory items based on filter, returns dbuffer of FileSystemObject</description>
 		<h2 id="core_filesystem_c_dir_list_filter_fixed">c_dir_list_filter_fixed</h2>
-		<pre><code class="language-c">bool c_dir_list_filter_fixed(const char *dir, const char *filter, FileSystemObject *buffer, size_t *bufferSize);</code></pre>
+		<pre><code class="language-c">size_t c_dir_list_filter_fixed(const char *dir, const char *filter, FSO *buffer, size_t size);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
-		<description><b>description: </b>list diretcory items in fixed FSO buffer</description>
+		<description><b>description: </b>list directory items in fixed FSO buffer</description>
 		<h2 id="core_filesystem_c_file_exists">c_file_exists</h2>
 		<pre><code class="language-c">bool   c_file_exists(const char *file);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
@@ -168,18 +168,18 @@
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>read file content to dynamic string</description>
-		<h2 id="core_filesystem_c_file_text_read_fixed">c_file_text_read_fixed</h2>
-		<pre><code class="language-c">void       c_file_text_read_fixed(const char *file, fstr string);</code></pre>
+		<h2 id="core_filesystem_c_file_text_read_to_buffer">c_file_text_read_to_buffer</h2>
+		<pre><code class="language-c">void       c_file_text_read_to_buffer(const char *file, char *buffer, size_t size);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>read file content to fixed string</description>
 		<h2 id="core_filesystem_c_current_module_path">c_current_module_path</h2>
-		<pre><code class="language-c">void c_current_module_path(fstr str);</code></pre>
+		<pre><code class="language-c">void c_current_module_path(Path path);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
-		<description><b>description: </b>set current module path to fixed string</description>
+		<description><b>description: </b>set current module path</description>
 		<h2 id="core_filesystem_c_current_module_name">c_current_module_name</h2>
-		<pre><code class="language-c">void c_current_module_name(fstr str);</code></pre>
+		<pre><code class="language-c">void c_current_module_name(char *buffer, size_t size);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>set current module name to fixed string</description>
@@ -204,7 +204,7 @@
 		<a class="section" href="core_datetime.html">datetime</a>
 		<a class="section" href="core_output.html">output</a>
 		<a class="section" href="core_log.html">log</a>
-		<a class="section" href="core_containers.html">containers</a>
+		<a class="section" href="core_dynamic_buffer.html">dynamic buffer</a>
 		<a class="section" href="core_compression.html">compression</a>
 		<a class="section" href="core_commands.html">commands</a>
 		<a class="section" href="core_multi-threading.html">multi-threading</a>
@@ -215,6 +215,7 @@
 		<a href="framework.html">framework</a>
 		<a href="documentation.html">documentation</a>
 		<a href="learn_opengl_-_getting_started.html">learn_opengl - getting started</a>
+		<a href="learn_opengl_-_lighting.html">learn_opengl - lighting</a>
 	</nav>
 	<footer>
 		<p>Another Memory Ends - Reference</p>

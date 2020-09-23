@@ -16,7 +16,7 @@
 	<br>
 	<section class="main">
 		<h2 id="core_commands_C_COMMAND_MAX">C_COMMAND_MAX</h2>
-		<pre><code class="language-c">#define C_COMMAND_MAX 256</code></pre>
+		<pre><code class="language-c">#define C_COMMAND_MAX 64</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>maximum number of commands in interpreter</description>
@@ -25,8 +25,8 @@
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>command not found error code</description>
-		<h2 id="core_commands_C_NULL_COMMAND">C_NULL_COMMAND</h2>
-		<pre><code class="language-c">#define C_NULL_COMMAND { "", "", "", NULL }</code></pre>
+		<h2 id="core_commands_C_COMMAND_NULL">C_COMMAND_NULL</h2>
+		<pre><code class="language-c">#define C_COMMAND_NULL { "", "", "", NULL }</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>NULL command initialization</description>
@@ -46,41 +46,23 @@
 		<description><b>type:</b> <i>C struct</i></description>
 		<br>
 		<description><b>description: </b>command struct</description>
-		<h2 id="core_commands_gc_null_command">gc_null_command</h2>
-		<pre><code class="language-c">extern const Command gc_null_command;</code></pre>
+		<h2 id="core_commands_gc_command_null">gc_command_null</h2>
+		<pre><code class="language-c">extern const Command gc_command_null;</code></pre>
 		<description><b>type:</b> <i>C variable</i></description>
 		<br>
 		<description><b>description: </b>NULL command</description>
-		<h2 id="core_commands_CommandInterpreter">CommandInterpreter</h2>
-		<pre><code class="language-c">typedef struct {
-  Command commands[C_COMMAND_MAX];
-} CommandInterpreter;
-</code></pre>
-		<description><b>type:</b> <i>C struct</i></description>
+		<h2 id="core_commands_CommandArray">CommandArray</h2>
+		<pre><code class="language-c">typedef Command CommandArray[C_COMMAND_MAX];</code></pre>
+		<description><b>type:</b> <i>C typedef</i></description>
 		<br>
-		<description><b>description: </b>interpreter, array of Commands</description>
-		<h2 id="core_commands_c_interpreter_initialize">c_interpreter_initialize</h2>
-		<pre><code class="language-c">bool c_interpreter_initialize(CommandInterpreter *itp, Command *commands[]);</code></pre>
-		<description><b>type:</b> <i>C function</i></description>
-		<br>
-		<description><b>description: </b>initialize interpreter with command array (terminated by NULL command)</description>
-		<h2 id="core_commands_c_interpreter_add_commands">c_interpreter_add_commands</h2>
-		<pre><code class="language-c">bool c_interpreter_add_commands(CommandInterpreter *itp, Command *commands[]);</code></pre>
-		<description><b>type:</b> <i>C function</i></description>
-		<br>
-		<description><b>description: </b>add command array (terminated by NULL command) to interpreter</description>
-		<h2 id="core_commands_c_interpreter_add_command">c_interpreter_add_command</h2>
-		<pre><code class="language-c">bool c_interpreter_add_command(CommandInterpreter *itp, Command *command);</code></pre>
-		<description><b>type:</b> <i>C function</i></description>
-		<br>
-		<description><b>description: </b>add command to interpreter</description>
-		<h2 id="core_commands_c_interpreter_execute">c_interpreter_execute</h2>
-		<pre><code class="language-c">int  c_interpreter_execute(CommandInterpreter *itp, int argc, char *argv[]);</code></pre>
+		<description><b>description: </b>array of command</description>
+		<h2 id="core_commands_c_command_execute">c_command_execute</h2>
+		<pre><code class="language-c">int  c_command_execute(CommandArray commands, int argc, char *argv[]);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>run arguments through interpreter</description>
-		<h2 id="core_commands_c_interpreter_print">c_interpreter_print</h2>
-		<pre><code class="language-c">void c_interpreter_print(CommandInterpreter *itp);</code></pre>
+		<h2 id="core_commands_c_command_print">c_command_print</h2>
+		<pre><code class="language-c">void c_command_print(CommandArray commnands);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>print commands name & arguments</description>
@@ -93,14 +75,11 @@
 		<description><b>type:</b> <i>C struct</i></description>
 		<br>
 		<description><b>description: </b>dynamic arguments data</description>
-		<h2 id="core_commands_args_var">args_var</h2>
-		<pre><code class="language-c">#define args_var(name) Args name = { 0, NULL }</code></pre>
-		<description><b>type:</b> <i>C preprocessor definition</i></description>
-		<h2 id="core_commands_c_args_delete">c_args_delete</h2>
-		<pre><code class="language-c">void c_args_delete(Args *args);</code></pre>
-		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="core_commands_c_args_parse">c_args_parse</h2>
-		<pre><code class="language-c">void c_args_parse(Args *args, const char *text);</code></pre>
+		<pre><code class="language-c">Args c_args_parse(const char *text);</code></pre>
+		<description><b>type:</b> <i>C function</i></description>
+		<h2 id="core_commands_c_args_clear">c_args_clear</h2>
+		<pre><code class="language-c">void c_args_clear(Args args);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 	</section>
 	<nav class="menu">
@@ -123,7 +102,7 @@
 		<a class="section" href="core_datetime.html">datetime</a>
 		<a class="section" href="core_output.html">output</a>
 		<a class="section" href="core_log.html">log</a>
-		<a class="section" href="core_containers.html">containers</a>
+		<a class="section" href="core_dynamic_buffer.html">dynamic buffer</a>
 		<a class="section" href="core_compression.html">compression</a>
 		<a class="current_section" href="core_commands.html">commands</a>
 		<a class="section" href="core_multi-threading.html">multi-threading</a>
@@ -134,6 +113,7 @@
 		<a href="framework.html">framework</a>
 		<a href="documentation.html">documentation</a>
 		<a href="learn_opengl_-_getting_started.html">learn_opengl - getting started</a>
+		<a href="learn_opengl_-_lighting.html">learn_opengl - lighting</a>
 	</nav>
 	<footer>
 		<p>Another Memory Ends - Reference</p>

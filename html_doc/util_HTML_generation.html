@@ -15,119 +15,119 @@
 	<p></p>
 	<br>
 	<section class="main">
-		<h2 id="util_HTML_generation_HtmlH">HtmlH</h2>
-		<pre><code class="language-c">typedef void HtmlH;</code></pre>
+		<h2 id="util_HTML_generation_HtmlHandle">HtmlHandle</h2>
+		<pre><code class="language-c">typedef void HtmlHandle;</code></pre>
 		<description><b>type:</b> <i>C typedef</i></description>
 		<h2 id="util_HTML_generation_util_html_create">util_html_create</h2>
-		<pre><code class="language-c">HtmlH *util_html_create();</code></pre>
+		<pre><code class="language-c">HtmlHandle *util_html_create();</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="util_HTML_generation_util_html_delete">util_html_delete</h2>
-		<pre><code class="language-c">void   util_html_delete(HtmlH *handle);</code></pre>
+		<pre><code class="language-c">void        util_html_delete(HtmlHandle *handle);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="util_HTML_generation_util_html_begin_page">util_html_begin_page</h2>
-		<pre><code class="language-c">void util_html_begin_page(HtmlH *handle);</code></pre>
+		<pre><code class="language-c">void util_html_begin_page(HtmlHandle *handle);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="util_HTML_generation_util_html_end_page">util_html_end_page</h2>
-		<pre><code class="language-c">void util_html_end_page(HtmlH *handle);</code></pre>
+		<pre><code class="language-c">void util_html_end_page(HtmlHandle *handle);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="util_HTML_generation_util_html_comment">util_html_comment</h2>
-		<pre><code class="language-c">void util_html_comment(HtmlH *handle, const char* content);</code></pre>
+		<pre><code class="language-c">void util_html_comment(HtmlHandle *handle, const char* content);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="util_HTML_generation_util_html_append">util_html_append</h2>
-		<pre><code class="language-c">void util_html_append(HtmlH* handle, const char *text);</code></pre>
+		<pre><code class="language-c">void util_html_append(HtmlHandle* handle, const char *text);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="util_HTML_generation_util_html_append_indent">util_html_append_indent</h2>
-		<pre><code class="language-c">void util_html_append_indent(HtmlH *handle, const char *text);</code></pre>
+		<pre><code class="language-c">void util_html_append_indent(HtmlHandle *handle, const char *text);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="util_HTML_generation_util_html_heading">util_html_heading</h2>
-		<pre><code class="language-c">void util_html_heading(HtmlH *handle, uint8 size, const char *attributes, const char *content);</code></pre>
+		<pre><code class="language-c">void util_html_heading(HtmlHandle *handle, uint8 size, const char *attributes, const char *content);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="util_HTML_generation_util_html_head">util_html_head</h2>
-		<pre><code class="language-c">void util_html_head(HtmlH *handle, const char *title, const char *description, const char *keywords, const char *author, const char *css, const char *css2);</code></pre>
+		<pre><code class="language-c">void util_html_head(HtmlHandle *handle, const char *title, const char *description, const char *keywords, const char *author, const char *css, const char *css2);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="util_HTML_generation_util_html_p">util_html_p</h2>
-		<pre><code class="language-c">void util_html_p(HtmlH *handle, const char *attributes, const char *content);</code></pre>
+		<pre><code class="language-c">void util_html_p(HtmlHandle *handle, const char *attributes, const char *content);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="util_HTML_generation_util_html_description">util_html_description</h2>
-		<pre><code class="language-c">void util_html_description(HtmlH *handle, const char *attributes, const char *content);</code></pre>
+		<pre><code class="language-c">void util_html_description(HtmlHandle *handle, const char *attributes, const char *content);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="util_HTML_generation_util_html_code">util_html_code</h2>
-		<pre><code class="language-c">void util_html_code(HtmlH *handle, const char *attributes, const char *content);</code></pre>
+		<pre><code class="language-c">void util_html_code(HtmlHandle *handle, const char *attributes, const char *content);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="util_HTML_generation_util_html_pre">util_html_pre</h2>
-		<pre><code class="language-c">void util_html_pre(HtmlH *handle, const char *attributes, const char *content);</code></pre>
+		<pre><code class="language-c">void util_html_pre(HtmlHandle *handle, const char *attributes, const char *content);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="util_HTML_generation_util_html_br">util_html_br</h2>
-		<pre><code class="language-c">void util_html_br(HtmlH *handle);</code></pre>
+		<pre><code class="language-c">void util_html_br(HtmlHandle *handle);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="util_HTML_generation_util_html_i">util_html_i</h2>
-		<pre><code class="language-c">void util_html_i(HtmlH *handle, const char *text);</code></pre>
+		<pre><code class="language-c">void util_html_i(HtmlHandle *handle, const char *text);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="util_HTML_generation_util_html_b">util_html_b</h2>
-		<pre><code class="language-c">void util_html_b(HtmlH *handle, const char *text);</code></pre>
+		<pre><code class="language-c">void util_html_b(HtmlHandle *handle, const char *text);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="util_HTML_generation_util_html_a">util_html_a</h2>
-		<pre><code class="language-c">void util_html_a(HtmlH *handle, const char *attributes, const char *link, const char *text, bool line_break);</code></pre>
+		<pre><code class="language-c">void util_html_a(HtmlHandle *handle, const char *attributes, const char *link, const char *text, bool line_break);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="util_HTML_generation_util_html_section_start">util_html_section_start</h2>
-		<pre><code class="language-c">void util_html_section_start(HtmlH *handle, const char *attributes);</code></pre>
+		<pre><code class="language-c">void util_html_section_start(HtmlHandle *handle, const char *attributes);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="util_HTML_generation_util_html_section_end">util_html_section_end</h2>
-		<pre><code class="language-c">void util_html_section_end(HtmlH *handle);</code></pre>
+		<pre><code class="language-c">void util_html_section_end(HtmlHandle *handle);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="util_HTML_generation_util_html_nav_start">util_html_nav_start</h2>
-		<pre><code class="language-c">void util_html_nav_start(HtmlH *handle, const char *attributes);</code></pre>
+		<pre><code class="language-c">void util_html_nav_start(HtmlHandle *handle, const char *attributes);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="util_HTML_generation_util_html_nav_end">util_html_nav_end</h2>
-		<pre><code class="language-c">void util_html_nav_end(HtmlH *handle);</code></pre>
+		<pre><code class="language-c">void util_html_nav_end(HtmlHandle *handle);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="util_HTML_generation_util_html_body_start">util_html_body_start</h2>
-		<pre><code class="language-c">void util_html_body_start(HtmlH *handle, const char *attributes);</code></pre>
+		<pre><code class="language-c">void util_html_body_start(HtmlHandle *handle, const char *attributes);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="util_HTML_generation_util_html_body_end">util_html_body_end</h2>
-		<pre><code class="language-c">void util_html_body_end(HtmlH *handle);</code></pre>
+		<pre><code class="language-c">void util_html_body_end(HtmlHandle *handle);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="util_HTML_generation_util_html_p_start">util_html_p_start</h2>
-		<pre><code class="language-c">void util_html_p_start(HtmlH *handle, const char *attributes);</code></pre>
+		<pre><code class="language-c">void util_html_p_start(HtmlHandle *handle, const char *attributes);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="util_HTML_generation_util_html_p_end">util_html_p_end</h2>
-		<pre><code class="language-c">void util_html_p_end(HtmlH *handle);</code></pre>
+		<pre><code class="language-c">void util_html_p_end(HtmlHandle *handle);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="util_HTML_generation_util_html_code_start">util_html_code_start</h2>
-		<pre><code class="language-c">void util_html_code_start(HtmlH *handle, const char *attributes);</code></pre>
+		<pre><code class="language-c">void util_html_code_start(HtmlHandle *handle, const char *attributes);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="util_HTML_generation_util_html_code_end">util_html_code_end</h2>
-		<pre><code class="language-c">void util_html_code_end(HtmlH *handle);</code></pre>
+		<pre><code class="language-c">void util_html_code_end(HtmlHandle *handle);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="util_HTML_generation_util_html_pre_start">util_html_pre_start</h2>
-		<pre><code class="language-c">void util_html_pre_start(HtmlH *handle, const char *attributes);</code></pre>
+		<pre><code class="language-c">void util_html_pre_start(HtmlHandle *handle, const char *attributes);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="util_HTML_generation_util_html_pre_end">util_html_pre_end</h2>
-		<pre><code class="language-c">void util_html_pre_end(HtmlH *handle);</code></pre>
+		<pre><code class="language-c">void util_html_pre_end(HtmlHandle *handle);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="util_HTML_generation_util_html_footer_start">util_html_footer_start</h2>
-		<pre><code class="language-c">void util_html_footer_start(HtmlH *handle, const char *attributes);</code></pre>
+		<pre><code class="language-c">void util_html_footer_start(HtmlHandle *handle, const char *attributes);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="util_HTML_generation_util_html_footer_end">util_html_footer_end</h2>
-		<pre><code class="language-c">void util_html_footer_end(HtmlH *handle);</code></pre>
+		<pre><code class="language-c">void util_html_footer_end(HtmlHandle *handle);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="util_HTML_generation_util_html_script_start">util_html_script_start</h2>
-		<pre><code class="language-c">void util_html_script_start(HtmlH *handle, const char *attributes);</code></pre>
+		<pre><code class="language-c">void util_html_script_start(HtmlHandle *handle, const char *attributes);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="util_HTML_generation_util_html_script_end">util_html_script_end</h2>
-		<pre><code class="language-c">void util_html_script_end(HtmlH *handle);</code></pre>
+		<pre><code class="language-c">void util_html_script_end(HtmlHandle *handle);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="util_HTML_generation_util_html_table_start">util_html_table_start</h2>
-		<pre><code class="language-c">void util_html_table_start(HtmlH *handle, const char *attributes);</code></pre>
+		<pre><code class="language-c">void util_html_table_start(HtmlHandle *handle, const char *attributes);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="util_HTML_generation_util_html_table_end">util_html_table_end</h2>
-		<pre><code class="language-c">void util_html_table_end(HtmlH *handle);</code></pre>
+		<pre><code class="language-c">void util_html_table_end(HtmlHandle *handle);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="util_HTML_generation_util_html_image">util_html_image</h2>
-		<pre><code class="language-c">void util_html_image(HtmlH *handle, const char *source, const char *alt, const char *style);</code></pre>
+		<pre><code class="language-c">void util_html_image(HtmlHandle *handle, const char *source, const char *alt, const char *style);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="util_HTML_generation_util_html_write">util_html_write</h2>
-		<pre><code class="language-c">bool util_html_write(HtmlH *handle, const char *path);</code></pre>
+		<pre><code class="language-c">bool util_html_write(HtmlHandle *handle, const char *path);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 	</section>
 	<nav class="menu">
@@ -145,6 +145,7 @@
 		<a href="framework.html">framework</a>
 		<a href="documentation.html">documentation</a>
 		<a href="learn_opengl_-_getting_started.html">learn_opengl - getting started</a>
+		<a href="learn_opengl_-_lighting.html">learn_opengl - lighting</a>
 	</nav>
 	<footer>
 		<p>Another Memory Ends - Reference</p>

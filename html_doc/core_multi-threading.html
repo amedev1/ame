@@ -17,8 +17,8 @@
 	<section class="main">
 		<h2 id="core_multi-threading_mt_uint">mt_uint</h2>
 		<pre><code class="language-c">typedef struct {
-  CriticalSection critical_section;
-  uint            value;
+  Lock lock;
+  uint value;
 } mt_uint;
 </code></pre>
 		<description><b>type:</b> <i>C struct</i></description>
@@ -39,18 +39,18 @@
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>set mt_uint value</description>
-		<h2 id="core_multi-threading_c_mt_uint_release">c_mt_uint_release</h2>
-		<pre><code class="language-c">void c_mt_uint_release(mt_uint *p);</code></pre>
+		<h2 id="core_multi-threading_c_mt_uint_terminate">c_mt_uint_terminate</h2>
+		<pre><code class="language-c">void c_mt_uint_terminate(mt_uint *p);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
-		<description><b>description: </b>release mt_uint</description>
-		<h2 id="core_multi-threading_JOB_DONE">JOB_DONE</h2>
-		<pre><code class="language-c">#define JOB_DONE     0</code></pre>
+		<description><b>description: </b>terminate mt_uint</description>
+		<h2 id="core_multi-threading_C_JOB_DONE">C_JOB_DONE</h2>
+		<pre><code class="language-c">#define C_JOB_DONE     0</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>return if job should release</description>
-		<h2 id="core_multi-threading_JOB_CONTINUE">JOB_CONTINUE</h2>
-		<pre><code class="language-c">#define JOB_CONTINUE 1</code></pre>
+		<h2 id="core_multi-threading_C_JOB_CONTINUE">C_JOB_CONTINUE</h2>
+		<pre><code class="language-c">#define C_JOB_CONTINUE 1</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>return if job should continue</description>
@@ -60,8 +60,8 @@
 		<br>
 		<description>
 			<b>description: </b>job function pointer<br>
-			return JOB_DONE if job is finished <br>
-			return JOB_CONTINUE if job needs to run again
+			return C_JOB_DONE if job is finished <br>
+			return C_JOB_CONTINUE if job needs to run again
 		</description>
 		<h2 id="core_multi-threading_Job">Job</h2>
 		<pre><code class="language-c">typedef struct {
@@ -117,11 +117,11 @@
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>initialize asynchronous job</description>
-		<h2 id="core_multi-threading_c_parallel_async_job_release">c_parallel_async_job_release</h2>
-		<pre><code class="language-c">void c_parallel_async_job_release(AsyncJob *async);</code></pre>
+		<h2 id="core_multi-threading_c_parallel_async_job_terminate">c_parallel_async_job_terminate</h2>
+		<pre><code class="language-c">void c_parallel_async_job_terminate(AsyncJob *async);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
-		<description><b>description: </b>release asynchronous job</description>
+		<description><b>description: </b>terminate asynchronous job</description>
 		<h2 id="core_multi-threading_c_parallel_start">c_parallel_start</h2>
 		<pre><code class="language-c">void c_parallel_start(uint thread_count);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
@@ -163,7 +163,7 @@
 		<a class="section" href="core_datetime.html">datetime</a>
 		<a class="section" href="core_output.html">output</a>
 		<a class="section" href="core_log.html">log</a>
-		<a class="section" href="core_containers.html">containers</a>
+		<a class="section" href="core_dynamic_buffer.html">dynamic buffer</a>
 		<a class="section" href="core_compression.html">compression</a>
 		<a class="section" href="core_commands.html">commands</a>
 		<a class="current_section" href="core_multi-threading.html">multi-threading</a>
@@ -174,6 +174,7 @@
 		<a href="framework.html">framework</a>
 		<a href="documentation.html">documentation</a>
 		<a href="learn_opengl_-_getting_started.html">learn_opengl - getting started</a>
+		<a href="learn_opengl_-_lighting.html">learn_opengl - lighting</a>
 	</nav>
 	<footer>
 		<p>Another Memory Ends - Reference</p>

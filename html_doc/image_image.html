@@ -52,101 +52,98 @@
 } Image;
 </code></pre>
 		<description><b>type:</b> <i>C struct</i></description>
-		<h2 id="image_image_Image_ptr">Image_ptr</h2>
-		<pre><code class="language-c">typedef Image *Image_ptr;</code></pre>
-		<description><b>type:</b> <i>C typedef</i></description>
 		<h2 id="image_image_i_image_alloc">i_image_alloc</h2>
-		<pre><code class="language-c">Image_ptr i_image_alloc(uint width, uint height, PixelFormat format);</code></pre>
+		<pre><code class="language-c">Image *i_image_alloc(uint width, uint height, PixelFormat format);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_image_i_image_alloc_from_file">i_image_alloc_from_file</h2>
-		<pre><code class="language-c">Image_ptr i_image_alloc_from_file(const char *path);</code></pre>
+		<pre><code class="language-c">Image *i_image_alloc_from_file(const char *path);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_image_i_image_free">i_image_free</h2>
-		<pre><code class="language-c">void      i_image_free(Image_ptr image);</code></pre>
+		<pre><code class="language-c">void   i_image_free(Image *image);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_image_i_image_byte_size">i_image_byte_size</h2>
-		<pre><code class="language-c">size_t i_image_byte_size(const Image_ptr image);</code></pre>
+		<pre><code class="language-c">size_t i_image_byte_size(const Image *image);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_image_i_image_row_size">i_image_row_size</h2>
-		<pre><code class="language-c">size_t i_image_row_size(const Image_ptr image);</code></pre>
+		<pre><code class="language-c">size_t i_image_row_size(const Image *image);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_image_i_image_resize">i_image_resize</h2>
-		<pre><code class="language-c">void i_image_resize(Image_ptr image, uint width, uint height, PixelFormat format);</code></pre>
+		<pre><code class="language-c">void i_image_resize(Image *image, uint width, uint height, PixelFormat format);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_image_i_image_clear">i_image_clear</h2>
-		<pre><code class="language-c">void i_image_clear(Image_ptr image);</code></pre>
+		<pre><code class="language-c">void i_image_clear(Image *image);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_image_i_image_get_pixel_memory">i_image_get_pixel_memory</h2>
-		<pre><code class="language-c">uint8 *i_image_get_pixel_memory(const Image_ptr image, uint x, uint y);</code></pre>
+		<pre><code class="language-c">uint8 *i_image_get_pixel_memory(const Image *image, uint x, uint y);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_image_i_image_get_pixel_index">i_image_get_pixel_index</h2>
-		<pre><code class="language-c">uint8  i_image_get_pixel_index(const Image_ptr image, uint x, uint y);</code></pre>
+		<pre><code class="language-c">uint8  i_image_get_pixel_index(const Image *image, uint x, uint y);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_image_i_image_set_pixel_index">i_image_set_pixel_index</h2>
-		<pre><code class="language-c">void   i_image_set_pixel_index(Image_ptr image, uint x, uint y, uint8 index);</code></pre>
+		<pre><code class="language-c">void   i_image_set_pixel_index(Image *image, uint x, uint y, uint8 index);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_image_i_image_get_pixel">i_image_get_pixel</h2>
-		<pre><code class="language-c">Color i_image_get_pixel(const Image_ptr image, uint x, uint y);</code></pre>
+		<pre><code class="language-c">Color i_image_get_pixel(const Image *image, uint x, uint y);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_image_i_image_set_pixel">i_image_set_pixel</h2>
-		<pre><code class="language-c">void  i_image_set_pixel(Image_ptr image, uint x, uint y, const Color *color);</code></pre>
+		<pre><code class="language-c">void  i_image_set_pixel(Image *image, uint x, uint y, Color color);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_image_i_image_fill">i_image_fill</h2>
-		<pre><code class="language-c">void i_image_fill(Image_ptr image, const Color *color);</code></pre>
+		<pre><code class="language-c">void i_image_fill(Image *image, Color color);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_image_i_image_flip">i_image_flip</h2>
-		<pre><code class="language-c">void i_image_flip(Image_ptr image);</code></pre>
+		<pre><code class="language-c">void i_image_flip(Image *image);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_image_i_image_mirror">i_image_mirror</h2>
-		<pre><code class="language-c">void i_image_mirror(Image_ptr image);</code></pre>
+		<pre><code class="language-c">void i_image_mirror(Image *image);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_image_i_image_convert">i_image_convert</h2>
-		<pre><code class="language-c">void i_image_convert(const Image_ptr source, Image_ptr dest);</code></pre>
+		<pre><code class="language-c">void i_image_convert(const Image *source, Image *dest);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_image_i_image_copy">i_image_copy</h2>
-		<pre><code class="language-c">void i_image_copy(const Image_ptr source, Image_ptr dest);</code></pre>
+		<pre><code class="language-c">void i_image_copy(const Image *source, Image *dest);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_image_i_image_generate_palette">i_image_generate_palette</h2>
-		<pre><code class="language-c">Palette i_image_generate_palette(const Image_ptr source, uint8 bit_depth);</code></pre>
+		<pre><code class="language-c">Palette i_image_generate_palette(const Image *source, uint8 bit_depth);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_image_i_image_palettize">i_image_palettize</h2>
-		<pre><code class="language-c">void    i_image_palettize(const Image_ptr source, Image_ptr dest, uint8 bit_depth, bool dithering);</code></pre>
+		<pre><code class="language-c">void    i_image_palettize(const Image *source, Image *dest, uint8 bit_depth, bool dithering);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_image_i_image_dither">i_image_dither</h2>
-		<pre><code class="language-c">void    i_image_dither(const Image_ptr source, Image_ptr dest);</code></pre>
+		<pre><code class="language-c">void    i_image_dither(const Image *source, Image *dest);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_image_i_image_diff">i_image_diff</h2>
-		<pre><code class="language-c">bool    i_image_diff(const Image_ptr old_image, const Image_ptr new_image, Image_ptr result, uint *offset_x, uint *offset_y);</code></pre>
+		<pre><code class="language-c">bool    i_image_diff(const Image *old_image, const Image *new_image, Image *result, uint *offset_x, uint *offset_y);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_image_i_image_bmp_load">i_image_bmp_load</h2>
-		<pre><code class="language-c">bool i_image_bmp_load(Image_ptr image, Stream *input);</code></pre>
+		<pre><code class="language-c">bool i_image_bmp_load(Image *image, Stream *input);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_image_i_image_bmp_save">i_image_bmp_save</h2>
-		<pre><code class="language-c">bool i_image_bmp_save(const Image_ptr image, Stream *output);</code></pre>
+		<pre><code class="language-c">bool i_image_bmp_save(const Image *image, Stream *output);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_image_i_image_png_load">i_image_png_load</h2>
-		<pre><code class="language-c">bool i_image_png_load(Image_ptr image, Stream *input);</code></pre>
+		<pre><code class="language-c">bool i_image_png_load(Image *image, Stream *input);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_image_i_image_png_save">i_image_png_save</h2>
-		<pre><code class="language-c">bool i_image_png_save(const Image_ptr image, Stream *output);</code></pre>
+		<pre><code class="language-c">bool i_image_png_save(const Image *image, Stream *output);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_image_i_image_jpg_load">i_image_jpg_load</h2>
-		<pre><code class="language-c">bool i_image_jpg_load(Image_ptr image, Stream *input);</code></pre>
+		<pre><code class="language-c">bool i_image_jpg_load(Image *image, Stream *input);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_image_i_image_jpg_save">i_image_jpg_save</h2>
-		<pre><code class="language-c">bool i_image_jpg_save(const Image_ptr image, Stream *output, uint quality);</code></pre>
+		<pre><code class="language-c">bool i_image_jpg_save(const Image *image, Stream *output, uint quality);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_image_i_image_gif_load">i_image_gif_load</h2>
-		<pre><code class="language-c">bool i_image_gif_load(Image_ptr image, Stream *input);</code></pre>
+		<pre><code class="language-c">bool i_image_gif_load(Image *image, Stream *input);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_image_i_image_gif_save">i_image_gif_save</h2>
-		<pre><code class="language-c">bool i_image_gif_save(const Image_ptr image, Stream *output);</code></pre>
+		<pre><code class="language-c">bool i_image_gif_save(const Image *image, Stream *output);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_image_i_image_load_file">i_image_load_file</h2>
-		<pre><code class="language-c">bool i_image_load_file(Image_ptr image, const char *path);</code></pre>
+		<pre><code class="language-c">bool i_image_load_file(Image *image, const char *path);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_image_i_image_save_file">i_image_save_file</h2>
-		<pre><code class="language-c">bool i_image_save_file(const Image_ptr image, const char *path);</code></pre>
+		<pre><code class="language-c">bool i_image_save_file(const Image *image, const char *path);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 	</section>
 	<nav class="menu">
@@ -168,6 +165,7 @@
 		<a href="framework.html">framework</a>
 		<a href="documentation.html">documentation</a>
 		<a href="learn_opengl_-_getting_started.html">learn_opengl - getting started</a>
+		<a href="learn_opengl_-_lighting.html">learn_opengl - lighting</a>
 	</nav>
 	<footer>
 		<p>Another Memory Ends - Reference</p>

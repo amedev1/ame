@@ -51,29 +51,29 @@
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>waits for an input</description>
-		<h2 id="core_main_functions_CriticalSection">CriticalSection</h2>
-		<pre><code class="language-c">typedef CRITICAL_SECTION CriticalSection;</code></pre>
+		<h2 id="core_main_functions_Lock">Lock</h2>
+		<pre><code class="language-c">typedef CRITICAL_SECTION Lock;</code></pre>
 		<description><b>type:</b> <i>C typedef</i></description>
-		<h2 id="core_main_functions_c_critical_section_initialize">c_critical_section_initialize</h2>
-		<pre><code class="language-c">void c_critical_section_initialize(CriticalSection *critical_section);</code></pre>
+		<h2 id="core_main_functions_c_lock_initialize">c_lock_initialize</h2>
+		<pre><code class="language-c">void c_lock_initialize(Lock *lock);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
-		<description><b>description: </b>initialize a critical section</description>
-		<h2 id="core_main_functions_c_critical_section_delete">c_critical_section_delete</h2>
-		<pre><code class="language-c">void c_critical_section_delete(CriticalSection *critical_section);</code></pre>
+		<description><b>description: </b>initialize a lock</description>
+		<h2 id="core_main_functions_c_lock_terminate">c_lock_terminate</h2>
+		<pre><code class="language-c">void c_lock_terminate(Lock *lock);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
-		<description><b>description: </b>delete a critical section</description>
-		<h2 id="core_main_functions_c_critical_section_enter">c_critical_section_enter</h2>
-		<pre><code class="language-c">void c_critical_section_enter(CriticalSection *critical_section);</code></pre>
+		<description><b>description: </b>delete a lock</description>
+		<h2 id="core_main_functions_c_lock_acquire">c_lock_acquire</h2>
+		<pre><code class="language-c">void c_lock_acquire(Lock *lock);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
-		<description><b>description: </b>enter a critical section</description>
-		<h2 id="core_main_functions_c_critical_section_leave">c_critical_section_leave</h2>
-		<pre><code class="language-c">void c_critical_section_leave(CriticalSection *critical_section);</code></pre>
+		<description><b>description: </b>acquire lock</description>
+		<h2 id="core_main_functions_c_lock_release">c_lock_release</h2>
+		<pre><code class="language-c">void c_lock_release(Lock *lock);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
-		<description><b>description: </b>leave a critical section</description>
+		<description><b>description: </b>release lock</description>
 	</section>
 	<nav class="menu">
 		<a href="../index.html">Home</a>
@@ -95,7 +95,7 @@
 		<a class="section" href="core_datetime.html">datetime</a>
 		<a class="section" href="core_output.html">output</a>
 		<a class="section" href="core_log.html">log</a>
-		<a class="section" href="core_containers.html">containers</a>
+		<a class="section" href="core_dynamic_buffer.html">dynamic buffer</a>
 		<a class="section" href="core_compression.html">compression</a>
 		<a class="section" href="core_commands.html">commands</a>
 		<a class="section" href="core_multi-threading.html">multi-threading</a>
@@ -106,6 +106,7 @@
 		<a href="framework.html">framework</a>
 		<a href="documentation.html">documentation</a>
 		<a href="learn_opengl_-_getting_started.html">learn_opengl - getting started</a>
+		<a href="learn_opengl_-_lighting.html">learn_opengl - lighting</a>
 	</nav>
 	<footer>
 		<p>Another Memory Ends - Reference</p>

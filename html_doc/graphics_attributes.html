@@ -77,17 +77,27 @@
 } GfxAttribute;
 </code></pre>
 		<description><b>type:</b> <i>C struct</i></description>
-		<h2 id="graphics_attributes_H">H</h2>
-		<pre><code class="language-c">typedef fbuffer_struct(GfxAttributeFormat, GfxAttribute, 128);</code></pre>
-		<description><b>type:</b> <i>C typedef</i></description>
-		<h2 id="graphics_attributes_gfx_attribute_format_init">gfx_attribute_format_init</h2>
-		<pre><code class="language-c">#define gfx_attribute_format_init() { 128, 0 }</code></pre>
+		<h2 id="graphics_attributes_C_GFX_FORMAT_SIZE">C_GFX_FORMAT_SIZE</h2>
+		<pre><code class="language-c">#define C_GFX_FORMAT_SIZE 32</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<h2 id="graphics_attributes_C_GFX_FORMAT_NULL">C_GFX_FORMAT_NULL</h2>
+		<pre><code class="language-c">#define C_GFX_FORMAT_NULL { 0 }</code></pre>
+		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<h2 id="graphics_attributes_GfxAttributeFormat">GfxAttributeFormat</h2>
+		<pre><code class="language-c">typedef struct {
+  uint         count;
+  GfxAttribute data[C_GFX_FORMAT_SIZE];
+} GfxAttributeFormat;
+</code></pre>
+		<description><b>type:</b> <i>C struct</i></description>
 		<h2 id="graphics_attributes_gfx_attribute_byte_size">gfx_attribute_byte_size</h2>
 		<pre><code class="language-c">size_t gfx_attribute_byte_size(GfxAttributeType type);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
-		<h2 id="graphics_attributes_gfx_attribute_format_add">gfx_attribute_format_add</h2>
-		<pre><code class="language-c">void   gfx_attribute_format_add(GfxAttributeFormat *format, const char *name, GfxAttributeType type);</code></pre>
+		<h2 id="graphics_attributes_gfx_attribute_add">gfx_attribute_add</h2>
+		<pre><code class="language-c">void   gfx_attribute_add(GfxAttributeFormat *format, const char *name, GfxAttributeType type);</code></pre>
+		<description><b>type:</b> <i>C function</i></description>
+		<h2 id="graphics_attributes_gfx_attribute_enable">gfx_attribute_enable</h2>
+		<pre><code class="language-c">void   gfx_attribute_enable(GfxAttributeFormat *format, const char *name, bool enabled);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 	</section>
 	<nav class="menu">
@@ -118,6 +128,7 @@
 		<a href="framework.html">framework</a>
 		<a href="documentation.html">documentation</a>
 		<a href="learn_opengl_-_getting_started.html">learn_opengl - getting started</a>
+		<a href="learn_opengl_-_lighting.html">learn_opengl - lighting</a>
 	</nav>
 	<footer>
 		<p>Another Memory Ends - Reference</p>

@@ -76,89 +76,89 @@
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>dynamic library extension for windows</description>
-		<h2 id="core_defines_INTERNAL_STRINGIFY">INTERNAL_STRINGIFY</h2>
-		<pre><code class="language-c">#define INTERNAL_STRINGIFY(x) #x</code></pre>
-		<description><b>type:</b> <i>C preprocessor definition</i></description>
-		<h2 id="core_defines_INTERNAL_CONCAT2">INTERNAL_CONCAT2</h2>
-		<pre><code class="language-c">#define INTERNAL_CONCAT2(s1, s2) s1##s2</code></pre>
-		<description><b>type:</b> <i>C preprocessor definition</i></description>
-		<h2 id="core_defines_INTERNAL_CONCAT3">INTERNAL_CONCAT3</h2>
-		<pre><code class="language-c">#define INTERNAL_CONCAT3(s1, s2, s3) s1##s2##s3</code></pre>
-		<description><b>type:</b> <i>C preprocessor definition</i></description>
-		<h2 id="core_defines_STRINGIFY">STRINGIFY</h2>
-		<pre><code class="language-c">#define STRINGIFY(x) INTERNAL_STRINGIFY(x)</code></pre>
-		<description><b>type:</b> <i>C preprocessor definition</i></description>
-		<br>
-		<description><b>description: </b>stringify expression</description>
-		<h2 id="core_defines_CONCAT2">CONCAT2</h2>
-		<pre><code class="language-c">#define CONCAT2(s1, s2) INTERNAL_CONCAT2(s1, s2)</code></pre>
-		<description><b>type:</b> <i>C preprocessor definition</i></description>
-		<br>
-		<description><b>description: </b>concat 2 expressions</description>
-		<h2 id="core_defines_CONCAT3">CONCAT3</h2>
-		<pre><code class="language-c">#define CONCAT3(s1, s2, s3) INTERNAL_CONCAT3(s1, s2, s3)</code></pre>
-		<description><b>type:</b> <i>C preprocessor definition</i></description>
-		<br>
-		<description><b>description: </b>concat 3 expressions</description>
-		<h2 id="core_defines_AME_PRINT">AME_PRINT</h2>
-		<pre><code class="language-c">#define AME_PRINT(message) printf_s("%s\n", message)</code></pre>
-		<description><b>type:</b> <i>C preprocessor definition</i></description>
-		<br>
-		<description><b>description: </b>print message on windows</description>
-		<h2 id="core_defines_AME_PRINTF">AME_PRINTF</h2>
-		<pre><code class="language-c">#define AME_PRINTF(format, ...)  printf_s(format, __VA_ARGS__); printf_s("\n")</code></pre>
-		<description><b>type:</b> <i>C preprocessor definition</i></description>
-		<br>
-		<description><b>description: </b>print formatted message on windows</description>
-		<h2 id="core_defines_AME_PRINT">AME_PRINT</h2>
-		<pre><code class="language-c">#define AME_PRINT(message) __android_log_write(ANDROID_LOG_INFO, "ame", message)</code></pre>
-		<description><b>type:</b> <i>C preprocessor definition</i></description>
-		<br>
-		<description><b>description: </b>print message on android</description>
-		<h2 id="core_defines_AME_PRINTF">AME_PRINTF</h2>
-		<pre><code class="language-c">#define AME_PRINTF(format, ...) __android_log_print(ANDROID_LOG_INFO, "ame", format, __VA_ARGS__)</code></pre>
-		<description><b>type:</b> <i>C preprocessor definition</i></description>
-		<br>
-		<description><b>description: </b>print formatted message on android</description>
-		<h2 id="core_defines_INTERNAL_AME_CRITICAL">INTERNAL_AME_CRITICAL</h2>
-		<pre><code class="language-c">#define INTERNAL_AME_CRITICAL(condition) if (IsDebuggerPresent()) { __debugbreak(); } else { AME_PRINTF("critical error in %s ( line %d ) : %s", __FILE__, __LINE__, #condition); exit(EXIT_FAILURE); }</code></pre>
-		<description><b>type:</b> <i>C preprocessor definition</i></description>
-		<h2 id="core_defines_INTERNAL_AME_CRITICAL">INTERNAL_AME_CRITICAL</h2>
-		<pre><code class="language-c">#define INTERNAL_AME_CRITICAL(condition) exit(EXIT_FAILURE);</code></pre>
-		<description><b>type:</b> <i>C preprocessor definition</i></description>
-		<h2 id="core_defines_INTERNAL_AME_CRITICAL">INTERNAL_AME_CRITICAL</h2>
-		<pre><code class="language-c">#define INTERNAL_AME_CRITICAL(condition) __android_log_assert(#condition, "ame::critical", #condition);</code></pre>
-		<description><b>type:</b> <i>C preprocessor definition</i></description>
-		<h2 id="core_defines_AME_CRITICAL">AME_CRITICAL</h2>
-		<pre><code class="language-c">#define AME_CRITICAL(condition) if ((condition) == false){ INTERNAL_AME_CRITICAL(condition) }</code></pre>
-		<description><b>type:</b> <i>C preprocessor definition</i></description>
-		<br>
-		<description><b>description: </b>critical test macro, if unsuccessful will exit program with failure code</description>
-		<h2 id="core_defines_INTERNAL_AME_ASSERT">INTERNAL_AME_ASSERT</h2>
-		<pre><code class="language-c">#define INTERNAL_AME_ASSERT(condition) if (IsDebuggerPresent()) { __debugbreak(); } else { AME_PRINTF("assert detected in %s ( line %d ) : %s", __FILE__, __LINE__, #condition); exit(EXIT_FAILURE); }</code></pre>
-		<description><b>type:</b> <i>C preprocessor definition</i></description>
-		<h2 id="core_defines_INTERNAL_AME_ASSERT">INTERNAL_AME_ASSERT</h2>
-		<pre><code class="language-c">#define INTERNAL_AME_ASSERT(condition) __android_log_assert(#condition, "ame::assertion", #condition)</code></pre>
-		<description><b>type:</b> <i>C preprocessor definition</i></description>
-		<h2 id="core_defines_AME_ASSERT">AME_ASSERT</h2>
-		<pre><code class="language-c">#define AME_ASSERT(condition) if ((condition) == false){ INTERNAL_AME_ASSERT(condition) }</code></pre>
-		<description><b>type:</b> <i>C preprocessor definition</i></description>
-		<br>
-		<description><b>description: </b>assertion macro, only active in Debug</description>
-		<h2 id="core_defines_AME_ASSERT_FALSE">AME_ASSERT_FALSE</h2>
-		<pre><code class="language-c">#define AME_ASSERT_FALSE() INTERNAL_AME_ASSERT(none)</code></pre>
-		<description><b>type:</b> <i>C preprocessor definition</i></description>
-		<h2 id="core_defines_AME_ASSERT">AME_ASSERT</h2>
-		<pre><code class="language-c">#define AME_ASSERT(condition)</code></pre>
-		<description><b>type:</b> <i>C preprocessor definition</i></description>
-		<h2 id="core_defines_AME_ASSERT_FALSE">AME_ASSERT_FALSE</h2>
-		<pre><code class="language-c">#define AME_ASSERT_FALSE()</code></pre>
-		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<h2 id="core_defines___FILENAME__">__FILENAME__</h2>
 		<pre><code class="language-c">#define __FILENAME__ (__FILE__ + SOURCE_PATH_SIZE)</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>short version of __FILE__ macro</description>
+		<h2 id="core_defines_stringify_internal">stringify_internal</h2>
+		<pre><code class="language-c">#define stringify_internal(x) #x</code></pre>
+		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<h2 id="core_defines_concat_2_internal">concat_2_internal</h2>
+		<pre><code class="language-c">#define concat_2_internal(s1, s2) s1##s2</code></pre>
+		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<h2 id="core_defines_concat_3_internal">concat_3_internal</h2>
+		<pre><code class="language-c">#define concat_3_internal(s1, s2, s3) s1##s2##s3</code></pre>
+		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<h2 id="core_defines_stringify">stringify</h2>
+		<pre><code class="language-c">#define stringify(x) stringify_internal(x)</code></pre>
+		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<br>
+		<description><b>description: </b>stringify expression</description>
+		<h2 id="core_defines_concat_2">concat_2</h2>
+		<pre><code class="language-c">#define concat_2(s1, s2) concat_2_internal(s1, s2)</code></pre>
+		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<br>
+		<description><b>description: </b>concat 2 expressions</description>
+		<h2 id="core_defines_concat_3">concat_3</h2>
+		<pre><code class="language-c">#define concat_3(s1, s2, s3) concat_3_internal(s1, s2, s3)</code></pre>
+		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<br>
+		<description><b>description: </b>concat 3 expressions</description>
+		<h2 id="core_defines_ame_print">ame_print</h2>
+		<pre><code class="language-c">#define ame_print(message) printf_s("%s\n", message)</code></pre>
+		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<br>
+		<description><b>description: </b>print message on windows</description>
+		<h2 id="core_defines_ame_printf">ame_printf</h2>
+		<pre><code class="language-c">#define ame_printf(format, ...)  printf_s(format "\n", __VA_ARGS__)</code></pre>
+		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<br>
+		<description><b>description: </b>print formatted message on windows</description>
+		<h2 id="core_defines_ame_print">ame_print</h2>
+		<pre><code class="language-c">#define ame_print(message) __android_log_write(ANDROID_LOG_INFO, "ame", message)</code></pre>
+		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<br>
+		<description><b>description: </b>print message on android</description>
+		<h2 id="core_defines_ame_printf">ame_printf</h2>
+		<pre><code class="language-c">#define ame_printf(format, ...) __android_log_print(ANDROID_LOG_INFO, "ame", format, __VA_ARGS__)</code></pre>
+		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<br>
+		<description><b>description: </b>print formatted message on android</description>
+		<h2 id="core_defines_ame_critical_internal">ame_critical_internal</h2>
+		<pre><code class="language-c">#define ame_critical_internal(condition) if (IsDebuggerPresent()) { __debugbreak(); } else { ame_printf("critical error in %s ( line %d ) : %s", __FILENAME__, __LINE__, #condition); exit(EXIT_FAILURE); }</code></pre>
+		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<h2 id="core_defines_ame_critical_internal">ame_critical_internal</h2>
+		<pre><code class="language-c">#define ame_critical_internal(condition) exit(EXIT_FAILURE);</code></pre>
+		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<h2 id="core_defines_ame_critical_internal">ame_critical_internal</h2>
+		<pre><code class="language-c">#define ame_critical_internal(condition) __android_log_assert(#condition, "ame::critical", #condition);</code></pre>
+		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<h2 id="core_defines_ame_critical">ame_critical</h2>
+		<pre><code class="language-c">#define ame_critical(condition) if ((condition) == false){ ame_critical_internal(condition) }</code></pre>
+		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<br>
+		<description><b>description: </b>critical test macro, if unsuccessful will exit program with failure code</description>
+		<h2 id="core_defines_ame_assert_internal">ame_assert_internal</h2>
+		<pre><code class="language-c">#define ame_assert_internal(condition) if (IsDebuggerPresent()) { __debugbreak(); } else { ame_printf("assert detected in %s ( line %d ) : %s", __FILENAME__, __LINE__, #condition); exit(EXIT_FAILURE); }</code></pre>
+		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<h2 id="core_defines_ame_assert_internal">ame_assert_internal</h2>
+		<pre><code class="language-c">#define ame_assert_internal(condition) __android_log_assert(#condition, "ame::assertion", #condition)</code></pre>
+		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<h2 id="core_defines_ame_assert">ame_assert</h2>
+		<pre><code class="language-c">#define ame_assert(condition) if ((condition) == false){ ame_assert_internal(condition) }</code></pre>
+		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<br>
+		<description><b>description: </b>assertion macro, only active in Debug</description>
+		<h2 id="core_defines_ame_assert_false">ame_assert_false</h2>
+		<pre><code class="language-c">#define ame_assert_false() ame_assert_internal(none)</code></pre>
+		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<h2 id="core_defines_ame_assert">ame_assert</h2>
+		<pre><code class="language-c">#define ame_assert(condition)</code></pre>
+		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<h2 id="core_defines_ame_assert_false">ame_assert_false</h2>
+		<pre><code class="language-c">#define ame_assert_false()</code></pre>
+		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<h2 id="core_defines_AME_BASE_TYPES">AME_BASE_TYPES</h2>
 		<pre><code class="language-c">#define AME_BASE_TYPES</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
@@ -246,7 +246,7 @@
 		<a class="section" href="core_datetime.html">datetime</a>
 		<a class="section" href="core_output.html">output</a>
 		<a class="section" href="core_log.html">log</a>
-		<a class="section" href="core_containers.html">containers</a>
+		<a class="section" href="core_dynamic_buffer.html">dynamic buffer</a>
 		<a class="section" href="core_compression.html">compression</a>
 		<a class="section" href="core_commands.html">commands</a>
 		<a class="section" href="core_multi-threading.html">multi-threading</a>
@@ -257,6 +257,7 @@
 		<a href="framework.html">framework</a>
 		<a href="documentation.html">documentation</a>
 		<a href="learn_opengl_-_getting_started.html">learn_opengl - getting started</a>
+		<a href="learn_opengl_-_lighting.html">learn_opengl - lighting</a>
 	</nav>
 	<footer>
 		<p>Another Memory Ends - Reference</p>

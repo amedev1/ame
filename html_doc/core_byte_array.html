@@ -19,7 +19,7 @@
 		<pre><code class="language-c">typedef uint8 *byte_array;</code></pre>
 		<description><b>type:</b> <i>C typedef</i></description>
 		<br>
-		<description><b>description: </b>byte_array is size | data | terminator</description>
+		<description><b>description: </b>byte_array is size | data | terminator (0)</description>
 		<h2 id="core_byte_array_c_byte_array_size">c_byte_array_size</h2>
 		<pre><code class="language-c">size_t     c_byte_array_size(const byte_array array);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
@@ -40,31 +40,6 @@
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>reallocate byte array</description>
-		<h2 id="core_byte_array_c_fbyte_array_size">c_fbyte_array_size</h2>
-		<pre><code class="language-c">#define c_fbyte_array_size c_byte_array_size</code></pre>
-		<description><b>type:</b> <i>C preprocessor definition</i></description>
-		<br>
-		<description><b>description: </b>get fixed byte array size</description>
-		<h2 id="core_byte_array_fbyte_array_struct">fbyte_array_struct</h2>
-		<pre><code class="language-c">#define fbyte_array_struct(name, size) struct { size_t size; uint8 bytes[size + 1]; } name</code></pre>
-		<description><b>type:</b> <i>C preprocessor definition</i></description>
-		<br>
-		<description><b>description: </b>declare fixed byte array</description>
-		<h2 id="core_byte_array_fbyte_array_init">fbyte_array_init</h2>
-		<pre><code class="language-c">#define fbyte_array_init(size) { size }</code></pre>
-		<description><b>type:</b> <i>C preprocessor definition</i></description>
-		<br>
-		<description><b>description: </b>initialize fixed byte array</description>
-		<h2 id="core_byte_array_fbyte_array_name">fbyte_array_name</h2>
-		<pre><code class="language-c">#define fbyte_array_name(name) CONCAT2(_fixed_byte_array_, name)</code></pre>
-		<description><b>type:</b> <i>C preprocessor definition</i></description>
-		<br>
-		<description><b>description: </b>named of fixed byte array when declared on stack</description>
-		<h2 id="core_byte_array_fbyte_array_var">fbyte_array_var</h2>
-		<pre><code class="language-c">#define fbyte_array_var(name, size) fbyte_array_struct(fbyte_array_name(name), size) = fbyte_array_init(size); memset(fbyte_array_name(name).bytes, 0, size + 1); byte_array name = fbyte_array_name(name).bytes</code></pre>
-		<description><b>type:</b> <i>C preprocessor definition</i></description>
-		<br>
-		<description><b>description: </b>declare & initialize fixed string on the stack</description>
 	</section>
 	<nav class="menu">
 		<a href="../index.html">Home</a>
@@ -86,7 +61,7 @@
 		<a class="section" href="core_datetime.html">datetime</a>
 		<a class="section" href="core_output.html">output</a>
 		<a class="section" href="core_log.html">log</a>
-		<a class="section" href="core_containers.html">containers</a>
+		<a class="section" href="core_dynamic_buffer.html">dynamic buffer</a>
 		<a class="section" href="core_compression.html">compression</a>
 		<a class="section" href="core_commands.html">commands</a>
 		<a class="section" href="core_multi-threading.html">multi-threading</a>
@@ -97,6 +72,7 @@
 		<a href="framework.html">framework</a>
 		<a href="documentation.html">documentation</a>
 		<a href="learn_opengl_-_getting_started.html">learn_opengl - getting started</a>
+		<a href="learn_opengl_-_lighting.html">learn_opengl - lighting</a>
 	</nav>
 	<footer>
 		<p>Another Memory Ends - Reference</p>

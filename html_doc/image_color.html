@@ -58,19 +58,19 @@
 		<pre><code class="language-c">void i_color_vec4_swap_br(ColorVec4 color);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_color_i_color_to_rgb_uint">i_color_to_rgb_uint</h2>
-		<pre><code class="language-c">uint32     i_color_to_rgb_uint(const Color *color);</code></pre>
+		<pre><code class="language-c">uint32     i_color_to_rgb_uint(Color color);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_color_i_color_to_vec4">i_color_to_vec4</h2>
-		<pre><code class="language-c">void       i_color_to_vec4(const Color *color, ColorVec4 v);</code></pre>
+		<pre><code class="language-c">void       i_color_to_vec4(Color color, ColorVec4 v);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_color_i_color_to_rgb16">i_color_to_rgb16</h2>
-		<pre><code class="language-c">ColorRGB16 i_color_to_rgb16(const Color *color);</code></pre>
+		<pre><code class="language-c">ColorRGB16 i_color_to_rgb16(Color color);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_color_i_color_to_rgb">i_color_to_rgb</h2>
-		<pre><code class="language-c">ColorRGB   i_color_to_rgb(const Color *color);</code></pre>
+		<pre><code class="language-c">ColorRGB   i_color_to_rgb(Color color);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_color_i_color_to_grayscale_alpha">i_color_to_grayscale_alpha</h2>
-		<pre><code class="language-c">ColorGA    i_color_to_grayscale_alpha(const Color *color);</code></pre>
+		<pre><code class="language-c">ColorGA    i_color_to_grayscale_alpha(Color color);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_color_i_color_rgb16_from_rgb">i_color_rgb16_from_rgb</h2>
 		<pre><code class="language-c">ColorRGB16 i_color_rgb16_from_rgb(uint8 red, uint8 green, uint8 blue);</code></pre>
@@ -85,25 +85,25 @@
 		<pre><code class="language-c">Color i_color_from_vec4(vec4 color);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_color_i_color_from_color_rgb">i_color_from_color_rgb</h2>
-		<pre><code class="language-c">Color i_color_from_color_rgb(const ColorRGB *color);</code></pre>
+		<pre><code class="language-c">Color i_color_from_color_rgb(ColorRGB color);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_color_i_color_from_rgb16">i_color_from_rgb16</h2>
 		<pre><code class="language-c">Color i_color_from_rgb16(ColorRGB16 color);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_color_i_color_from_color_ga">i_color_from_color_ga</h2>
-		<pre><code class="language-c">Color i_color_from_color_ga(const ColorGA *color);</code></pre>
+		<pre><code class="language-c">Color i_color_from_color_ga(ColorGA color);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_color_i_color_inverse">i_color_inverse</h2>
-		<pre><code class="language-c">Color i_color_inverse(const Color *color);</code></pre>
+		<pre><code class="language-c">Color i_color_inverse(Color color);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_color_i_color_grayscale">i_color_grayscale</h2>
-		<pre><code class="language-c">Color i_color_grayscale(const Color *color);</code></pre>
+		<pre><code class="language-c">Color i_color_grayscale(Color color);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_color_i_color_random">i_color_random</h2>
 		<pre><code class="language-c">Color i_color_random();</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_color_i_color_grayscale_index">i_color_grayscale_index</h2>
-		<pre><code class="language-c">uint8 i_color_grayscale_index(uint8 bit_depth, const Color *color);</code></pre>
+		<pre><code class="language-c">uint8 i_color_grayscale_index(uint8 bit_depth, Color color);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_color_i_color_get_grayscale">i_color_get_grayscale</h2>
 		<pre><code class="language-c">Color i_color_get_grayscale(uint8 bit_depth, uint8 index);</code></pre>
@@ -112,16 +112,16 @@
 		<pre><code class="language-c">Color i_color_from_string(const char* text);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_color_i_color_from_btsr">i_color_from_btsr</h2>
-		<pre><code class="language-c">Color i_color_from_btsr(const bstr *text);</code></pre>
+		<pre><code class="language-c">Color i_color_from_btsr(const bstr text);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_color_i_color_modulate">i_color_modulate</h2>
-		<pre><code class="language-c">Color i_color_modulate(const Color *a, const Color *b);</code></pre>
+		<pre><code class="language-c">Color i_color_modulate(Color a, Color b);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_color_i_color_interpolate">i_color_interpolate</h2>
-		<pre><code class="language-c">Color i_color_interpolate(const Color *a, const Color *b, float t);</code></pre>
+		<pre><code class="language-c">Color i_color_interpolate(Color a, Color b, float t);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_color_i_color_distance">i_color_distance</h2>
-		<pre><code class="language-c">double i_color_distance(const Color *c0, const Color *c1);</code></pre>
+		<pre><code class="language-c">double i_color_distance(Color c0, Color c1);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_color_gc_color_maroon">gc_color_maroon</h2>
 		<pre><code class="language-c">extern const Color gc_color_maroon;</code></pre>
@@ -575,6 +575,7 @@
 		<a href="framework.html">framework</a>
 		<a href="documentation.html">documentation</a>
 		<a href="learn_opengl_-_getting_started.html">learn_opengl - getting started</a>
+		<a href="learn_opengl_-_lighting.html">learn_opengl - lighting</a>
 	</nav>
 	<footer>
 		<p>Another Memory Ends - Reference</p>

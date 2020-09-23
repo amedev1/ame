@@ -96,16 +96,22 @@
 				</tr>
 			</tbody>
 		</table>
+		<h2 id="graphics_shader_C_GFX_SHADER_LINK_DEFAULT">C_GFX_SHADER_LINK_DEFAULT</h2>
+		<pre><code class="language-c">#define C_GFX_SHADER_LINK_DEFAULT { GFX_SHADER_LINK_DEFAULT_BINDING, { 0 }, C_GFX_FORMAT_NULL }</code></pre>
+		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<h2 id="graphics_shader_GfxShaderLink">GfxShaderLink</h2>
 		<pre><code class="language-c">typedef struct {
   GfxShaderAttributeLinkType link_type;
-  uint                       attribute_locations[128];
+  uint                       attribute_locations[C_GFX_FORMAT_SIZE];
   GfxAttributeFormat         attributes;
 } GfxShaderLink;
 </code></pre>
 		<description><b>type:</b> <i>C struct</i></description>
+		<h2 id="graphics_shader_gc_gfx_shader_link_default">gc_gfx_shader_link_default</h2>
+		<pre><code class="language-c">extern const GfxShaderLink gc_gfx_shader_link_default;</code></pre>
+		<description><b>type:</b> <i>C variable</i></description>
 		<h2 id="graphics_shader_gfx_shader_create">gfx_shader_create</h2>
-		<pre><code class="language-c">gfx_id gfx_shader_create(const bstr *vertex, const bstr *fragment, const GfxShaderLink *parameters);</code></pre>
+		<pre><code class="language-c">gfx_id gfx_shader_create(const bstr vertex, const bstr fragment, const GfxShaderLink *parameters);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="graphics_shader_gfx_shader_create_from_files">gfx_shader_create_from_files</h2>
 		<pre><code class="language-c">gfx_id gfx_shader_create_from_files(const char *vertex_file, const char *fragment_file, const GfxShaderLink *parameters);</code></pre>
@@ -140,6 +146,9 @@
 		<h2 id="graphics_shader_gfx_uniform_vec2_set">gfx_uniform_vec2_set</h2>
 		<pre><code class="language-c">void   gfx_uniform_vec2_set(int location, vec2 value);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
+		<h2 id="graphics_shader_gfx_uniform_vec2_set_values">gfx_uniform_vec2_set_values</h2>
+		<pre><code class="language-c">void   gfx_uniform_vec2_set_values(int location, float x, float y);</code></pre>
+		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="graphics_shader_gfx_uniform_vec2_set_array">gfx_uniform_vec2_set_array</h2>
 		<pre><code class="language-c">void   gfx_uniform_vec2_set_array(int location, uint count, const vec2 *values);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
@@ -158,6 +167,9 @@
 		<h2 id="graphics_shader_gfx_uniform_vec3_set">gfx_uniform_vec3_set</h2>
 		<pre><code class="language-c">void   gfx_uniform_vec3_set(int location, vec3 value);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
+		<h2 id="graphics_shader_gfx_uniform_vec3_set_values">gfx_uniform_vec3_set_values</h2>
+		<pre><code class="language-c">void   gfx_uniform_vec3_set_values(int location, float x, float y, float z);</code></pre>
+		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="graphics_shader_gfx_uniform_vec3_set_array">gfx_uniform_vec3_set_array</h2>
 		<pre><code class="language-c">void   gfx_uniform_vec3_set_array(int location, uint count, const vec3 *values);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
@@ -175,6 +187,9 @@
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="graphics_shader_gfx_uniform_vec4_set">gfx_uniform_vec4_set</h2>
 		<pre><code class="language-c">void   gfx_uniform_vec4_set(int location, vec4 value);</code></pre>
+		<description><b>type:</b> <i>C function</i></description>
+		<h2 id="graphics_shader_gfx_uniform_vec4_set_values">gfx_uniform_vec4_set_values</h2>
+		<pre><code class="language-c">void   gfx_uniform_vec4_set_values(int location, float x, float y, float z, float w);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="graphics_shader_gfx_uniform_vec4_set_array">gfx_uniform_vec4_set_array</h2>
 		<pre><code class="language-c">void   gfx_uniform_vec4_set_array(int location, uint count, const vec4 *values);</code></pre>
@@ -215,6 +230,111 @@
 		<h2 id="graphics_shader_gfx_uniform_sampler_cube_set">gfx_uniform_sampler_cube_set</h2>
 		<pre><code class="language-c">void   gfx_uniform_sampler_cube_set(int location, int sampler_index);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
+		<h2 id="graphics_shader_gfx_shader_int_set">gfx_shader_int_set</h2>
+		<pre><code class="language-c">void   gfx_shader_int_set(gfx_id shader, const char *name, int value);</code></pre>
+		<description><b>type:</b> <i>C function</i></description>
+		<h2 id="graphics_shader_gfx_shader_int_set_array">gfx_shader_int_set_array</h2>
+		<pre><code class="language-c">void   gfx_shader_int_set_array(gfx_id shader, const char *name, uint count, const int *values);</code></pre>
+		<description><b>type:</b> <i>C function</i></description>
+		<h2 id="graphics_shader_gfx_shader_uint_set">gfx_shader_uint_set</h2>
+		<pre><code class="language-c">void   gfx_shader_uint_set(gfx_id shader, const char *name, uint value);</code></pre>
+		<description><b>type:</b> <i>C function</i></description>
+		<h2 id="graphics_shader_gfx_shader_uint_set_array">gfx_shader_uint_set_array</h2>
+		<pre><code class="language-c">void   gfx_shader_uint_set_array(gfx_id shader, const char *name, uint count, const uint *values);</code></pre>
+		<description><b>type:</b> <i>C function</i></description>
+		<h2 id="graphics_shader_gfx_shader_float_set">gfx_shader_float_set</h2>
+		<pre><code class="language-c">void   gfx_shader_float_set(gfx_id shader, const char *name, float value);</code></pre>
+		<description><b>type:</b> <i>C function</i></description>
+		<h2 id="graphics_shader_gfx_shader_float_set_array">gfx_shader_float_set_array</h2>
+		<pre><code class="language-c">void   gfx_shader_float_set_array(gfx_id shader, const char *name, uint count, const float *values);</code></pre>
+		<description><b>type:</b> <i>C function</i></description>
+		<h2 id="graphics_shader_gfx_shader_vec2_set">gfx_shader_vec2_set</h2>
+		<pre><code class="language-c">void   gfx_shader_vec2_set(gfx_id shader, const char *name, vec2 value);</code></pre>
+		<description><b>type:</b> <i>C function</i></description>
+		<h2 id="graphics_shader_gfx_shader_vec2_set_values">gfx_shader_vec2_set_values</h2>
+		<pre><code class="language-c">void   gfx_shader_vec2_set_values(gfx_id shader, const char *name, float x, float y);</code></pre>
+		<description><b>type:</b> <i>C function</i></description>
+		<h2 id="graphics_shader_gfx_shader_vec2_set_array">gfx_shader_vec2_set_array</h2>
+		<pre><code class="language-c">void   gfx_shader_vec2_set_array(gfx_id shader, const char *name, uint count, const vec2 *values);</code></pre>
+		<description><b>type:</b> <i>C function</i></description>
+		<h2 id="graphics_shader_gfx_shader_ivec2_set">gfx_shader_ivec2_set</h2>
+		<pre><code class="language-c">void   gfx_shader_ivec2_set(gfx_id shader, const char *name, ivec2 value);</code></pre>
+		<description><b>type:</b> <i>C function</i></description>
+		<h2 id="graphics_shader_gfx_shader_ivec2_set_array">gfx_shader_ivec2_set_array</h2>
+		<pre><code class="language-c">void   gfx_shader_ivec2_set_array(gfx_id shader, const char *name, uint count, const ivec2 *values);</code></pre>
+		<description><b>type:</b> <i>C function</i></description>
+		<h2 id="graphics_shader_gfx_shader_uvec2_set">gfx_shader_uvec2_set</h2>
+		<pre><code class="language-c">void   gfx_shader_uvec2_set(gfx_id shader, const char *name, uvec2 value);</code></pre>
+		<description><b>type:</b> <i>C function</i></description>
+		<h2 id="graphics_shader_gfx_shader_uvec2_set_array">gfx_shader_uvec2_set_array</h2>
+		<pre><code class="language-c">void   gfx_shader_uvec2_set_array(gfx_id shader, const char *name, uint count, const uvec2 *values);</code></pre>
+		<description><b>type:</b> <i>C function</i></description>
+		<h2 id="graphics_shader_gfx_shader_vec3_set">gfx_shader_vec3_set</h2>
+		<pre><code class="language-c">void   gfx_shader_vec3_set(gfx_id shader, const char *name, vec3 value);</code></pre>
+		<description><b>type:</b> <i>C function</i></description>
+		<h2 id="graphics_shader_gfx_shader_vec3_set_values">gfx_shader_vec3_set_values</h2>
+		<pre><code class="language-c">void   gfx_shader_vec3_set_values(gfx_id shader, const char *name, float x, float y, float z);</code></pre>
+		<description><b>type:</b> <i>C function</i></description>
+		<h2 id="graphics_shader_gfx_shader_vec3_set_array">gfx_shader_vec3_set_array</h2>
+		<pre><code class="language-c">void   gfx_shader_vec3_set_array(gfx_id shader, const char *name, uint count, const vec3 *values);</code></pre>
+		<description><b>type:</b> <i>C function</i></description>
+		<h2 id="graphics_shader_gfx_shader_ivec3_set">gfx_shader_ivec3_set</h2>
+		<pre><code class="language-c">void   gfx_shader_ivec3_set(gfx_id shader, const char *name, ivec3 value);</code></pre>
+		<description><b>type:</b> <i>C function</i></description>
+		<h2 id="graphics_shader_gfx_shader_ivec3_set_array">gfx_shader_ivec3_set_array</h2>
+		<pre><code class="language-c">void   gfx_shader_ivec3_set_array(gfx_id shader, const char *name, uint count, const ivec3 *values);</code></pre>
+		<description><b>type:</b> <i>C function</i></description>
+		<h2 id="graphics_shader_gfx_shader_uvec3_set">gfx_shader_uvec3_set</h2>
+		<pre><code class="language-c">void   gfx_shader_uvec3_set(gfx_id shader, const char *name, uvec3 value);</code></pre>
+		<description><b>type:</b> <i>C function</i></description>
+		<h2 id="graphics_shader_gfx_shader_uvec3_set_array">gfx_shader_uvec3_set_array</h2>
+		<pre><code class="language-c">void   gfx_shader_uvec3_set_array(gfx_id shader, const char *name, uint count, const uvec3 *values);</code></pre>
+		<description><b>type:</b> <i>C function</i></description>
+		<h2 id="graphics_shader_gfx_shader_vec4_set">gfx_shader_vec4_set</h2>
+		<pre><code class="language-c">void   gfx_shader_vec4_set(gfx_id shader, const char *name, vec4 value);</code></pre>
+		<description><b>type:</b> <i>C function</i></description>
+		<h2 id="graphics_shader_gfx_shader_vec4_set_values">gfx_shader_vec4_set_values</h2>
+		<pre><code class="language-c">void   gfx_shader_vec4_set_values(gfx_id shader, const char *name, float x, float y, float z, float w);</code></pre>
+		<description><b>type:</b> <i>C function</i></description>
+		<h2 id="graphics_shader_gfx_shader_vec4_set_array">gfx_shader_vec4_set_array</h2>
+		<pre><code class="language-c">void   gfx_shader_vec4_set_array(gfx_id shader, const char *name, uint count, const vec4 *values);</code></pre>
+		<description><b>type:</b> <i>C function</i></description>
+		<h2 id="graphics_shader_gfx_shader_ivec4_set">gfx_shader_ivec4_set</h2>
+		<pre><code class="language-c">void   gfx_shader_ivec4_set(gfx_id shader, const char *name, ivec4 value);</code></pre>
+		<description><b>type:</b> <i>C function</i></description>
+		<h2 id="graphics_shader_gfx_shader_ivec4_set_array">gfx_shader_ivec4_set_array</h2>
+		<pre><code class="language-c">void   gfx_shader_ivec4_set_array(gfx_id shader, const char *name, uint count, const ivec4 *values);</code></pre>
+		<description><b>type:</b> <i>C function</i></description>
+		<h2 id="graphics_shader_gfx_shader_uvec4_set">gfx_shader_uvec4_set</h2>
+		<pre><code class="language-c">void   gfx_shader_uvec4_set(gfx_id shader, const char *name, uvec4 value);</code></pre>
+		<description><b>type:</b> <i>C function</i></description>
+		<h2 id="graphics_shader_gfx_shader_uvec4_set_array">gfx_shader_uvec4_set_array</h2>
+		<pre><code class="language-c">void   gfx_shader_uvec4_set_array(gfx_id shader, const char *name, uint count, const uvec4 *values);</code></pre>
+		<description><b>type:</b> <i>C function</i></description>
+		<h2 id="graphics_shader_gfx_shader_mat2_set">gfx_shader_mat2_set</h2>
+		<pre><code class="language-c">void   gfx_shader_mat2_set(gfx_id shader, const char *name, mat2 value);</code></pre>
+		<description><b>type:</b> <i>C function</i></description>
+		<h2 id="graphics_shader_gfx_shader_mat2_set_array">gfx_shader_mat2_set_array</h2>
+		<pre><code class="language-c">void   gfx_shader_mat2_set_array(gfx_id shader, const char *name, uint count, const mat2 *values);</code></pre>
+		<description><b>type:</b> <i>C function</i></description>
+		<h2 id="graphics_shader_gfx_shader_mat3_set">gfx_shader_mat3_set</h2>
+		<pre><code class="language-c">void   gfx_shader_mat3_set(gfx_id shader, const char *name, mat3 value);</code></pre>
+		<description><b>type:</b> <i>C function</i></description>
+		<h2 id="graphics_shader_gfx_shader_mat3_set_array">gfx_shader_mat3_set_array</h2>
+		<pre><code class="language-c">void   gfx_shader_mat3_set_array(gfx_id shader, const char *name, uint count, const mat3 *values);</code></pre>
+		<description><b>type:</b> <i>C function</i></description>
+		<h2 id="graphics_shader_gfx_shader_mat4_set">gfx_shader_mat4_set</h2>
+		<pre><code class="language-c">void   gfx_shader_mat4_set(gfx_id shader, const char *name, mat4 value);</code></pre>
+		<description><b>type:</b> <i>C function</i></description>
+		<h2 id="graphics_shader_gfx_shader_mat4_set_array">gfx_shader_mat4_set_array</h2>
+		<pre><code class="language-c">void   gfx_shader_mat4_set_array(gfx_id shader, const char *name, uint count, const mat4 *values);</code></pre>
+		<description><b>type:</b> <i>C function</i></description>
+		<h2 id="graphics_shader_gfx_shader_sampler_2d_set">gfx_shader_sampler_2d_set</h2>
+		<pre><code class="language-c">void   gfx_shader_sampler_2d_set(gfx_id shader, const char *name, int sampler_index);</code></pre>
+		<description><b>type:</b> <i>C function</i></description>
+		<h2 id="graphics_shader_gfx_shader_sampler_cube_set">gfx_shader_sampler_cube_set</h2>
+		<pre><code class="language-c">void   gfx_shader_sampler_cube_set(gfx_id shader, const char *name, int sampler_index);</code></pre>
+		<description><b>type:</b> <i>C function</i></description>
 	</section>
 	<nav class="menu">
 		<a href="../index.html">Home</a>
@@ -244,6 +364,7 @@
 		<a href="framework.html">framework</a>
 		<a href="documentation.html">documentation</a>
 		<a href="learn_opengl_-_getting_started.html">learn_opengl - getting started</a>
+		<a href="learn_opengl_-_lighting.html">learn_opengl - lighting</a>
 	</nav>
 	<footer>
 		<p>Another Memory Ends - Reference</p>

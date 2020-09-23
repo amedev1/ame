@@ -40,8 +40,8 @@
 		</table>
 		<h2 id="core_streams_FileStream">FileStream</h2>
 		<pre><code class="language-c">typedef struct {
-  FILE     *handle;
-  PathArray path;
+  FILE *handle;
+  Path  path;
 } FileStream;
 </code></pre>
 		<description><b>type:</b> <i>C struct</i></description>
@@ -58,7 +58,7 @@
 		<description><b>description: </b>memory stream data</description>
 		<h2 id="core_streams_Stream">Stream</h2>
 		<pre><code class="language-c">typedef struct {
-  StreamType type;
+  StreamType     type;
   union Data
   {
     FileStream   file;
@@ -108,7 +108,7 @@
 		<pre><code class="language-c">bool  c_ostream_write(Stream *stream, size_t size, const uint8 *bytes);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
-		<description><b>description: </b>write byest to output stream</description>
+		<description><b>description: </b>write bytes to output stream</description>
 		<h2 id="core_streams_c_ostream_write_byte">c_ostream_write_byte</h2>
 		<pre><code class="language-c">bool  c_ostream_write_byte(Stream *stream, uint8 byte);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
@@ -119,15 +119,6 @@
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>close a stream</description>
-		<h2 id="core_streams_C_SET2">C_SET2</h2>
-		<pre><code class="language-c">#define C_SET2(p, x, y) p[0] = x; p[1] = y</code></pre>
-		<description><b>type:</b> <i>C preprocessor definition</i></description>
-		<h2 id="core_streams_C_SET3">C_SET3</h2>
-		<pre><code class="language-c">#define C_SET3(p, x, y, z) p[0] = x; p[1] = y; p[2] = z</code></pre>
-		<description><b>type:</b> <i>C preprocessor definition</i></description>
-		<h2 id="core_streams_C_SET4">C_SET4</h2>
-		<pre><code class="language-c">#define C_SET4(p, x, y, z, w) p[0] = x; p[1] = y; p[2] = z; p[3] = w</code></pre>
-		<description><b>type:</b> <i>C preprocessor definition</i></description>
 	</section>
 	<nav class="menu">
 		<a href="../index.html">Home</a>
@@ -149,7 +140,7 @@
 		<a class="section" href="core_datetime.html">datetime</a>
 		<a class="section" href="core_output.html">output</a>
 		<a class="section" href="core_log.html">log</a>
-		<a class="section" href="core_containers.html">containers</a>
+		<a class="section" href="core_dynamic_buffer.html">dynamic buffer</a>
 		<a class="section" href="core_compression.html">compression</a>
 		<a class="section" href="core_commands.html">commands</a>
 		<a class="section" href="core_multi-threading.html">multi-threading</a>
@@ -160,6 +151,7 @@
 		<a href="framework.html">framework</a>
 		<a href="documentation.html">documentation</a>
 		<a href="learn_opengl_-_getting_started.html">learn_opengl - getting started</a>
+		<a href="learn_opengl_-_lighting.html">learn_opengl - lighting</a>
 	</nav>
 	<footer>
 		<p>Another Memory Ends - Reference</p>

@@ -82,7 +82,7 @@
 		<pre><code class="language-c">gfx_id gfx_texture_create(uint width, uint height, PixelFormat format, const GfxTextureParameters *parameters);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="graphics_texture_gfx_texture_import">gfx_texture_import</h2>
-		<pre><code class="language-c">gfx_id gfx_texture_import(const Image_ptr image, const GfxTextureParameters *parameters);</code></pre>
+		<pre><code class="language-c">gfx_id gfx_texture_import(const Image *image, const GfxTextureParameters *parameters);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="graphics_texture_gfx_texture_depth_create">gfx_texture_depth_create</h2>
 		<pre><code class="language-c">gfx_id gfx_texture_depth_create(uint width, uint height);</code></pre>
@@ -103,16 +103,16 @@
 		<pre><code class="language-c">void   gfx_texture_delete(gfx_id texture);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="graphics_texture_gfx_texture_update">gfx_texture_update</h2>
-		<pre><code class="language-c">void   gfx_texture_update(const Image_ptr image, int x, int y, uint width, uint height);</code></pre>
+		<pre><code class="language-c">void   gfx_texture_update(const Image *image, int x, int y, uint width, uint height);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="graphics_texture_GfxCubeImage">GfxCubeImage</h2>
 		<pre><code class="language-c">typedef struct {
-  Image_ptr right;
-  Image_ptr left;
-  Image_ptr top;
-  Image_ptr bottom;
-  Image_ptr back;
-  Image_ptr front;
+  Image *right;
+  Image *left;
+  Image *top;
+  Image *bottom;
+  Image *back;
+  Image *front;
 } GfxCubeImage;
 </code></pre>
 		<description><b>type:</b> <i>C struct</i></description>
@@ -156,6 +156,7 @@
 		<a href="framework.html">framework</a>
 		<a href="documentation.html">documentation</a>
 		<a href="learn_opengl_-_getting_started.html">learn_opengl - getting started</a>
+		<a href="learn_opengl_-_lighting.html">learn_opengl - lighting</a>
 	</nav>
 	<footer>
 		<p>Another Memory Ends - Reference</p>

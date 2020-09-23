@@ -35,48 +35,48 @@
 				</tr>
 			</tbody>
 		</table>
-		<h2 id="ftest_test_macros_FTEST">FTEST</h2>
-		<pre><code class="language-c">#define FTEST(name) void name(TestResult *out_result)</code></pre>
+		<h2 id="ftest_test_macros_ftest">ftest</h2>
+		<pre><code class="language-c">#define ftest(name) void name(TestResult *out_result)</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>declares a test</description>
-		<h2 id="ftest_test_macros_FTEST_ERROR_EMPTY">FTEST_ERROR_EMPTY</h2>
-		<pre><code class="language-c">#define FTEST_ERROR_EMPTY() printf_s("%s (%i)\n", __FILE__, __LINE__); *out_result = TEST_FAILED</code></pre>
+		<h2 id="ftest_test_macros_ftest_error_empty">ftest_error_empty</h2>
+		<pre><code class="language-c">#define ftest_error_empty() printf_s("%s (%i)\n", __FILE__, __LINE__); *out_result = TEST_FAILED</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>triggers a test error</description>
-		<h2 id="ftest_test_macros_FTEST_ERROR">FTEST_ERROR</h2>
-		<pre><code class="language-c">#define FTEST_ERROR(error) printf_s("%s (%i) : %s\n", __FILE__, __LINE__, error); *out_result = TEST_FAILED</code></pre>
+		<h2 id="ftest_test_macros_ftest_error">ftest_error</h2>
+		<pre><code class="language-c">#define ftest_error(error) printf_s("%s (%i) : %s\n", __FILE__, __LINE__, error); *out_result = TEST_FAILED</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>triggers a test error with message</description>
-		<h2 id="ftest_test_macros_FTEST_EQUAL">FTEST_EQUAL</h2>
-		<pre><code class="language-c">#define FTEST_EQUAL(value1, value2) if ((value1 == value2) == false){ printf_s("%s (%i) : %s not equal %s\n", __FILE__, __LINE__, #value1, #value2); *out_result = TEST_FAILED; }</code></pre>
+		<h2 id="ftest_test_macros_ftest_equal">ftest_equal</h2>
+		<pre><code class="language-c">#define ftest_equal(value1, value2) if ((value1 == value2) == false){ printf_s("%s (%i) : %s not equal %s\n", __FILE__, __LINE__, #value1, #value2); *out_result = TEST_FAILED; }</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>tests if expressions are equal</description>
-		<h2 id="ftest_test_macros_FTEST_NOT_EQUAL">FTEST_NOT_EQUAL</h2>
-		<pre><code class="language-c">#define FTEST_NOT_EQUAL(value1, value2) if ((value1 != value2) == false){ printf_s("%s (%i) : %s equal %s\n", __FILE__, __LINE__, #value1, #value2); *out_result = TEST_FAILED; }</code></pre>
+		<h2 id="ftest_test_macros_ftest_not_equal">ftest_not_equal</h2>
+		<pre><code class="language-c">#define ftest_not_equal(value1, value2) if ((value1 != value2) == false){ printf_s("%s (%i) : %s equal %s\n", __FILE__, __LINE__, #value1, #value2); *out_result = TEST_FAILED; }</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>tests if expressions are different</description>
-		<h2 id="ftest_test_macros_FTEST_TRUE">FTEST_TRUE</h2>
-		<pre><code class="language-c">#define FTEST_TRUE(value) if (value == false){ printf_s("%s (%i) : %s is false\n", __FILE__, __LINE__, #value); *out_result = TEST_FAILED; }</code></pre>
+		<h2 id="ftest_test_macros_ftest_true">ftest_true</h2>
+		<pre><code class="language-c">#define ftest_true(value) if (value == false){ printf_s("%s (%i) : %s is false\n", __FILE__, __LINE__, #value); *out_result = TEST_FAILED; }</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>tests if expression is true</description>
-		<h2 id="ftest_test_macros_FTEST_FALSE">FTEST_FALSE</h2>
-		<pre><code class="language-c">#define FTEST_FALSE(value) if (value == true) { printf_s("%s (%i) : %s is true\n", __FILE__, __LINE__, #value); *out_result = TEST_FAILED; }</code></pre>
+		<h2 id="ftest_test_macros_ftest_false">ftest_false</h2>
+		<pre><code class="language-c">#define ftest_false(value) if (value == true) { printf_s("%s (%i) : %s is true\n", __FILE__, __LINE__, #value); *out_result = TEST_FAILED; }</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>tests if expression is false</description>
-		<h2 id="ftest_test_macros_FTEST_PRINT">FTEST_PRINT</h2>
-		<pre><code class="language-c">#define FTEST_PRINT printf_s</code></pre>
+		<h2 id="ftest_test_macros_ftest_print">ftest_print</h2>
+		<pre><code class="language-c">#define ftest_print printf_s</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>print function</description>
-		<h2 id="ftest_test_macros_FTEST_NOT_IMPLEMENTED">FTEST_NOT_IMPLEMENTED</h2>
-		<pre><code class="language-c">#define FTEST_NOT_IMPLEMENTED() *out_result = TEST_NULL</code></pre>
+		<h2 id="ftest_test_macros_ftest_not_implemented">ftest_not_implemented</h2>
+		<pre><code class="language-c">#define ftest_not_implemented() *out_result = TEST_NULL</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>declare test as no implemented</description>
@@ -96,6 +96,7 @@
 		<a href="framework.html">framework</a>
 		<a href="documentation.html">documentation</a>
 		<a href="learn_opengl_-_getting_started.html">learn_opengl - getting started</a>
+		<a href="learn_opengl_-_lighting.html">learn_opengl - lighting</a>
 	</nav>
 	<footer>
 		<p>Another Memory Ends - Reference</p>

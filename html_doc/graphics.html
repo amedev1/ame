@@ -40,10 +40,12 @@
 		<a href="graphics_attributes.html">attributes</a><br>
 		<a class="element" href="graphics_attributes.html#graphics_attributes_GfxAttributeType">GfxAttributeType</a><br>
 		<a class="element" href="graphics_attributes.html#graphics_attributes_GfxAttribute">GfxAttribute</a><br>
-		<a class="element" href="graphics_attributes.html#graphics_attributes_H">H</a><br>
-		<a class="element" href="graphics_attributes.html#graphics_attributes_gfx_attribute_format_init">gfx_attribute_format_init</a><br>
+		<a class="element" href="graphics_attributes.html#graphics_attributes_C_GFX_FORMAT_SIZE">C_GFX_FORMAT_SIZE</a><br>
+		<a class="element" href="graphics_attributes.html#graphics_attributes_C_GFX_FORMAT_NULL">C_GFX_FORMAT_NULL</a><br>
+		<a class="element" href="graphics_attributes.html#graphics_attributes_GfxAttributeFormat">GfxAttributeFormat</a><br>
 		<a class="element" href="graphics_attributes.html#graphics_attributes_gfx_attribute_byte_size">gfx_attribute_byte_size</a><br>
-		<a class="element" href="graphics_attributes.html#graphics_attributes_gfx_attribute_format_add">gfx_attribute_format_add</a><br>
+		<a class="element" href="graphics_attributes.html#graphics_attributes_gfx_attribute_add">gfx_attribute_add</a><br>
+		<a class="element" href="graphics_attributes.html#graphics_attributes_gfx_attribute_enable">gfx_attribute_enable</a><br>
 		<a href="graphics_depth_testing.html">depth testing</a><br>
 		<a class="element" href="graphics_depth_testing.html#graphics_depth_testing_GfxTestFunction">GfxTestFunction</a><br>
 		<a class="element" href="graphics_depth_testing.html#graphics_depth_testing_gfx_depth_testing">gfx_depth_testing</a><br>
@@ -139,7 +141,9 @@
 		<a href="graphics_shader.html">shader</a><br>
 		<a class="element" href="graphics_shader.html#graphics_shader_GfxUniformType">GfxUniformType</a><br>
 		<a class="element" href="graphics_shader.html#graphics_shader_GfxShaderAttributeLinkType">GfxShaderAttributeLinkType</a><br>
+		<a class="element" href="graphics_shader.html#graphics_shader_C_GFX_SHADER_LINK_DEFAULT">C_GFX_SHADER_LINK_DEFAULT</a><br>
 		<a class="element" href="graphics_shader.html#graphics_shader_GfxShaderLink">GfxShaderLink</a><br>
+		<a class="element" href="graphics_shader.html#graphics_shader_gc_gfx_shader_link_default">gc_gfx_shader_link_default</a><br>
 		<a class="element" href="graphics_shader.html#graphics_shader_gfx_shader_create">gfx_shader_create</a><br>
 		<a class="element" href="graphics_shader.html#graphics_shader_gfx_shader_create_from_files">gfx_shader_create_from_files</a><br>
 		<a class="element" href="graphics_shader.html#graphics_shader_gfx_shader_delete">gfx_shader_delete</a><br>
@@ -152,18 +156,21 @@
 		<a class="element" href="graphics_shader.html#graphics_shader_gfx_uniform_float_set">gfx_uniform_float_set</a><br>
 		<a class="element" href="graphics_shader.html#graphics_shader_gfx_uniform_float_set_array">gfx_uniform_float_set_array</a><br>
 		<a class="element" href="graphics_shader.html#graphics_shader_gfx_uniform_vec2_set">gfx_uniform_vec2_set</a><br>
+		<a class="element" href="graphics_shader.html#graphics_shader_gfx_uniform_vec2_set_values">gfx_uniform_vec2_set_values</a><br>
 		<a class="element" href="graphics_shader.html#graphics_shader_gfx_uniform_vec2_set_array">gfx_uniform_vec2_set_array</a><br>
 		<a class="element" href="graphics_shader.html#graphics_shader_gfx_uniform_ivec2_set">gfx_uniform_ivec2_set</a><br>
 		<a class="element" href="graphics_shader.html#graphics_shader_gfx_uniform_ivec2_set_array">gfx_uniform_ivec2_set_array</a><br>
 		<a class="element" href="graphics_shader.html#graphics_shader_gfx_uniform_uvec2_set">gfx_uniform_uvec2_set</a><br>
 		<a class="element" href="graphics_shader.html#graphics_shader_gfx_uniform_uvec2_set_array">gfx_uniform_uvec2_set_array</a><br>
 		<a class="element" href="graphics_shader.html#graphics_shader_gfx_uniform_vec3_set">gfx_uniform_vec3_set</a><br>
+		<a class="element" href="graphics_shader.html#graphics_shader_gfx_uniform_vec3_set_values">gfx_uniform_vec3_set_values</a><br>
 		<a class="element" href="graphics_shader.html#graphics_shader_gfx_uniform_vec3_set_array">gfx_uniform_vec3_set_array</a><br>
 		<a class="element" href="graphics_shader.html#graphics_shader_gfx_uniform_ivec3_set">gfx_uniform_ivec3_set</a><br>
 		<a class="element" href="graphics_shader.html#graphics_shader_gfx_uniform_ivec3_set_array">gfx_uniform_ivec3_set_array</a><br>
 		<a class="element" href="graphics_shader.html#graphics_shader_gfx_uniform_uvec3_set">gfx_uniform_uvec3_set</a><br>
 		<a class="element" href="graphics_shader.html#graphics_shader_gfx_uniform_uvec3_set_array">gfx_uniform_uvec3_set_array</a><br>
 		<a class="element" href="graphics_shader.html#graphics_shader_gfx_uniform_vec4_set">gfx_uniform_vec4_set</a><br>
+		<a class="element" href="graphics_shader.html#graphics_shader_gfx_uniform_vec4_set_values">gfx_uniform_vec4_set_values</a><br>
 		<a class="element" href="graphics_shader.html#graphics_shader_gfx_uniform_vec4_set_array">gfx_uniform_vec4_set_array</a><br>
 		<a class="element" href="graphics_shader.html#graphics_shader_gfx_uniform_ivec4_set">gfx_uniform_ivec4_set</a><br>
 		<a class="element" href="graphics_shader.html#graphics_shader_gfx_uniform_ivec4_set_array">gfx_uniform_ivec4_set_array</a><br>
@@ -177,6 +184,41 @@
 		<a class="element" href="graphics_shader.html#graphics_shader_gfx_uniform_mat4_set_array">gfx_uniform_mat4_set_array</a><br>
 		<a class="element" href="graphics_shader.html#graphics_shader_gfx_uniform_sampler_2d_set">gfx_uniform_sampler_2d_set</a><br>
 		<a class="element" href="graphics_shader.html#graphics_shader_gfx_uniform_sampler_cube_set">gfx_uniform_sampler_cube_set</a><br>
+		<a class="element" href="graphics_shader.html#graphics_shader_gfx_shader_int_set">gfx_shader_int_set</a><br>
+		<a class="element" href="graphics_shader.html#graphics_shader_gfx_shader_int_set_array">gfx_shader_int_set_array</a><br>
+		<a class="element" href="graphics_shader.html#graphics_shader_gfx_shader_uint_set">gfx_shader_uint_set</a><br>
+		<a class="element" href="graphics_shader.html#graphics_shader_gfx_shader_uint_set_array">gfx_shader_uint_set_array</a><br>
+		<a class="element" href="graphics_shader.html#graphics_shader_gfx_shader_float_set">gfx_shader_float_set</a><br>
+		<a class="element" href="graphics_shader.html#graphics_shader_gfx_shader_float_set_array">gfx_shader_float_set_array</a><br>
+		<a class="element" href="graphics_shader.html#graphics_shader_gfx_shader_vec2_set">gfx_shader_vec2_set</a><br>
+		<a class="element" href="graphics_shader.html#graphics_shader_gfx_shader_vec2_set_values">gfx_shader_vec2_set_values</a><br>
+		<a class="element" href="graphics_shader.html#graphics_shader_gfx_shader_vec2_set_array">gfx_shader_vec2_set_array</a><br>
+		<a class="element" href="graphics_shader.html#graphics_shader_gfx_shader_ivec2_set">gfx_shader_ivec2_set</a><br>
+		<a class="element" href="graphics_shader.html#graphics_shader_gfx_shader_ivec2_set_array">gfx_shader_ivec2_set_array</a><br>
+		<a class="element" href="graphics_shader.html#graphics_shader_gfx_shader_uvec2_set">gfx_shader_uvec2_set</a><br>
+		<a class="element" href="graphics_shader.html#graphics_shader_gfx_shader_uvec2_set_array">gfx_shader_uvec2_set_array</a><br>
+		<a class="element" href="graphics_shader.html#graphics_shader_gfx_shader_vec3_set">gfx_shader_vec3_set</a><br>
+		<a class="element" href="graphics_shader.html#graphics_shader_gfx_shader_vec3_set_values">gfx_shader_vec3_set_values</a><br>
+		<a class="element" href="graphics_shader.html#graphics_shader_gfx_shader_vec3_set_array">gfx_shader_vec3_set_array</a><br>
+		<a class="element" href="graphics_shader.html#graphics_shader_gfx_shader_ivec3_set">gfx_shader_ivec3_set</a><br>
+		<a class="element" href="graphics_shader.html#graphics_shader_gfx_shader_ivec3_set_array">gfx_shader_ivec3_set_array</a><br>
+		<a class="element" href="graphics_shader.html#graphics_shader_gfx_shader_uvec3_set">gfx_shader_uvec3_set</a><br>
+		<a class="element" href="graphics_shader.html#graphics_shader_gfx_shader_uvec3_set_array">gfx_shader_uvec3_set_array</a><br>
+		<a class="element" href="graphics_shader.html#graphics_shader_gfx_shader_vec4_set">gfx_shader_vec4_set</a><br>
+		<a class="element" href="graphics_shader.html#graphics_shader_gfx_shader_vec4_set_values">gfx_shader_vec4_set_values</a><br>
+		<a class="element" href="graphics_shader.html#graphics_shader_gfx_shader_vec4_set_array">gfx_shader_vec4_set_array</a><br>
+		<a class="element" href="graphics_shader.html#graphics_shader_gfx_shader_ivec4_set">gfx_shader_ivec4_set</a><br>
+		<a class="element" href="graphics_shader.html#graphics_shader_gfx_shader_ivec4_set_array">gfx_shader_ivec4_set_array</a><br>
+		<a class="element" href="graphics_shader.html#graphics_shader_gfx_shader_uvec4_set">gfx_shader_uvec4_set</a><br>
+		<a class="element" href="graphics_shader.html#graphics_shader_gfx_shader_uvec4_set_array">gfx_shader_uvec4_set_array</a><br>
+		<a class="element" href="graphics_shader.html#graphics_shader_gfx_shader_mat2_set">gfx_shader_mat2_set</a><br>
+		<a class="element" href="graphics_shader.html#graphics_shader_gfx_shader_mat2_set_array">gfx_shader_mat2_set_array</a><br>
+		<a class="element" href="graphics_shader.html#graphics_shader_gfx_shader_mat3_set">gfx_shader_mat3_set</a><br>
+		<a class="element" href="graphics_shader.html#graphics_shader_gfx_shader_mat3_set_array">gfx_shader_mat3_set_array</a><br>
+		<a class="element" href="graphics_shader.html#graphics_shader_gfx_shader_mat4_set">gfx_shader_mat4_set</a><br>
+		<a class="element" href="graphics_shader.html#graphics_shader_gfx_shader_mat4_set_array">gfx_shader_mat4_set_array</a><br>
+		<a class="element" href="graphics_shader.html#graphics_shader_gfx_shader_sampler_2d_set">gfx_shader_sampler_2d_set</a><br>
+		<a class="element" href="graphics_shader.html#graphics_shader_gfx_shader_sampler_cube_set">gfx_shader_sampler_cube_set</a><br>
 		<a href="graphics_graphics_draw.html">graphics_draw</a><br>
 		<a class="element" href="graphics_graphics_draw.html#graphics_graphics_draw_gfx_print">gfx_print</a><br>
 	</section>
@@ -208,6 +250,7 @@
 		<a href="framework.html">framework</a>
 		<a href="documentation.html">documentation</a>
 		<a href="learn_opengl_-_getting_started.html">learn_opengl - getting started</a>
+		<a href="learn_opengl_-_lighting.html">learn_opengl - lighting</a>
 	</nav>
 	<footer>
 		<p>Another Memory Ends - Reference</p>

@@ -155,12 +155,12 @@
 } GifBlock;
 </code></pre>
 		<description><b>type:</b> <i>C struct</i></description>
-		<h2 id="image_gif_GifFile">GifFile</h2>
+		<h2 id="image_gif_Gif">Gif</h2>
 		<pre><code class="language-c">typedef struct {
   GifHeader  header;
   GifPalette gct;
   GifBlock  *blocks;
-} GifFile;
+} Gif;
 </code></pre>
 		<description><b>type:</b> <i>C struct</i></description>
 		<h2 id="image_gif_GifDisposalMethod">GifDisposalMethod</h2>
@@ -185,55 +185,47 @@
 				</tr>
 			</tbody>
 		</table>
-		<h2 id="image_gif_Gif_ptr">Gif_ptr</h2>
-		<pre><code class="language-c">typedef GifFile *Gif_ptr;</code></pre>
-		<description><b>type:</b> <i>C typedef</i></description>
 		<h2 id="image_gif_i_gif_alloc">i_gif_alloc</h2>
-		<pre><code class="language-c">Gif_ptr i_gif_alloc();</code></pre>
+		<pre><code class="language-c">Gif *i_gif_alloc();</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_gif_i_gif_clear">i_gif_clear</h2>
-		<pre><code class="language-c">void    i_gif_clear(Gif_ptr gif);</code></pre>
+		<pre><code class="language-c">void i_gif_clear(Gif *gif);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_gif_i_gif_free">i_gif_free</h2>
-		<pre><code class="language-c">void    i_gif_free(Gif_ptr gif);</code></pre>
+		<pre><code class="language-c">void i_gif_free(Gif *gif);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_gif_i_gif_read">i_gif_read</h2>
-		<pre><code class="language-c">bool i_gif_read(Gif_ptr gif, Stream *stream);</code></pre>
+		<pre><code class="language-c">bool i_gif_read(Gif *gif, Stream *stream);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_gif_i_gif_write">i_gif_write</h2>
-		<pre><code class="language-c">bool i_gif_write(const Gif_ptr gif, Stream *stream);</code></pre>
+		<pre><code class="language-c">bool i_gif_write(const Gif *gif, Stream *stream);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_gif_i_gif_write_file">i_gif_write_file</h2>
-		<pre><code class="language-c">bool i_gif_write_file(const Gif_ptr gif, const char *path);</code></pre>
+		<pre><code class="language-c">bool i_gif_write_file(const Gif *gif, const char *path);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_gif_i_gif_read_file">i_gif_read_file</h2>
-		<pre><code class="language-c">bool i_gif_read_file(Gif_ptr gif, const char *path);</code></pre>
+		<pre><code class="language-c">bool i_gif_read_file(Gif *gif, const char *path);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_gif_i_gif_begin">i_gif_begin</h2>
-		<pre><code class="language-c">bool i_gif_begin(Gif_ptr gif, uint width, uint height, bool sort, const GifPalette *palette, uint8 background_color);</code></pre>
+		<pre><code class="language-c">bool i_gif_begin(Gif *gif, uint width, uint height, bool sort, const GifPalette *palette, uint8 background_color);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_gif_i_gif_add_netscape_extension">i_gif_add_netscape_extension</h2>
-		<pre><code class="language-c">bool i_gif_add_netscape_extension(Gif_ptr gif, uint32 repeat);</code></pre>
+		<pre><code class="language-c">bool i_gif_add_netscape_extension(Gif *gif, uint32 repeat);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_gif_i_gif_add_comment">i_gif_add_comment</h2>
-		<pre><code class="language-c">bool i_gif_add_comment(Gif_ptr gif, const char *comment);</code></pre>
+		<pre><code class="language-c">bool i_gif_add_comment(Gif *gif, const char *comment);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_gif_i_gif_add_graphics_control">i_gif_add_graphics_control</h2>
-		<pre><code class="language-c">bool i_gif_add_graphics_control(Gif_ptr gif, uint16 delay, bool user_input, GifDisposalMethod disposal, bool transparency, uint8 transparency_index);</code></pre>
+		<pre><code class="language-c">bool i_gif_add_graphics_control(Gif *gif, uint16 delay, bool user_input, GifDisposalMethod disposal, bool transparency, uint8 transparency_index);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_gif_i_gif_add_image_descriptor">i_gif_add_image_descriptor</h2>
-		<pre><code class="language-c">bool i_gif_add_image_descriptor(Gif_ptr gif, uint32 left, uint32 top, uint32 width, uint32 height, const GifPalette *palette, const uint8 *indices, bool sort, bool interlace);</code></pre>
+		<pre><code class="language-c">bool i_gif_add_image_descriptor(Gif *gif, uint32 left, uint32 top, uint32 width, uint32 height, const GifPalette *palette, const uint8 *indices, bool sort, bool interlace);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_gif_i_gif_add_frame">i_gif_add_frame</h2>
-		<pre><code class="language-c">bool i_gif_add_frame(Gif_ptr gif, const Image_ptr image, uint offset_x, uint offset_y, uint16 delay, bool dithering);</code></pre>
+		<pre><code class="language-c">bool i_gif_add_frame(Gif *gif, const Image *image, uint offset_x, uint offset_y, uint16 delay, bool dithering);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
-		<h2 id="image_gif_i_gif_extract_frames">i_gif_extract_frames</h2>
-		<pre><code class="language-c">bool i_gif_extract_frames(const Gif_ptr gif, Image_ptr **frames);</code></pre>
-		<description><b>type:</b> <i>C function</i></description>
-		<br>
-		<description><b>description: </b>TODO Implement</description>
 		<h2 id="image_gif_i_gif_optimize_transparency">i_gif_optimize_transparency</h2>
-		<pre><code class="language-c">void i_gif_optimize_transparency(Gif_ptr gif);</code></pre>
+		<pre><code class="language-c">void i_gif_optimize_transparency(Gif *gif);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 	</section>
 	<nav class="menu">
@@ -255,6 +247,7 @@
 		<a href="framework.html">framework</a>
 		<a href="documentation.html">documentation</a>
 		<a href="learn_opengl_-_getting_started.html">learn_opengl - getting started</a>
+		<a href="learn_opengl_-_lighting.html">learn_opengl - lighting</a>
 	</nav>
 	<footer>
 		<p>Another Memory Ends - Reference</p>

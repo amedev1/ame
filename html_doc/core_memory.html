@@ -107,43 +107,43 @@
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>check that all current allocation are valid (no overshoot)</description>
-		<h2 id="core_memory_c_alloc">c_alloc</h2>
-		<pre><code class="language-c">#define c_alloc(size, alignment) c_memory_debug_alloc(size, alignment, __FILENAME__, __LINE__)</code></pre>
+		<h2 id="core_memory_mem_alloc">mem_alloc</h2>
+		<pre><code class="language-c">#define mem_alloc(size, alignment) c_memory_debug_alloc(size, alignment, __FILENAME__, __LINE__)</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>debug allocate with core allocator</description>
-		<h2 id="core_memory_c_free">c_free</h2>
-		<pre><code class="language-c">#define c_free(pointer) c_memory_debug_free(pointer, __FILENAME__, __LINE__)</code></pre>
+		<h2 id="core_memory_mem_free">mem_free</h2>
+		<pre><code class="language-c">#define mem_free(pointer) c_memory_debug_free(pointer, __FILENAME__, __LINE__)</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>debug free with core allocator</description>
-		<h2 id="core_memory_c_realloc">c_realloc</h2>
-		<pre><code class="language-c">#define c_realloc(pointer, size, alignment) c_memory_debug_realloc(pointer, size, alignment, __FILENAME__, __LINE__)</code></pre>
+		<h2 id="core_memory_mem_realloc">mem_realloc</h2>
+		<pre><code class="language-c">#define mem_realloc(pointer, size, alignment) c_memory_debug_realloc(pointer, size, alignment, __FILENAME__, __LINE__)</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>debug realloc with core allocator</description>
-		<h2 id="core_memory_c_alloc">c_alloc</h2>
-		<pre><code class="language-c">#define c_alloc(size, alignment) c_memory_alloc(size, alignment)</code></pre>
+		<h2 id="core_memory_mem_alloc">mem_alloc</h2>
+		<pre><code class="language-c">#define mem_alloc(size, alignment) c_memory_alloc(size, alignment)</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>allocate with core allocator</description>
-		<h2 id="core_memory_c_free">c_free</h2>
-		<pre><code class="language-c">#define c_free(pointer) c_memory_free(pointer)</code></pre>
+		<h2 id="core_memory_mem_free">mem_free</h2>
+		<pre><code class="language-c">#define mem_free(pointer) c_memory_free(pointer)</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>free with core allocator</description>
-		<h2 id="core_memory_c_realloc">c_realloc</h2>
-		<pre><code class="language-c">#define c_realloc(pointer, size, alignment) c_memory_realloc(pointer, size, alignment)</code></pre>
+		<h2 id="core_memory_mem_realloc">mem_realloc</h2>
+		<pre><code class="language-c">#define mem_realloc(pointer, size, alignment) c_memory_realloc(pointer, size, alignment)</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>realloc with core allocator</description>
-		<h2 id="core_memory_c_alloc_type">c_alloc_type</h2>
-		<pre><code class="language-c">#define c_alloc_type(type) (type*)c_alloc(sizeof(type), __alignof(type))</code></pre>
+		<h2 id="core_memory_mem_alloc_type">mem_alloc_type</h2>
+		<pre><code class="language-c">#define mem_alloc_type(type) (type*)mem_alloc(sizeof(type), __alignof(type))</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>allocate memory for type using core allocator</description>
-		<h2 id="core_memory_c_alloc_type_array">c_alloc_type_array</h2>
-		<pre><code class="language-c">#define c_alloc_type_array(type, size) (type*)c_alloc(size * sizeof(type), __alignof(type))</code></pre>
+		<h2 id="core_memory_mem_alloc_array">mem_alloc_array</h2>
+		<pre><code class="language-c">#define mem_alloc_array(type, size) (type*)mem_alloc(size * sizeof(type), __alignof(type))</code></pre>
 		<description><b>type:</b> <i>C preprocessor definition</i></description>
 		<br>
 		<description><b>description: </b>allocate memory for type array using core allocator</description>
@@ -268,7 +268,7 @@
 		<a class="section" href="core_datetime.html">datetime</a>
 		<a class="section" href="core_output.html">output</a>
 		<a class="section" href="core_log.html">log</a>
-		<a class="section" href="core_containers.html">containers</a>
+		<a class="section" href="core_dynamic_buffer.html">dynamic buffer</a>
 		<a class="section" href="core_compression.html">compression</a>
 		<a class="section" href="core_commands.html">commands</a>
 		<a class="section" href="core_multi-threading.html">multi-threading</a>
@@ -279,6 +279,7 @@
 		<a href="framework.html">framework</a>
 		<a href="documentation.html">documentation</a>
 		<a href="learn_opengl_-_getting_started.html">learn_opengl - getting started</a>
+		<a href="learn_opengl_-_lighting.html">learn_opengl - lighting</a>
 	</nav>
 	<footer>
 		<p>Another Memory Ends - Reference</p>

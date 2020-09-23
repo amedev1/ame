@@ -66,7 +66,7 @@
 		<h2 id="image_noise_ValueNoise">ValueNoise</h2>
 		<pre><code class="language-c">typedef struct {
   float values[256];
-  uint permutation[512];
+  uint  permutation[512];
 } ValueNoise;
 </code></pre>
 		<description><b>type:</b> <i>C struct</i></description>
@@ -112,17 +112,17 @@
 		<br>
 		<description><b>description: </b>get value noise as noise source</description>
 		<h2 id="image_noise_i_noise_1d">i_noise_1d</h2>
-		<pre><code class="language-c">float i_noise_1d(NoiseSource *source, float x);</code></pre>
+		<pre><code class="language-c">float i_noise_1d(NoiseSource source, float x);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>get one-dimensional noise from noise source</description>
 		<h2 id="image_noise_i_noise_2d">i_noise_2d</h2>
-		<pre><code class="language-c">float i_noise_2d(NoiseSource *source, float x, float y);</code></pre>
+		<pre><code class="language-c">float i_noise_2d(NoiseSource source, float x, float y);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>get two-dimensional noise from noise source</description>
 		<h2 id="image_noise_i_noise_3d">i_noise_3d</h2>
-		<pre><code class="language-c">float i_noise_3d(NoiseSource *source, float x, float y, float z);</code></pre>
+		<pre><code class="language-c">float i_noise_3d(NoiseSource source, float x, float y, float z);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>get three-dimensional noise from noise source</description>
@@ -173,62 +173,62 @@
 		<br>
 		<description><b>description: </b>noise mixer data</description>
 		<h2 id="image_noise_i_noise_fbm_1d">i_noise_fbm_1d</h2>
-		<pre><code class="language-c">float i_noise_fbm_1d(NoiseSource *source, uint octaves, float lacunarity, float gain, float x);</code></pre>
+		<pre><code class="language-c">float i_noise_fbm_1d(NoiseSource source, uint octaves, float lacunarity, float gain, float x);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>get one-dimensional fractional brownian motion</description>
 		<h2 id="image_noise_i_noise_fbm_2d">i_noise_fbm_2d</h2>
-		<pre><code class="language-c">float i_noise_fbm_2d(NoiseSource *source, uint octaves, float lacunarity, float gain, float x, float y);</code></pre>
+		<pre><code class="language-c">float i_noise_fbm_2d(NoiseSource source, uint octaves, float lacunarity, float gain, float x, float y);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>get two-dimensional fractional brownian motion</description>
 		<h2 id="image_noise_i_noise_fbm_3d">i_noise_fbm_3d</h2>
-		<pre><code class="language-c">float i_noise_fbm_3d(NoiseSource *source, uint octaves, float lacunarity, float gain, float x, float y, float z);</code></pre>
+		<pre><code class="language-c">float i_noise_fbm_3d(NoiseSource source, uint octaves, float lacunarity, float gain, float x, float y, float z);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>get three-dimensional fractional brownian motion</description>
 		<h2 id="image_noise_i_noise_turbulence_2d">i_noise_turbulence_2d</h2>
-		<pre><code class="language-c">float i_noise_turbulence_2d(NoiseSource *source, uint octaves, float lacunarity, float gain, float x, float y);</code></pre>
+		<pre><code class="language-c">float i_noise_turbulence_2d(NoiseSource source, uint octaves, float lacunarity, float gain, float x, float y);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_noise_i_noise_turbulence_3d">i_noise_turbulence_3d</h2>
-		<pre><code class="language-c">float i_noise_turbulence_3d(NoiseSource *source, uint octaves, float lacunarity, float gain, float x, float y, float z);</code></pre>
+		<pre><code class="language-c">float i_noise_turbulence_3d(NoiseSource source, uint octaves, float lacunarity, float gain, float x, float y, float z);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_noise_i_noise_ridge_2d">i_noise_ridge_2d</h2>
-		<pre><code class="language-c">float i_noise_ridge_2d(NoiseSource *source, uint octaves, float lacunarity, float gain, float offset, float x, float y);</code></pre>
+		<pre><code class="language-c">float i_noise_ridge_2d(NoiseSource source, uint octaves, float lacunarity, float gain, float offset, float x, float y);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_noise_i_noise_ridge_3d">i_noise_ridge_3d</h2>
-		<pre><code class="language-c">float i_noise_ridge_3d(NoiseSource *source, uint octaves, float lacunarity, float gain, float offset, float x, float y, float z);</code></pre>
+		<pre><code class="language-c">float i_noise_ridge_3d(NoiseSource source, uint octaves, float lacunarity, float gain, float offset, float x, float y, float z);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_noise_i_noise_planet_2d">i_noise_planet_2d</h2>
-		<pre><code class="language-c">float i_noise_planet_2d(NoiseSource *source, uint octaves, float lacunarity, float gain, float x, float y);</code></pre>
+		<pre><code class="language-c">float i_noise_planet_2d(NoiseSource source, uint octaves, float lacunarity, float gain, float x, float y);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_noise_i_noise_planet_3d">i_noise_planet_3d</h2>
-		<pre><code class="language-c">float i_noise_planet_3d(NoiseSource *source, uint octaves, float lacunarity, float gain, float x, float y, float z);</code></pre>
+		<pre><code class="language-c">float i_noise_planet_3d(NoiseSource source, uint octaves, float lacunarity, float gain, float x, float y, float z);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_noise_i_noise_wood_2d">i_noise_wood_2d</h2>
-		<pre><code class="language-c">float i_noise_wood_2d(NoiseSource *source, uint octaves, float lacunarity, float gain, float wood_coef, float x, float y);</code></pre>
+		<pre><code class="language-c">float i_noise_wood_2d(NoiseSource source, uint octaves, float lacunarity, float gain, float wood_coef, float x, float y);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_noise_i_noise_wood_3d">i_noise_wood_3d</h2>
-		<pre><code class="language-c">float i_noise_wood_3d(NoiseSource *source, uint octaves, float lacunarity, float gain, float wood_coef, float x, float y, float z);</code></pre>
+		<pre><code class="language-c">float i_noise_wood_3d(NoiseSource source, uint octaves, float lacunarity, float gain, float wood_coef, float x, float y, float z);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_noise_i_noise_marble_2d">i_noise_marble_2d</h2>
-		<pre><code class="language-c">float i_noise_marble_2d(NoiseSource *source, uint octaves, float lacunarity, float gain, uint marble_period, float x, float y);</code></pre>
+		<pre><code class="language-c">float i_noise_marble_2d(NoiseSource source, uint octaves, float lacunarity, float gain, uint marble_period, float x, float y);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_noise_i_noise_marble_3d">i_noise_marble_3d</h2>
-		<pre><code class="language-c">float i_noise_marble_3d(NoiseSource *source, uint octaves, float lacunarity, float gain, uint marble_period, float x, float y, float z);</code></pre>
+		<pre><code class="language-c">float i_noise_marble_3d(NoiseSource source, uint octaves, float lacunarity, float gain, uint marble_period, float x, float y, float z);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="image_noise_i_noise_mix_1d">i_noise_mix_1d</h2>
-		<pre><code class="language-c">float i_noise_mix_1d(NoiseSource *source, NoiseMixer *mixer, float x);</code></pre>
+		<pre><code class="language-c">float i_noise_mix_1d(NoiseSource source, NoiseMixer *mixer, float x);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>mix one-dimensional noise</description>
 		<h2 id="image_noise_i_noise_mix_2d">i_noise_mix_2d</h2>
-		<pre><code class="language-c">float i_noise_mix_2d(NoiseSource *source, NoiseMixer *mixer, float x, float y);</code></pre>
+		<pre><code class="language-c">float i_noise_mix_2d(NoiseSource source, NoiseMixer *mixer, float x, float y);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>mix two-dimensional noise</description>
 		<h2 id="image_noise_i_noise_mix_3d">i_noise_mix_3d</h2>
-		<pre><code class="language-c">float i_noise_mix_3d(NoiseSource *source, NoiseMixer *mixer, float x, float y, float z);</code></pre>
+		<pre><code class="language-c">float i_noise_mix_3d(NoiseSource source, NoiseMixer *mixer, float x, float y, float z);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
 		<description><b>description: </b>mix three-dimensional noise</description>
@@ -252,6 +252,7 @@
 		<a href="framework.html">framework</a>
 		<a href="documentation.html">documentation</a>
 		<a href="learn_opengl_-_getting_started.html">learn_opengl - getting started</a>
+		<a href="learn_opengl_-_lighting.html">learn_opengl - lighting</a>
 	</nav>
 	<footer>
 		<p>Another Memory Ends - Reference</p>

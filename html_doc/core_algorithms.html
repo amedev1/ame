@@ -15,6 +15,21 @@
 	<p></p>
 	<br>
 	<section class="main">
+		<h2 id="core_algorithms_array_set_2">array_set_2</h2>
+		<pre><code class="language-c">#define array_set_2(p, x, y) p[0] = x; p[1] = y</code></pre>
+		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<br>
+		<description><b>description: </b>set 2 values in array</description>
+		<h2 id="core_algorithms_array_set_3">array_set_3</h2>
+		<pre><code class="language-c">#define array_set_3(p, x, y, z) p[0] = x; p[1] = y; p[2] = z</code></pre>
+		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<br>
+		<description><b>description: </b>set 3 values in array</description>
+		<h2 id="core_algorithms_array_set_4">array_set_4</h2>
+		<pre><code class="language-c">#define array_set_4(p, x, y, z, w) p[0] = x; p[1] = y; p[2] = z; p[3] = w</code></pre>
+		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<br>
+		<description><b>description: </b>set 4 values in array</description>
 		<h2 id="core_algorithms_compare_func">compare_func</h2>
 		<pre><code class="language-c">typedef int (*compare_func)(const void *a, const void *b);</code></pre>
 		<description><b>type:</b> <i>C typedef</i></description>
@@ -93,9 +108,8 @@
 		<h2 id="core_algorithms_c_swap">c_swap</h2>
 		<pre><code class="language-c">void c_swap(void *a, void *b, void *swap, size_t size);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
-		<h2 id="core_algorithms_C_VOID_GET">C_VOID_GET</h2>
-		<pre><code class="language-c">#define C_VOID_GET(array, size, n) (void *)((uintptr_t)array + (uintptr_t)((n) * (size)))</code></pre>
-		<description><b>type:</b> <i>C preprocessor definition</i></description>
+		<br>
+		<description><b>description: </b>swap a & b memory using swap memory (using size)</description>
 		<h2 id="core_algorithms_c_array_reverse">c_array_reverse</h2>
 		<pre><code class="language-c">void c_array_reverse(void *array, size_t item_size, size_t item_count);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
@@ -140,10 +154,12 @@
 		<pre><code class="language-c">uint c_array_max(void *array, size_t item_size, size_t item_count, compare_func function);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<br>
-		<description><b>description: </b>find max value in array</description>
+		<description><b>description: </b>find max value index in array</description>
 		<h2 id="core_algorithms_c_array_min">c_array_min</h2>
 		<pre><code class="language-c">uint c_array_min(void *array, size_t item_size, size_t item_count, compare_func function);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
+		<br>
+		<description><b>description: </b>find min value index in array</description>
 	</section>
 	<nav class="menu">
 		<a href="../index.html">Home</a>
@@ -165,7 +181,7 @@
 		<a class="section" href="core_datetime.html">datetime</a>
 		<a class="section" href="core_output.html">output</a>
 		<a class="section" href="core_log.html">log</a>
-		<a class="section" href="core_containers.html">containers</a>
+		<a class="section" href="core_dynamic_buffer.html">dynamic buffer</a>
 		<a class="section" href="core_compression.html">compression</a>
 		<a class="section" href="core_commands.html">commands</a>
 		<a class="section" href="core_multi-threading.html">multi-threading</a>
@@ -176,6 +192,7 @@
 		<a href="framework.html">framework</a>
 		<a href="documentation.html">documentation</a>
 		<a href="learn_opengl_-_getting_started.html">learn_opengl - getting started</a>
+		<a href="learn_opengl_-_lighting.html">learn_opengl - lighting</a>
 	</nav>
 	<footer>
 		<p>Another Memory Ends - Reference</p>

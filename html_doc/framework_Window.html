@@ -28,73 +28,70 @@
 			</tbody>
 		</table>
 		<h2 id="framework_Window_window_resize_callback">window_resize_callback</h2>
-		<pre><code class="language-c">typedef void(*window_resize_callback)(ameWindow*, uint, uint);</code></pre>
+		<pre><code class="language-c">typedef void(*window_resize_callback)(AmeWindow*, uint, uint);</code></pre>
 		<description><b>type:</b> <i>C typedef</i></description>
 		<h2 id="framework_Window_window_move_callback">window_move_callback</h2>
-		<pre><code class="language-c">typedef void(*window_move_callback)(ameWindow*, int, int);</code></pre>
+		<pre><code class="language-c">typedef void(*window_move_callback)(AmeWindow*, int, int);</code></pre>
 		<description><b>type:</b> <i>C typedef</i></description>
 		<h2 id="framework_Window_window_input_callback">window_input_callback</h2>
-		<pre><code class="language-c">typedef void(*window_input_callback)(ameWindow*, const InputEvent*);</code></pre>
-		<description><b>type:</b> <i>C typedef</i></description>
-		<h2 id="framework_Window_ameWindow">ameWindow</h2>
-		<pre><code class="language-c">typedef void ameWindow;</code></pre>
+		<pre><code class="language-c">typedef void(*window_input_callback)(AmeWindow*, const InputEvent*);</code></pre>
 		<description><b>type:</b> <i>C typedef</i></description>
 		<h2 id="framework_Window_f_window_create">f_window_create</h2>
-		<pre><code class="language-c">ameWindow *f_window_create(const char *name, uint width, uint height, WindowStyle style);</code></pre>
+		<pre><code class="language-c">AmeWindow *f_window_create(const char *name, uint width, uint height, WindowStyle style);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="framework_Window_f_window_delete">f_window_delete</h2>
-		<pre><code class="language-c">void       f_window_delete(ameWindow *window);</code></pre>
+		<pre><code class="language-c">void       f_window_delete(AmeWindow *window);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="framework_Window_f_window_should_close">f_window_should_close</h2>
-		<pre><code class="language-c">bool       f_window_should_close(ameWindow *window);</code></pre>
+		<pre><code class="language-c">bool       f_window_should_close(AmeWindow *window);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="framework_Window_f_window_process_messages">f_window_process_messages</h2>
-		<pre><code class="language-c">void       f_window_process_messages(ameWindow *window);</code></pre>
+		<pre><code class="language-c">void       f_window_process_messages(AmeWindow *window);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="framework_Window_f_window_set_current">f_window_set_current</h2>
-		<pre><code class="language-c">void       f_window_set_current(ameWindow *window);</code></pre>
+		<pre><code class="language-c">void       f_window_set_current(AmeWindow *window);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="framework_Window_f_window_swap_buffers">f_window_swap_buffers</h2>
-		<pre><code class="language-c">void       f_window_swap_buffers(ameWindow *window);</code></pre>
+		<pre><code class="language-c">void       f_window_swap_buffers(AmeWindow *window);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="framework_Window_f_window_set_input_callback">f_window_set_input_callback</h2>
-		<pre><code class="language-c">void       f_window_set_input_callback(ameWindow *window, window_input_callback callback);</code></pre>
+		<pre><code class="language-c">void       f_window_set_input_callback(AmeWindow *window, window_input_callback callback);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="framework_Window_f_window_set_resize_callback">f_window_set_resize_callback</h2>
-		<pre><code class="language-c">void       f_window_set_resize_callback(ameWindow *window, window_resize_callback callback);</code></pre>
+		<pre><code class="language-c">void       f_window_set_resize_callback(AmeWindow *window, window_resize_callback callback);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="framework_Window_f_window_set_move_callback">f_window_set_move_callback</h2>
-		<pre><code class="language-c">void       f_window_set_move_callback(ameWindow *window, window_move_callback callback);</code></pre>
+		<pre><code class="language-c">void       f_window_set_move_callback(AmeWindow *window, window_move_callback callback);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="framework_Window_f_window_user_data">f_window_user_data</h2>
-		<pre><code class="language-c">uintptr_t  f_window_user_data(ameWindow *window);</code></pre>
+		<pre><code class="language-c">uintptr_t  f_window_user_data(AmeWindow *window);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="framework_Window_f_window_set_user_data">f_window_set_user_data</h2>
-		<pre><code class="language-c">void       f_window_set_user_data(ameWindow *window, uintptr_t data);</code></pre>
+		<pre><code class="language-c">void       f_window_set_user_data(AmeWindow *window, uintptr_t data);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="framework_Window_f_window_context">f_window_context</h2>
-		<pre><code class="language-c">gfx_id     f_window_context(ameWindow *window);</code></pre>
+		<pre><code class="language-c">gfx_id     f_window_context(AmeWindow *window);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="framework_Window_f_window_name">f_window_name</h2>
-		<pre><code class="language-c">bstr       f_window_name(ameWindow *window);</code></pre>
+		<pre><code class="language-c">bstr       f_window_name(AmeWindow *window);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="framework_Window_f_window_aspect">f_window_aspect</h2>
-		<pre><code class="language-c">float      f_window_aspect(ameWindow *window);</code></pre>
+		<pre><code class="language-c">float      f_window_aspect(AmeWindow *window);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="framework_Window_f_window_size">f_window_size</h2>
-		<pre><code class="language-c">void       f_window_size(ameWindow *window, uvec2 size);</code></pre>
+		<pre><code class="language-c">void       f_window_size(AmeWindow *window, uvec2 size);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="framework_Window_f_window_center_screen">f_window_center_screen</h2>
-		<pre><code class="language-c">void       f_window_center_screen(ameWindow *window);</code></pre>
+		<pre><code class="language-c">void       f_window_center_screen(AmeWindow *window);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="framework_Window_f_window_move">f_window_move</h2>
-		<pre><code class="language-c">void       f_window_move(ameWindow *window, int x, int y, uint width, uint height);</code></pre>
+		<pre><code class="language-c">void       f_window_move(AmeWindow *window, int x, int y, uint width, uint height);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="framework_Window_f_window_send_close">f_window_send_close</h2>
-		<pre><code class="language-c">void       f_window_send_close(ameWindow *window);</code></pre>
+		<pre><code class="language-c">void       f_window_send_close(AmeWindow *window);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="framework_Window_f_window_send_input">f_window_send_input</h2>
-		<pre><code class="language-c">void       f_window_send_input(ameWindow *window, const InputEvent *event);</code></pre>
+		<pre><code class="language-c">void       f_window_send_input(AmeWindow *window, const InputEvent *event);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="framework_Window_CursorMode">CursorMode</h2>
 		<description><b>type:</b> <i>C enum</i></description>
@@ -112,7 +109,7 @@
 			</tbody>
 		</table>
 		<h2 id="framework_Window_f_window_cursor_mode">f_window_cursor_mode</h2>
-		<pre><code class="language-c">void       f_window_cursor_mode(ameWindow *window, CursorMode mode);</code></pre>
+		<pre><code class="language-c">void       f_window_cursor_mode(AmeWindow *window, CursorMode mode);</code></pre>
 		<description><b>type:</b> <i>C function</i></description>
 		<h2 id="framework_Window_f_window_find_handle">f_window_find_handle</h2>
 		<pre><code class="language-c">HWND       f_window_find_handle(const char *title);</code></pre>
@@ -141,6 +138,7 @@
 		<a class="current_section" href="framework_Window.html">Window</a>
 		<a href="documentation.html">documentation</a>
 		<a href="learn_opengl_-_getting_started.html">learn_opengl - getting started</a>
+		<a href="learn_opengl_-_lighting.html">learn_opengl - lighting</a>
 	</nav>
 	<footer>
 		<p>Another Memory Ends - Reference</p>

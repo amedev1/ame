@@ -312,6 +312,27 @@ void input_callback(AmeWindow* window, const InputEvent* event)
 }</code></pre>
 		<h2 id="learn_opengl_-_lighting_2_5_4_light_casters_spot_soft_lighting_vertex_shader">lighting_vertex_shader</h2>
 		<pre><code class="language-glsl">#version 330 core
+in vec3 pos;
+in vec3 normal;
+in vec2 uv;
+
+out vec3 frag_normal;
+out vec3 frag_pos;
+out vec2 tex_coords;
+
+uniform mat4 model;
+uniform mat4 view;
+uniform mat4 projection;
+
+void main()
+{
+  frag_pos = vec3(model * vec4(pos, 1.0));
+  frag_normal = mat3(transpose(inverse(model))) * normal;
+  gl_Position = projection * view * vec4(frag_pos, 1.0);
+  tex_coords = uv;
+}</code></pre>
+		<h2 id="learn_opengl_-_lighting_2_5_4_light_casters_spot_soft_lighting_fragment_shader">lighting_fragment_shader</h2>
+		<pre><code class="language-glsl">#version 330 core
 out vec4 color;
 
 struct Material {
@@ -368,27 +389,6 @@ void main()
   diffuse *= attenuation;
   specular *= attenuation;
   color = vec4(ambient + diffuse + specular, 1.0);
-}</code></pre>
-		<h2 id="learn_opengl_-_lighting_2_5_4_light_casters_spot_soft_lighting_fragment_shader">lighting_fragment_shader</h2>
-		<pre><code class="language-glsl">#version 330 core
-in vec3 pos;
-in vec3 normal;
-in vec2 uv;
-
-out vec3 frag_normal;
-out vec3 frag_pos;
-out vec2 tex_coords;
-
-uniform mat4 model;
-uniform mat4 view;
-uniform mat4 projection;
-
-void main()
-{
-  frag_pos = vec3(model * vec4(pos, 1.0));
-  frag_normal = mat3(transpose(inverse(model))) * normal;
-  gl_Position = projection * view * vec4(frag_pos, 1.0);
-  tex_coords = uv;
 }</code></pre>
 		<h2 id="learn_opengl_-_lighting_2_5_4_light_casters_spot_soft_light_cube_vertex_shader">light_cube_vertex_shader</h2>
 		<pre><code class="language-glsl">#version 330 core

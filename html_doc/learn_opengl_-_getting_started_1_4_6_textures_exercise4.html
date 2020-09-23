@@ -158,19 +158,16 @@ void input_callback(AmeWindow* window, const InputEvent* event)
 </code></pre>
 		<h2 id="learn_opengl_-_getting_started_1_4_6_textures_exercise4_vertex_shader">vertex_shader</h2>
 		<pre><code class="language-glsl">#version 330 core
-out vec4 color;
-
-in vec3 frag_color;
-in vec2 frag_uv;
-
-uniform sampler2D texture1;
-uniform sampler2D texture2;
-
-uniform float mix_rate;
-
+in vec3 pos;
+in vec3 color;
+in vec2 uv;
+out vec3 frag_color;
+out vec2 frag_uv;
 void main()
 {
-  color = mix(texture(texture1, frag_uv), texture(texture2, frag_uv), mix_rate);
+  gl_Position = vec4(pos, 1.0);
+  frag_color = color;
+  frag_uv = uv;
 }</code></pre>
 		<h2 id="learn_opengl_-_getting_started_1_4_6_textures_exercise4_fragment_shader">fragment_shader</h2>
 		<pre><code class="language-glsl">#version 330 core

@@ -259,18 +259,6 @@ void input_callback(AmeWindow* window, const InputEvent* event)
 }</code></pre>
 		<h2 id="learn_opengl_-_lighting_2_2_5_basic_lighting_exercise3_lighting_vertex_shader">lighting_vertex_shader</h2>
 		<pre><code class="language-glsl">#version 330 core
-out vec4 color;
-
-in vec3 lighting_color;
-
-uniform vec3 object_color;
-
-void main()
-{
-  color = vec4(lighting_color * object_color, 1.0);
-}</code></pre>
-		<h2 id="learn_opengl_-_lighting_2_2_5_basic_lighting_exercise3_lighting_fragment_shader">lighting_fragment_shader</h2>
-		<pre><code class="language-glsl">#version 330 core
 in vec3 pos;
 in vec3 normal;
 
@@ -309,6 +297,18 @@ void main()
   vec3 specular = specular_strength * spec * light_color;      
 
   lighting_color = ambient + diffuse + specular;
+}</code></pre>
+		<h2 id="learn_opengl_-_lighting_2_2_5_basic_lighting_exercise3_lighting_fragment_shader">lighting_fragment_shader</h2>
+		<pre><code class="language-glsl">#version 330 core
+out vec4 color;
+
+in vec3 lighting_color;
+
+uniform vec3 object_color;
+
+void main()
+{
+  color = vec4(lighting_color * object_color, 1.0);
 }</code></pre>
 		<h2 id="learn_opengl_-_lighting_2_2_5_basic_lighting_exercise3_light_cube_vertex_shader">light_cube_vertex_shader</h2>
 		<pre><code class="language-glsl">#version 330 core

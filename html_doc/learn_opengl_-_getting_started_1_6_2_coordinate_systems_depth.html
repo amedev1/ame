@@ -193,16 +193,19 @@ void input_callback(AmeWindow* window, const InputEvent* event)
 </code></pre>
 		<h2 id="learn_opengl_-_getting_started_1_6_2_coordinate_systems_depth_vertex_shader">vertex_shader</h2>
 		<pre><code class="language-glsl">#version 330 core
-out vec4 color;
+in vec3 pos;
+in vec2 uv;
 
-in vec2 frag_uv;
+out vec2 frag_uv;
 
-uniform sampler2D texture1;
-uniform sampler2D texture2;
+uniform mat4 model;
+uniform mat4 view;
+uniform mat4 projection;
 
 void main()
 {
-  color = mix(texture(texture1, frag_uv), texture(texture2, frag_uv), 0.2);
+  gl_Position = projection * view * model * vec4(pos, 1.0);
+  frag_uv = uv;
 }</code></pre>
 		<h2 id="learn_opengl_-_getting_started_1_6_2_coordinate_systems_depth_fragment_shader">fragment_shader</h2>
 		<pre><code class="language-glsl">#version 330 core
